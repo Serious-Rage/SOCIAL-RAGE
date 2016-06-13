@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Icons and Labels</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+
+		<form action="" method="" class="j-forms" novalidate>
+
+			<div class="header">
+				<p>Icons and Labels</p>
+			</div>
+			<!-- end /.header -->
+
+			<div class="content">
+
+				<!-- start input without icon -->
+				<div class="unit">
+					<label class="label">Text input without icon</label>
+					<div class="input">
+						<input type="text" placeholder="placeholder text...">
+					</div>
+				</div>
+				<!-- end input without icon -->
+
+				<!-- start input with prepend icon -->
+				<div class="unit">
+					<label class="label">Text input with prepend icon</label>
+					<div class="input">
+						<label class="icon-left" for="icon-left">
+							<i class="fa fa-book"></i>
+						</label>
+						<input type="text" id="icon-left" placeholder="placeholder text...">
+					</div>
+				</div>
+				<!-- end input with prepend icon -->
+
+				<!-- start input with append icon -->
+				<div class="unit">
+					<label class="label">Text input with append icon</label>
+					<div class="input">
+						<label class="icon-right" for="icon-right">
+							<i class="fa fa-envelope-o"></i>
+						</label>
+						<input type="text" id="icon-right" placeholder="placeholder text...">
+					</div>
+				</div>
+				<!-- end input with append icon -->
+
+				<!-- start icons on both sides -->
+				<div class="unit">
+					<label class="label">Text input with icons on both sides</label>
+					<div class="input">
+						<label class="icon-left" for="icons">
+							<i class="fa fa-folder-o"></i>
+						</label>
+						<label class="icon-right" for="icons">
+							<i class="fa fa-folder-open-o"></i>
+						</label>
+						<input type="text" id="icons" placeholder="placeholder text...">
+					</div>
+				</div>
+				<!-- end icons on both sides -->
+
+				<div class="divider gap-top-45 gap-bottom-45"></div>
+
+				<!-- start textarea with prepend icon -->
+				<div class="unit">
+					<label class="label">Textarea with prepend icon</label>
+					<div class="input">
+						<label class="icon-left" for="txt-icon-left">
+							<i class="fa fa-file-text-o"></i>
+						</label>
+						<textarea id="txt-icon-left" placeholder="placeholder text..."></textarea>
+					</div>
+				</div>
+				<!-- end textarea with prepend icon -->
+
+				<!-- start textarea with append icon -->
+				<div class="unit">
+					<label class="label">Textarea with append icon</label>
+					<div class="input">
+						<label class="icon-right" for="txt-icon-right">
+							<i class="fa fa-comments-o"></i>
+						</label>
+						<textarea id="txt-icon-right" placeholder="placeholder text..."></textarea>
+					</div>
+				</div>
+				<!-- end textarea with append icon -->
+
+				<!-- start textarea with icons and info message -->
+				<div class="unit">
+					<label class="label">Textarea with icons and note</label>
+					<div class="input">
+						<label class="icon-left" for="txt-icons-info">
+							<i class="fa fa-file-text-o"></i>
+						</label>
+						<label class="icon-right" for="txt-icons-info">
+							<i class="fa fa-comments-o"></i>
+						</label>
+						<textarea id="txt-icons-info" placeholder="placeholder text..."></textarea>
+						<span class="hint">
+							<strong>Note:</strong>
+							describe your project as detailed as possible
+						</span>
+					</div>
+				</div>
+				<!-- end textarea with icons and info message -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn">Send</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+</body>
+</html>

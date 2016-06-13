@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Custom select</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/jquery.multiple.select.js"></script>
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-400">
+
+		<form action="" method="" class="j-forms" id="j-forms" novalidate>
+
+			<div class="header">
+				<p>Custom select</p>
+			</div>
+			<!-- end /.header-->
+
+			<div class="content">
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Multiple select</span>
+				</div>
+
+				<!-- start Multiple select -->
+				<!-- for proper plugin work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="unit">
+					<label class="input select">
+						<select autocomplete="off" multiple="" id="multiple_select">
+							<option value="Australia">Australia</option>
+							<option value="Austria">Austria</option>
+							<option value="Brazil">Brazil</option>
+							<option value="Canada">Canada</option>
+							<option value="Germany">Germany</option>
+							<option value="India">India</option>
+							<option value="Italy">Italy</option>
+							<option value="Japan">Japan</option>
+							<option value=">Netherlands">Netherlands</option>
+							<option value=">New Zealand">New Zealand</option>
+							<option value="Philippines">Philippines</option>
+							<option value="Portugal">Portugal</option>
+							<option value="South Africa">South Africa</option>
+							<option value="Spain">Spain</option>
+							<option value="Switzerland">Switzerland</option>
+							<option value="Sweden">Sweden</option>
+							<option value="Turkey">Turkey</option>
+							<option value="United Arab Emirates">United Arab Emirates</option>
+							<option value="United Kingdom">United Kingdom</option>
+							<option value="USA">USA</option>
+						</select>
+						<i></i>
+					</label>
+				</div>
+				<!-- end Multiple select -->
+
+				<div class="divider-text gap-top-45 gap-bottom-45">
+					<span>Multiple select with search</span>
+				</div>
+
+				<!-- start Multiple select with search -->
+				<!-- for proper plugin work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="unit">
+					<label class="input select">
+						<select autocomplete="off" multiple="" id="multiple_select_search">
+							<option value="Australia">Australia</option>
+							<option value="Austria">Austria</option>
+							<option value="Brazil">Brazil</option>
+							<option value="Canada">Canada</option>
+							<option value="Germany">Germany</option>
+							<option value="India">India</option>
+							<option value="Italy">Italy</option>
+							<option value="Japan">Japan</option>
+							<option value=">Netherlands">Netherlands</option>
+							<option value=">New Zealand">New Zealand</option>
+							<option value="Philippines">Philippines</option>
+							<option value="Portugal">Portugal</option>
+							<option value="South Africa">South Africa</option>
+							<option value="Spain">Spain</option>
+							<option value="Switzerland">Switzerland</option>
+							<option value="Sweden">Sweden</option>
+							<option value="Turkey">Turkey</option>
+							<option value="United Arab Emirates">United Arab Emirates</option>
+							<option value="United Kingdom">United Kingdom</option>
+							<option value="USA">USA</option>
+						</select>
+						<i></i>
+					</label>
+				</div>
+				<!-- end Multiple select with search -->
+
+				<div class="divider-text gap-top-45 gap-bottom-45">
+					<span>Single select</span>
+				</div>
+
+				<!-- start Single select -->
+				<!-- for proper plugin work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="unit">
+					<label class="input select">
+						<select autocomplete="off" multiple="" id="single_select">
+							<option value="0">Apple</option>
+							<option value="1">Banana</option>
+							<option value="2">Coconut</option>
+							<option value="3">Mango</option>
+							<option value="4">Melon</option>
+							<option value="5">Orange</option>
+							<option value="6">Pear</option>
+							<option value="7">Watermelon</option>
+						</select>
+						<i></i>
+					</label>
+				</div>
+				<!-- end Single select -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn">Submit</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+	<script>
+	/***************************************/
+	/* Multiple select plugin */
+	/***************************************/
+	// Multiple select
+	$('#multiple_select').multipleSelect({
+		placeholder: "select country",
+	});
+
+	// Multiple select with search
+	$('#multiple_select_search').multipleSelect({
+		placeholder: "select country",
+		filter: true,
+		selectAll: false
+	});
+
+	// Single select
+	$('#single_select').multipleSelect({
+		placeholder: "select fruit",
+		single:true
+	});
+	/***************************************/
+	/* Multiple select plugin */
+	/***************************************/
+	</script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Datepicker</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/jquery.ui.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+
+		<form action="" method="" class="j-forms" novalidate>
+
+			<div class="header">
+				<p>Datepicker Layout</p>
+			</div>
+			<!-- end /.header -->
+
+			<div class="content">
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Single date</span>
+				</div>
+
+				<!-- start single date -->
+				<!-- for proper datapicker work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="j-row">
+					<div class="span6 unit">
+						<div class="input">
+							<label class="icon-right" for="date-icon">
+								<i class="fa fa-calendar"></i>
+							</label>
+							<input type="text" id="date-icon" placeholder="datepicker with an icon" readonly="">
+						</div>
+					</div>
+					<div class="span6 unit">
+						<div class="widget right-50">
+							<div class="input">
+								<input type="text" id="date-widget" placeholder="datepicker with a widget" readonly="">
+							</div>
+							<label class="addon adn-50 adn-right" for="date-widget">
+								<i class="fa fa-calendar"></i>
+							</label>
+						</div>
+					</div>
+				</div>
+				<!-- end single date -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Popup time interval</span>
+				</div>
+
+				<!-- start popup time interval -->
+				<!-- for proper datapicker work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="j-row">
+					<div class="span6 unit">
+						<div class="input">
+						<label class="icon-right" for="popup-from">
+							<i class="fa fa-calendar"></i>
+						</label>
+							<input type="text" id="popup-from" placeholder="date from..." readonly="">
+						</div>
+					</div>
+					<div class="span6 unit">
+						<div class="input">
+						<label class="icon-right" for="popup-to">
+							<i class="fa fa-calendar"></i>
+						</label>
+							<input type="text" id="popup-to" placeholder="date to..." readonly="">
+						</div>
+					</div>
+				</div>
+				<!-- end popup time interval -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Inline time interval</span>
+				</div>
+
+				<!-- start Inline time interval -->
+				<!-- for proper datapicker work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="j-row">
+					<div class="span6 unit">
+						<div class="input unit">
+							<label class="icon-right" for="inline-range-from">
+								<i class="fa fa-calendar"></i>
+							</label>
+							<input type="text" id="inline-range-from" readonly="">
+						</div>
+						<div id="inline-from"></div>
+					</div>
+					<div class="span6 unit">
+						<div class="input unit">
+							<label class="icon-right" for="inline-range-to">
+								<i class="fa fa-calendar"></i>
+							</label>
+							<input type="text" id="inline-range-to" readonly="">
+						</div>
+						<div id="inline-to"></div>
+					</div>
+				</div>
+				<!-- end Inline time interval -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Inline date</span>
+				</div>
+
+				<!-- start Inline date -->
+				<!-- for proper datapicker work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="unit">
+					<div class="input unit">
+						<label class="icon-right" for="inline-single">
+							<i class="fa fa-calendar"></i>
+						</label>
+						<input type="text" id="inline-single" readonly="">
+					</div>
+					<div id="inline"></div>
+				</div>
+				<!-- end Inline date -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn">Send</button>
+			</div>
+			<!-- end /.footer -->
+		</form>
+	</div>
+	<script>
+		$(document).ready(function(){
+			// Single date with icon
+			$(function(){
+				$("#date-icon").datepicker({
+						dateFormat: 'mm/dd/yy',
+						prevText: '<i class="fa fa-caret-left"></i>',
+						nextText: '<i class="fa fa-caret-right"></i>'
+					});
+			});
+			// Single date with widget
+			$(function(){
+				$("#date-widget").datepicker({
+						dateFormat: 'mm/dd/yy',
+						prevText: '<i class="fa fa-caret-left"></i>',
+						nextText: '<i class="fa fa-caret-right"></i>'
+					});
+			});
+			// Popup time interval
+			$(function() {
+				$( "#popup-from" ).datepicker({
+					dateFormat: 'mm/dd/yy',
+					prevText: '<i class="fa fa-caret-left"></i>',
+					nextText: '<i class="fa fa-caret-right"></i>',
+					onClose: function( selectedDate ) {
+						$( "#popup-to" ).datepicker( "option", "minDate", selectedDate );
+					}
+				});
+				$( "#popup-to" ).datepicker({
+					dateFormat: 'mm/dd/yy',
+					prevText: '<i class="fa fa-caret-left"></i>',
+					nextText: '<i class="fa fa-caret-right"></i>',
+					onClose: function( selectedDate ) {
+						$( "#popup-from" ).datepicker( "option", "maxDate", selectedDate );
+					}
+				});
+			});
+			// Inline time interval
+			$(function() {
+				$( "#inline-from" ).datepicker({
+					dateFormat: 'mm/dd/yy',
+					altField: '#inline-range-from',
+					prevText: '<i class="fa fa-caret-left"></i>',
+					nextText: '<i class="fa fa-caret-right"></i>',
+					onSelect: function( selectedDate ) {
+						$( "#inline-to" ).datepicker( "option", "minDate", selectedDate );
+					}
+				});
+				$( "#inline-to" ).datepicker({
+					dateFormat: 'mm/dd/yy',
+					altField: '#inline-range-to',
+					prevText: '<i class="fa fa-caret-left"></i>',
+					nextText: '<i class="fa fa-caret-right"></i>',
+					onSelect: function( selectedDate ) {
+						$( "#inline-from" ).datepicker( "option", "maxDate", selectedDate );
+					}
+				});
+			});
+			//Inline date
+			$(function(){
+				$("#inline").datepicker({
+					dateFormat: 'mm/dd/yy',
+					altField: "#inline-single",
+					prevText: '<i class="fa fa-caret-left"></i>',
+					nextText: '<i class="fa fa-caret-right"></i>'
+				});
+			});
+		});
+	</script>
+</body>
+</html>

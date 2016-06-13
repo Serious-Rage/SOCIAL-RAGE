@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Logic conditions</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/jquery.ui.min.js"></script>
+	<script src="j-folder/js/jquery.maskedinput.min.js"></script>
+	<script src="j-folder/js/j-forms-multistep-with-dinamic-steps-all-types.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+
+				<form action="" method="" class="j-forms j-multistep" id="j-forms" novalidate>
+
+			<div class="header">
+				<p>Logic conditions</p>
+			</div>
+			<!-- end /.header-->
+
+			<div class="content">
+
+				<fieldset>
+
+					<div class="divider-text gap-top-20 gap-bottom-45">
+						<span>Step 1/5 - Dropdown logic condition</span>
+					</div>
+
+					<!-- start name -->
+					<div class="j-row">
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="first_name">
+									<i class="fa fa-user"></i>
+								</label>
+								<input type="text" id="first_name" name="first_name" placeholder="first name">
+							</div>
+						</div>
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="last_name">
+									<i class="fa fa-user"></i>
+								</label>
+								<input type="text" id="last_name" name="last_name" placeholder="last name">
+							</div>
+						</div>
+					</div>
+					<!-- end name -->
+
+					<!-- start logic dropdown list -->
+					<div class="unit logic-block-select">
+						<label class="label">Show next step?</label>
+						<label class="input select">
+							<select autocomplete="off" name="single-select">
+								<option value="">---</option>
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+							</select>
+							<i></i>
+						</label>
+					</div>
+					<!-- end logic dropdown list -->
+
+				</fieldset>
+
+				<fieldset>
+
+					<div class="divider-text gap-top-20 gap-bottom-45">
+						<span>Step 2/5 - Checkbox logic condition</span>
+					</div>
+
+					<!-- start email phone -->
+					<div class="j-row">
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="email">
+									<i class="fa fa-envelope-o"></i>
+								</label>
+								<input type="email" id="email" name="email" placeholder="email">
+							</div>
+						</div>
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="phone">
+									<i class="fa fa-phone"></i>
+								</label>
+								<input type="text" id="phone" name="phone" placeholder="phone/mobile">
+							</div>
+						</div>
+					</div>
+					<!-- end email phone -->
+
+					<!-- start logic checkbox -->
+					<div class="unit logic-block-checkbox">
+						<label class="label">Show next step?</label>
+						<label class="checkbox-toggle">
+							<input type="checkbox" id="next-step-checkbox">
+							<i></i>
+						</label>
+					</div>
+					<!-- end logic checkbox -->
+
+				</fieldset>
+
+				<fieldset>
+
+					<div class="divider-text gap-top-20 gap-bottom-45">
+						<span>Step 3/5 - Radio logic condition</span>
+					</div>
+
+					<!-- start guests -->
+					<div class="j-row">
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="adults">
+									<i class="fa fa-male"></i>
+								</label>
+								<input type="text" id="adults" name="adults" placeholder="adult guests">
+								<span class="tooltip tooltip-right-top">number of adult guests</span>
+							</div>
+						</div>
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="children">
+									<i class="fa fa-female"></i>
+								</label>
+								<input type="text" id="children" name="children" placeholder="children guests">
+								<span class="tooltip tooltip-right-top">number of children</span>
+							</div>
+						</div>
+					</div>
+					<!-- end guests -->
+
+					<!-- start logic radio -->
+					<div class="unit logic-block-radio">
+						<div class="inline-group">
+							<label class="label">Show next step?</label>
+							<label class="radio">
+								<input type="radio" name="radio" id="next-step-radio">
+								<i></i>
+								Yes
+							</label>
+							<label class="radio">
+								<input type="radio" name="radio" checked="">
+								<i></i>
+								No
+							</label>
+						</div>
+					</div>
+					<!-- end logic radio -->
+
+				</fieldset>
+
+				<fieldset>
+
+					<div class="divider-text gap-top-20 gap-bottom-45">
+						<span>Step 4/5- Input logic condition</span>
+					</div>
+
+					<!-- start date -->
+					<div class="j-row">
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="date_from">
+									<i class="fa fa-calendar"></i>
+								</label>
+								<input type="text" id="date_from" name="date_from" placeholder="check-in date">
+							</div>
+						</div>
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="date_to">
+									<i class="fa fa-calendar"></i>
+								</label>
+								<input type="text" id="date_to" name="date_to" placeholder="check-out date">
+							</div>
+						</div>
+					</div>
+					<!-- end date -->
+
+					<!-- start logic input -->
+					<div class="unit logic-block-input">
+						<label class="label">Show next step?</label>
+						<div class="input">
+							<input type="text" name="age">
+						</div>
+						<span class="hint">
+							<strong>Note:</strong>
+							enter value from <strong>1</strong> to <strong>20</strong> to show next step
+						</span>
+					</div>
+					<!-- end logic input -->
+
+				</fieldset>
+
+				<fieldset>
+
+					<div class="divider-text gap-top-20 gap-bottom-45">
+						<span>Step 5/5 - Final step</span>
+					</div>
+
+					<!-- start message -->
+					<div class="unit">
+						<div class="input">
+							<textarea spellcheck="false" name="message" placeholder="comments/message"></textarea>
+						</div>
+					</div>
+					<!-- end message -->
+
+				</fieldset>
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn multi-submit-btn">Booking</button>
+				<button type="button" class="primary-btn multi-next-btn">Next</button>
+				<button type="button" class="secondary-btn multi-prev-btn">Back</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+
+</body>
+</html>

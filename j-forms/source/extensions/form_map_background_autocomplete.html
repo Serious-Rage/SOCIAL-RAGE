@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact form</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/jquery.maskedinput.min.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+	<script src="j-folder/js/j-forms-form-map-background-autocomplete.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+	<style>
+		#google-map {
+			height:100%;
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			z-index:0;
+		}
+		.wrapper { opacity:.9; }
+	</style>
+
+</head>
+
+<body class="bg-pic">
+
+	<div id="google-map"></div>
+
+	<div class="wrapper wrapper-640">
+
+		<form action="" method="" class="j-forms j-multistep" id="j-forms" novalidate>
+
+			<div class="header">
+				<p>Contact form</p>
+			</div>
+			<!-- end /.header-->
+
+			<div class="content">
+
+				<fieldset>
+
+					<div class="divider-text gap-top-20 gap-bottom-45">
+						<span>Step 1/2 - Location</span>
+					</div>
+
+					<!-- start address -->
+					<div class="unit">
+						<div class="input">
+							<input type="text" id="address">
+						</div>
+					</div>
+					<!-- end address -->
+
+				</fieldset>
+
+				<fieldset>
+
+					<div class="divider-text gap-top-20 gap-bottom-45">
+						<span>Step 2/2 - Contact Details</span>
+					</div>
+
+					<!-- start name -->
+					<div class="unit">
+						<div class="input">
+							<label class="icon-right" for="name">
+								<i class="fa fa-user"></i>
+							</label>
+							<input type="text" id="name" placeholder="name">
+						</div>
+					</div>
+					<!-- end name -->
+
+					<!-- start email phone -->
+					<div class="j-row">
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="email">
+									<i class="fa fa-envelope-o"></i>
+								</label>
+								<input type="email" id="email" placeholder="email">
+							</div>
+						</div>
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="phone">
+									<i class="fa fa-phone"></i>
+								</label>
+								<input type="text" id="phone" placeholder="phone">
+							</div>
+						</div>
+					</div>
+					<!-- end email phone -->
+
+					<!-- start message -->
+					<div class="unit">
+						<div class="input">
+							<textarea spellcheck="false" placeholder="message/comments"></textarea>
+						</div>
+					</div>
+					<!-- end message -->
+
+				</fieldset>
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn multi-submit-btn">Contact</button>
+				<button type="button" class="primary-btn multi-next-btn">Next</button>
+				<button type="button" class="secondary-btn multi-prev-btn">Back</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cloned elements</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/jquery-cloneya.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+
+		<form action="" method="" class="j-forms" id="j-forms" novalidate>
+
+			<div class="header">
+				<p>Cloned elements</p>
+			</div>
+			<!-- end /.header-->
+
+			<div class="content">
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Cloning with widget addons</span>
+				</div>
+
+				<!-- start cloned widget element -->
+				<div class="clone-widget">
+					<div class="unit widget left-50 right-50 toclone">
+						<div class="input">
+							<input type="text">
+						</div>
+						<button type="button" class="addon-btn adn-50 adn-left delete">
+							<i class="fa fa-minus"></i>
+						</button>
+						<button type="button" class="addon-btn adn-50 adn-right clone">
+							<i class="fa fa-plus"></i>
+						</button>
+					</div>
+				</div>
+				<!-- end cloned widget element -->
+
+				<div class="divider-text gap-top-45 gap-bottom-45">
+					<span>Cloning with buttons</span>
+				</div>
+
+				<!-- start cloned right side buttons element -->
+				<div class="clone-rightside-btn-1">
+					<label class="label">Right side buttons</label>
+					<div class="j-row toclone-widget-right toclone">
+						<div class="span6 unit">
+							<div class="input">
+								<input type="text" placeholder="first name">
+							</div>
+						</div>
+						<div class="span6 unit">
+							<div class="input">
+								<input type="text" placeholder="last name">
+							</div>
+						</div>
+						<button type="button" class="primary-btn clone-btn-right clone">
+							<i class="fa fa-plus"></i>
+						</button>
+						<button type="button" class="secondary-btn clone-btn-right delete">
+							<i class="fa fa-minus"></i>
+						</button>
+					</div>
+				</div>
+				<!-- end cloned right side buttons element -->
+
+				<!-- start cloned right side buttons element -->
+				<div class="clone-rightside-btn-2">
+					<div class="unit toclone-widget-right toclone">
+						<div class="input">
+							<input type="email" placeholder="email">
+						</div>
+						<button type="button" class="primary-btn clone-btn-right clone">
+							<i class="fa fa-plus"></i>
+						</button>
+						<button type="button" class="secondary-btn clone-btn-right delete">
+							<i class="fa fa-minus"></i>
+						</button>
+					</div>
+				</div>
+				<!-- end cloned right side buttons element -->
+
+				<!-- start cloned left side buttons element -->
+				<div class="clone-leftside-btn-1">
+					<label class="label">Left side buttons</label>
+					<div class="j-row toclone-widget-left toclone">
+						<div class="span6 unit">
+							<div class="input">
+								<input type="text" placeholder="first name">
+							</div>
+						</div>
+						<div class="span6 unit">
+							<div class="input">
+								<input type="text" placeholder="last name">
+							</div>
+						</div>
+						<button type="button" class="primary-btn clone-btn-left clone">
+							<i class="fa fa-plus"></i>
+						</button>
+						<button type="button" class="secondary-btn clone-btn-left delete">
+							<i class="fa fa-minus"></i>
+						</button>
+					</div>
+				</div>
+				<!-- end cloned left side buttons element -->
+
+				<!-- start cloned left side buttons element -->
+				<div class="clone-leftside-btn-2">
+					<div class="unit toclone-widget-left toclone">
+						<div class="input">
+							<input type="email" placeholder="email">
+						</div>
+						<button type="button" class="primary-btn clone-btn-left clone">
+							<i class="fa fa-plus"></i>
+						</button>
+						<button type="button" class="secondary-btn clone-btn-left delete">
+							<i class="fa fa-minus"></i>
+						</button>
+					</div>
+				</div>
+				<!-- end cloned left side buttons element -->
+
+				<div class="divider-text gap-top-45 gap-bottom-45">
+					<span>Cloning with links</span>
+				</div>
+
+				<!-- start cloned link elements -->
+				<div class="clone-link">
+					<div class="toclone">
+
+						<a href="#" class="link clone">add new person</a>
+						<a href="#" class="link delete">delete a person</a>
+
+						<div class="j-row">
+							<div class="span6 unit">
+								<div class="input">
+									<input type="text" placeholder="first name">
+								</div>
+							</div>
+							<div class="span6 unit">
+								<div class="input">
+									<input type="text" placeholder="last name">
+								</div>
+							</div>
+						</div>
+
+						<div class="unit">
+							<div class="input">
+								<input type="email" placeholder="email">
+							</div>
+						</div>
+					</div>
+					<!-- end /.toclone -->
+				</div>
+				<!-- end cloned link elements -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn">Send</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+	<script>
+	$(document).ready(function(){
+
+		/***************************************/
+		/* Cloned element */
+		/***************************************/
+		$('.clone-widget').cloneya();
+
+		$('.clone-rightside-btn-1').cloneya();
+
+		$('.clone-rightside-btn-2').cloneya();
+
+		$('.clone-leftside-btn-1').cloneya();
+
+		$('.clone-leftside-btn-2').cloneya();
+
+		$('.clone-link').cloneya();
+		/***************************************/
+		/* end Cloned element */
+		/***************************************/
+
+	});
+	</script>
+</body>
+</html>

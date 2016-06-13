@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Subscribe form</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+
+	<div class="popup-menu">
+		<div class="popup-list">
+			<ul>
+				<!-- for proper work of the popup form -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<li class="popup-list-open" id="sub-popup-menu">
+					Subscribe
+					<div class="popup-list-wrapper">
+						<form action="" method="" class="j-forms" novalidate>
+
+							<div class="content">
+
+								<!-- start subscribe -->
+								<div class="unit check">
+									<label class="checkbox">
+										<input type="checkbox" name="news_group[]" value="news_and_articles" checked="">
+										<i></i>
+										News and Articles (only the latest)
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="news_group[]" value="weekly_news" checked="">
+										<i></i>
+										Weekly newsletter
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="news_group[]" value="monthly_news">
+										<i></i>
+										Mothly newsletter
+									</label>
+								</div>
+								<!-- end subscribe -->
+
+								<div class="divider gap-bottom-25"></div>
+
+								<!-- start email -->
+								<div class="unit">
+									<div class="input">
+										<label class="icon-right" for="email">
+											<i class="fa fa-envelope-o"></i>
+										</label>
+										<input type="email" placeholder="email@example.com" id="email" name="email">
+									</div>
+								</div>
+								<!-- end email -->
+
+								<button type="submit" class="primary-btn">Subscribe</button>
+
+							</div>
+							<!-- end /.content -->
+
+						</form>
+					</div>
+					<!-- /. popup-list-wrapper -->
+				</li>
+				<!-- /. popup-list-open -->
+
+			</ul>
+		</div>
+		<!-- end /.popup-list -->
+	</div>
+	<!-- end /.popup-menu -->
+	<script>
+	$(document).ready(function() {
+		/***************************************/
+		/* Popup menu forms */
+		/***************************************/
+		// If user clicks on the 'subscribe' item
+		// Open popup-menu subscribe form
+		$('#sub-popup-menu').on('click', function() {
+			if ( $('#sub-popup-menu .popup-list-wrapper').css('display') == 'none' ) {
+				$('#sub-popup-menu .popup-list-wrapper').css({ display:'block', left:'auto', right:'0', opacity:'1' });
+			}
+		});
+
+		// Add an event listener
+		// If user clicks outside a form
+		// The form will disappear
+		$(document).on('click touchstart', function(event) {
+			// Close popup-menu 'subscribe' form
+			if (!$(event.target).closest('#sub-popup-menu').length) {
+				if ( $('#sub-popup-menu .popup-list-wrapper').css('display') == 'block' ) {
+					$('#sub-popup-menu .popup-list-wrapper').css({ display:'none', left:'-9999px', opacity:'0' });
+				}
+			}
+		});
+		/***************************************/
+		/* end popup menu forms */
+		/***************************************/
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset='utf-8' />
+   <link rel="stylesheet" src="style.css" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+   <script src="https://apis.google.com/js/client.js"></script>
+   <script type="text/javascript">
+     var PROJECT_ID = 'YOUR_PROJECT_ID';
+     var CLIENT_ID = 'YOUR_CLIENT_ID';
+     var API_KEY = 'YOUR_API_KEY';
+     var SCOPES = 'https://www.googleapis.com/auth/compute';
+
+     /**
+      * Authorize Google Compute Engine API.
+      */
+     function authorization() {
+       gapi.client.setApiKey(API_KEY);
+       gapi.auth.authorize({
+         client_id: CLIENT_ID,
+         scope: SCOPES,
+         immediate: false
+       }, function(authResult) {
+            if (authResult && !authResult.error) {
+              window.alert('Auth was successful!');
+            } else {
+              window.alert('Auth was not successful');
+            }
+          }
+       );
+     }
+
+     /**
+      * Driver for sample application.
+      */
+     $(window).load(authorization);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

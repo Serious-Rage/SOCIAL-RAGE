@@ -1,0 +1,2304 @@
+<!doctype html>
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <title>Just Forms full - Form Framework</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="LazyCode">
+    <meta name="copyright" content="LazyCode">
+    <meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+    <meta name="date" content="2014-12-10T00:00:00+01:00">
+
+    <link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+    <link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="j-forms.ico" />
+
+    <script src="assets/js/jquery.js"></script>
+
+    <script src="assets/js/jquery.scrollTo.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+
+    <script>document.createElement('section');var duration='500',easing='swing';</script>
+    <script src="assets/js/script.js"></script>
+
+    <style>
+        html{background-color:#EEEEEE;color:#383838;}
+        ::-moz-selection{background:#333636;color:#00DFFC;}
+        ::selection{background:#333636;color:#00DFFC;}
+        #documenter_sidebar #documenter_logo{background-image:url(assets/images/image_1.png);}
+        a{color:#008C9E;}
+        .btn {
+            border-radius:3px;
+        }
+        .btn-primary {
+              background-image: -moz-linear-gradient(top, #008C9E, #006673);
+              background-image: -ms-linear-gradient(top, #008C9E, #006673);
+              background-image: -webkit-gradient(linear, 0 0, 0 008C9E%, from(#343838), to(#006673));
+              background-image: -webkit-linear-gradient(top, #008C9E, #006673);
+              background-image: -o-linear-gradient(top, #008C9E, #006673);
+              background-image: linear-gradient(top, #008C9E, #006673);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008C9E', endColorstr='#006673', GradientType=0);
+              border-color: #006673 #006673 #bfbfbf;
+              color:#FFFFFF;
+        }
+        .btn-primary:hover,
+        .btn-primary:active,
+        .btn-primary.active,
+        .btn-primary.disabled,
+        .btn-primary[disabled] {
+          border-color: #008C9E #008C9E #bfbfbf;
+          background-color: #006673;
+        }
+        hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+        #documenter_sidebar, #documenter_sidebar ul a{background-color:#343838;color:#FFFFFF;}
+        #documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+        #documenter_sidebar ul{border-top:1px solid #212424;}
+        #documenter_sidebar ul a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+        #documenter_sidebar ul a:hover{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+        #documenter_sidebar ul a.current{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+        #documenter_copyright{display:block !important;visibility:visible !important;}
+    </style>
+
+</head>
+<body class="documenter-project-b-check-forms">
+    <div id="documenter_sidebar">
+        <a href="#documenter_cover" id="documenter_logo"></a>
+        <ul id="documenter_nav">
+            <li><a class="current" href="#documenter_cover">Start</a></li>
+            <li><a href="#intro" title="Intro">Intro</a></li>
+            <li><a href="#quick_installation" title="Quick Installation">Quick Installation</a></li>
+            <li><a href="#html_structure" title="HTML Structure">HTML Structure</a></li>
+            <li><a href="#css_structure" title="CSS Structure">CSS Structure</a></li>
+            <li><a href="#js_structure" title="JS Structure">JS Structure</a></li>
+            <li><a href="#js_plugin" title="JS Plugins">JS Plugins</a></li>
+            <li><a href="#js_additions" title="JS Additions">JS Additions</a></li>
+            <li><a href="#modal_form" title="Modal Form">Modal Form</a></li>
+            <li><a href="#multistep_form" title="Multistep Form">Multistep Form</a></li>
+            <li><a href="#multistep_form_logic" title="Multistep Form with Logic">Multistep Form with Logic</a></li>
+            <li><a href="#order_logic" title="Order Form with Calculations">Order Form with Calculations</a></li>
+            <li><a href="#popup_form" title="Popup Form">Popup Form</a></li>
+            <li><a href="#foot_head_form" title="W/o footer header Form">W/o footer header Form</a></li>
+            <li><a href="#js_validation" title="JS Validation">JS Validation</a></li>
+            <li><a href="#php_structure" title="PHP Structure">PHP Structure</a></li>
+            <li><a href="#new_form" title="New Form">New Form</a></li>
+            <li><a href="#mailchimp" title="Subcsribe with MailChimp">Subscribe with MailChimp</a></li>
+            <li><a href="#few_forms" title="Several Forms at One Page">Several Forms at One Page</a></li>
+            <li><a href="#security" title="Security">Security</a></li>
+            <li><a href="#recaptcha" title="Google reCAPTCHA">Google reCAPTCHA</a></li>
+            <li><a href="#database" title="Database">Database</a></li>
+            <li><a href="#csv" title="CSV">CSV</a></li>
+            <li><a href="#extensions" title="Extensions">Extensions</a></li>
+            <li><a href="#faq" title="FAQ">FAQ</a></li>
+            <li><a href="#changelog" title="Changelog">Changelog</a></li>
+            <li><a href="#credits" title="Credits">Credits</a></li>
+        </ul>
+    </div>
+    <div id="documenter_content">
+    <section id="documenter_cover">
+    <h1>Just Forms</h1>
+    <h2 style="margin-bottom:0;">full version</h2>
+    <h2>v 2.3</h2>
+    <h2>Form Framework</h2>
+    <hr>
+    <ul>
+    <li>created: 04/15/2015</li>
+    <li>latest update: 01/31/2016</li>
+    <li>by: LazyCode</li>
+
+
+    </ul>
+    <p>Thank you for purchasing <strong>Just Forms full</strong>. If you have any questions that are beyond the scope of this help file, please feel free to email me via contact form in my <a target="_blank" href="http://codecanyon.net/user/lazycode?ref=lazycode">profile page</a>.</p>
+    </section>
+
+    <section id="intro">
+    <div class="page-header"><h3>Intro</h3><hr class="notop"></div>
+<h4 id="intro_folder_organization">Folder organization:</h4>
+<div>
+    <p>
+        If you`re reading this line, this means that you already unzipped the downloaded package from CodeCanyon. Now, in the extracted package you will find a folder named &quot;<strong>source</strong>&quot;. When you open this folder you will find 3 folders:</p>
+    <ul>
+        <li>
+            <strong>extensions</strong> - contains extensions and additions;
+        </li>
+        <li>
+            <strong>forms</strong> - contains ready-to-use forms with three variants of information processing:
+            <ul>
+                <li>smtp_sendmail - send email using smtp or sendmail</li>
+                <li>smtp_sendmail_csv - send email using smtp or sendmail + duplicate data to a CSV file</li>
+                <li>smtp_sendmail_database - send email using smtp or sendmail + duplicate data to a MySQL database (PDO or mysqli will be used)</li>
+            </ul>
+        </li>
+        <li>
+            <strong>templates</strong> - contains ready-to-use templates that will help you to create your forms
+        </li>
+    </ul>
+
+    <h4 id="intro_basic_html_structure">Basic HTML structure:</h4>
+    <p style="margin-left: 40px;">
+        In general, HTML structure of any form should look like below:</p>
+    <img alt="html structure" src="assets/images/html_structure.png"  style="margin-left: 40px;">
+</div>
+<h4 id="intro_basic_css_structure">Basic CSS structure:</h4>
+<p style="margin-left: 40px;">
+    All CSS code is in files:</p>
+    <img alt="html structure" src="assets/images/css_structure.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In the <strong>Just Forms advanced</strong> only <strong>j-forms.css</strong> file is required. It contains all css settings including default color settings. If you want to use Font Awesome icons in your form - you have to add appropriate CSS file in the "head" section of your html page.</p>
+    <p style="margin-left: 40px;">All forms have "indigo" color as default color. But you can select any color from available in the <strong>css</strong> folder. To change form color you have to add css file with color settings. Also, you have to add a "color" class to the form. Pay attention that "color" class has to be equal to the css file name. For instance, take a look to the picture below:</p>
+    <img alt="html structure" src="assets/images/new_color.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">So, if you have several forms at one page - you can configure color for all forms. Just connect css files with color settings and add "color" classes to the forms.</p>
+<h4 id="intro_basic_js_structure">Basic JS structure:</h4>
+    <p style="margin-left: 40px;">If you want to use some extra fields (date pickers, phone masking, etc.) - you have to add appropriate js scripts to the "head" section of your html page. More info - in the &quot;<strong>JS Plugins</strong>&quot; section.</p>
+    <img alt="html structure" src="assets/images/js_structure.png" style="margin-left: 40px;" >
+</section>
+<section id="quick_installation">
+
+
+
+
+
+
+
+
+
+
+
+<div class="page-header"><h3>Quick Installation</h3><hr class="notop"></div>
+<p><strong>Just Forms full</strong> contains a wide selection of forms and templates. You can choose any template from the folder &quot;<strong>templates/</strong>&quot;. You can choose any form from the folder &quot;<strong>forms/</strong>&quot;. All templates and forms are ready to use and you can easily add it to your website. For example, we will add &quot;<strong>booking</strong>&quot; form to an exemplary site.</p>
+<h4>
+    <strong>Case 1: Install a form like a new html page</strong></h4>
+<h5>
+    <strong>Copy files</strong></h5>
+<p style="margin-left: 40px;">You have to copy <strong>j-folder</strong> and <strong>index.php</strong> file to your website (some folder).</p>
+    <p style="margin-left: 40px;">Form files:</p>
+    <img alt="html structure" src="assets/images/copy_folder_form1.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/copy_folder_form2.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;"><strong>j-folder</strong> contains all form files and has next folder structure:</p>
+<ul style="margin-left: 40px;">
+    <li>
+        <strong>&quot;css/&quot;</strong> - folder contains CSS files;</li>
+    <li>
+        <strong>&quot;fonts/&quot;</strong> - folder contains Font Awesome fonts. It is required folder for proper icons displaying;</li>
+    <li>
+        <strong>&quot;img/&quot;</strong> - folder contains image for site background. These image required only for demonstration purpose and should not be copied to the server;</li>
+    <li>
+        <strong>&quot;js/&quot;</strong> - folder contains JavaScript files and libraries. This folder is required;</li>
+    <li>
+        <strong>&quot;php/&quot;</strong> - required folder that contains PHP files.</li>
+</ul>
+<h5>
+    <strong>Configure PHP file</strong></h5>
+    <p style="margin-left: 40px;">Let`s take a look to the file <strong>"action.php"</strong> in the folder <strong>"j-folder/php/"</strong>. This file contains several sections and one of them is <strong>"Your data"</strong> section:</p>
+    <img alt="html structure" src="assets/images/instal_1.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In this section you have to enter your email address, your name and subject of the message that your clients will send to you.</p>
+    <p style="margin-left: 40px;">Now, your form is ready to use.</p>
+<h4>
+    <strong>Case 2: Install a form to an existing html page</strong></h4>
+<h5>
+    <strong>HTML markup</strong></h5>
+    <p style="margin-left: 40px;">First, you have to add necessary js scripts and files in the "head" section of your html page. Be sure that you set a proper path to form files inside <strong>scipt</strong> tags.</p>
+    <img alt="html structure" src="assets/images/instal_2.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Second, you have to copy form to the html page. The form is placed in the "div" with <strong>class=&quot;wrapper wrapper-640&quot;</strong>. More about form elements in the <strong>"HTML Structure"</strong> section.</p>
+    <img alt="html structure" src="assets/images/instal_3.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Copy files</strong></h5>
+<p style="margin-left: 40px;">You have to copy <strong>j-folder</strong> to your website.</p>
+    <p style="margin-left: 40px;">Form files:</p>
+    <img alt="html structure" src="assets/images/instal_5.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/instal_6.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Configure PHP file</strong></h5>
+    <p style="margin-left: 40px;">Let`s take a look to the file <strong>"action.php"</strong> in the folder <strong>"j-folder/php/"</strong>. This file contains several sections and one of them is <strong>"Your data"</strong> section:</p>
+    <img alt="html structure" src="assets/images/instal_1.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In this section you have to enter your email address, your name and subject of the message that your clients will send to you.</p>
+    <p style="margin-left: 40px;">Now, your form is ready to use.</p>
+    <p>After you follow these steps form on your site will work properly and send emails to your email address. All forms from the <strong>"forms/"</strong> folder created similar. So any form can be added to your site by following these steps.</p>
+</section>
+<section id="html_structure">
+    <div class="page-header"><h3>HTML Structure</h3><hr class="notop"></div>
+<p>
+    Let`s take a look to the HTML structure with more attention. All forms have similar structure so you don`t need to change a lot of code with other forms.</p>
+
+<h4 id="html_structure_grid_system">Grid sys​tem</h4>
+<p style="margin-left: 40px;">
+    Demo of the grid system: &quot;<strong>extensions/grid.html</strong>&quot;</p>
+<p style="margin-left: 40px;">
+    All forms have responsive design. It works well for PC, tablets, mobile.</p>
+<p style="margin-left: 40px;">
+    Grid system is used for creating form layouts through a series of rows and columns which include your form elements.&nbsp;</p>
+<ol style="margin-left: 40px;">
+    <li style="margin-left: 40px;">
+        Use rows <strong>class=&quot;j-row&quot;</strong> to create horizontal groups of columns <strong>class=&quot;span&quot;</strong></li>
+    <li style="margin-left: 40px;">
+        Content should be placed within columns</li>
+    <li style="margin-left: 40px;">
+        Column classes <strong>class=&quot;span&quot;</strong> have to immediately be followed by a column number such as 6, so the entire class will look like this <strong>class=&quot;span6&quot;</strong></li>
+    <li style="margin-left: 40px;">
+        <strong>class=&quot;offset&quot;</strong>&nbsp;- class that allows you to make some offsets before or between columns</li>
+    <li style="margin-left: 40px;">
+        Offset classes&nbsp;<strong>class=&quot;offset&quot;</strong>&nbsp;have to immediately be followed by an offset number such as 4, so the entire class will look like this&nbsp;<strong>class=&quot;offset4&quot;</strong></li>
+    <li style="margin-left: 40px;">
+        Grid form columns are created by specifying the number of twelve available columns you wish to span.&nbsp;</li>
+</ol>
+<p style="margin-left: 40px;">
+    A combination of all columns in a row have to add up to 12.</p>
+<p style="margin-left: 40px;">
+    For example:</p>
+<ul>
+    <li style="margin-left: 80px;">
+        two equal columns: span6 + span6 = 12</li>
+    <li style="margin-left: 80px;">
+        one right side column: offset6 + span6 = 12</li>
+    <li style="margin-left: 80px;">
+        six&nbsp;equal columns: span2 + span2 + span2 + span2 + span2 + span2 = 12</li>
+    <li style="margin-left: 80px;">
+        one center column: offset3 + span6 + offset3 = 12</li>
+    <li style="margin-left: 80px;">
+        three unequal columns: span3 + span4 + span5 = 12</li>
+</ul>
+<p style="margin-left: 40px;">For instance, take a look to the pictures below:</p>
+    <img alt="html structure" src="assets/images/span2.png"  style="margin-left: 40px;">
+    <img alt="html structure" src="assets/images/span3.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/span1.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">If you want to create an element that will be over the entire width of the form - you don't need to use <strong>class=&quot;j-row&quot;</strong>. Just wrap your element in <strong>class=&quot;unit&quot;</strong>. More about <strong>class=&quot;unit&quot;</strong> - in the next section.</p>
+    <img alt="html structure" src="assets/images/span4.png" style="margin-left: 40px;" >
+
+<h4 id="html_structure_elements">Elements</h4>
+<p style="margin-left: 40px;">
+    Demo of the elements: &quot;<strong>extensions/elements.html</strong>&quot;</p>
+<h5>
+    <strong>Form wrapper</strong></h5>
+    <img alt="html structure" src="assets/images/wrapper.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">
+    <strong>class=&quot;bg-pic&quot; -</strong>&nbsp;<span style="font-size: 12px;">this class required only for demonstration purpose. It sets site background.</span></p>
+<p style="margin-left: 40px;">
+    <strong>class=&quot;wrapper&quot;</strong> - wrapper-class for all forms.</p>
+<p style="margin-left: 40px;">
+    <strong>class=&quot;wrapper-400&quot; / class=&quot;wrapper-640&quot; - </strong>this class sets the width of the form. You can toggle these classes and thereby toggle form width:</p>
+<ul style="margin-left: 40px;">
+    <li style="margin-left: 40px;">
+        <strong>class=&quot;wrapper-400&quot;</strong>&nbsp;- 400px</li>
+    <li style="margin-left: 40px;">
+        <strong>class=&quot;wrapper-640&quot;</strong>&nbsp;- 640px</li>
+</ul>
+<h5>
+    <strong>"Header" class</strong></h5>
+    <p style="margin-left: 40px;">You can add a header to your form using this class.</p>
+    <img alt="html structure" src="assets/images/header_1.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;"><strong>"Header"</strong> class has to be added before <strong>"content"</strong> class in the html markup.</p>
+    <p style="margin-left: 40px;">If you want to add an icon to your header - just add a line with icon.</p>
+    <img alt="html structure" src="assets/images/header_2.png" style="margin-left: 40px;" >
+<h5>
+    <strong>"Content" class</strong></h5>
+    <p style="margin-left: 40px;">You should to add all form elements inside this class.</p>
+    <img alt="html structure" src="assets/images/content.png" style="margin-left: 40px;" >
+<h5>
+    <strong>"Footer" class</strong></h5>
+    <p style="margin-left: 40px;">This class is used for buttons. Add your buttons inside this class.</p>
+    <img alt="html structure" src="assets/images/footer.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Horizontal divider</strong></h5>
+    <p style="margin-left: 40px;">Two types of dividers are allowed: line divider and text divider.</p>
+    <img alt="html structure" src="assets/images/divider.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Also, you can set the height for the gaps for dividers. Let's take a look to the css file:</p>
+    <img alt="html structure" src="assets/images/divider_gap.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">So, you can select or 20px height gap, or 45px height gap.</p>
+<h5>
+    <strong>"j-forms" class</strong></h5>
+    <p style="margin-left: 40px;">This class is required for all forms. You have to add this class to any form for proper form displaying.</p>
+    <img alt="html structure" src="assets/images/j-forms.png" style="margin-left: 40px;" >
+<h5>
+    <strong>"unit" class</strong></h5>
+    <p style="margin-left: 40px;">This class is required for creating indents between rows in the form. You can add this class to any element and this element will have bottom margin equal 25 pixels. Pay attention: these indents will remain on any device: PC, tablet or mobile. That's why <strong>class=&quot;unit&quot;</strong> can be used by several ways.</p>
+    <p style="margin-left: 40px;"><strong>Case 1 - standalone element</strong></p>
+    <p style="margin-left: 40px;">Add <strong>class=&quot;unit&quot;</strong> to every standalone element. This element will display separately from another form elements on any devices.</p>
+    <img alt="html structure" src="assets/images/span3_u.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/span3_unit.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/span3_unit_mob.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;"><strong>Case 2 - group of elements</strong></p>
+    <p style="margin-left: 40px;">Add <strong>class=&quot;unit&quot;</strong> to a group of elements (radio, checkbox, etc.) and this group will display without gaps on any device (any screen width).</p>
+    <img alt="html structure" src="assets/images/unit_u.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/unit_unit.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/unit_unit_mob.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Text input</strong></h5>
+    <img alt="html structure" src="assets/images/text_input.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Text input with left icon</strong></h5>
+    <img alt="html structure" src="assets/images/text_input_icon.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Pay attention to the <strong>class=&quot;icon-left&quot;</strong>. This class required for the left-side icons. For the right-side icons you have to add <strong>class=&quot;icon-right&quot;</strong>.</p>
+    <p style="margin-left: 40px;">Also take a look to the <strong>&quot;for&quot;</strong> and <strong>&quot;id&quot;</strong> attributes. These attributes have to be equal if you want to make focus on the field when icon is clicked.</p>
+<p style="margin-left: 40px;">
+    Font Awesome - free library of icons - is used for icons.</p>
+<h5>
+    <strong>Text input with icons and label</strong></h5>
+    <img alt="html structure" src="assets/images/text_input_icon_label.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">
+    More about icons and labels: &quot;<strong>extensions/icons_labels.html</strong>&quot;</p>
+<div class="alert alert-info" style="margin-left: 40px;">
+    <strong>Tips:</strong> if you want to add one label for whole row, no matter how many columns it has - add &quot;label&quot; before first <strong>class=&quot;span&quot;</strong>&nbsp;in the row.<strong>&nbsp;</strong>But if you need &quot;label&quot; for each column - add label after each <strong>class=&quot;span&quot;.</strong></div>
+<div>
+    &nbsp;</div>
+<div style="margin-left: 40px;">
+    Label for a few columns:</div>
+    <img alt="html structure" src="assets/images/label_row.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">
+    Label for each column:</p>
+    <img alt="html structure" src="assets/images/label_each_column.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Email and URL inputs</strong></h5>
+    <img alt="html structure" src="assets/images/email_url.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Search and Textarea inputs</strong></h5>
+    <img alt="html structure" src="assets/images/search_textarea.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Select input</strong></h5>
+    <img alt="html structure" src="assets/images/select.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Link</strong></h5>
+    <img alt="html structure" src="assets/images/link.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">Replace &quot;#&quot; in the &quot;href&quot; attribute with path to the &quot;terms of service&quot; document.</p>
+<h5>
+    <strong>Tooltips</strong></h5>
+<p style="margin-left: 40px;">
+  Two types of tooltips are allowed: text tooltip and image tooltip. You can use tooltip with any input: text, textarea, select. For image tooltips don't forget to add images to the form and set proper path to these images. More about tooltips: &quot;<strong>extensions/tooltips.html</strong>&quot;</p>
+    <img alt="html structure" src="assets/images/tooltip.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Note message</strong></h5>
+    <img alt="html structure" src="assets/images/note_message.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Columned Checkbox and Radio</strong></h5>
+    <img alt="html structure" src="assets/images/columned_checkbox.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Inline Checkbox and Radio</strong></h5>
+    <img alt="html structure" src="assets/images/inline_checkbox.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Columned Toggles</strong></h5>
+    <img alt="html structure" src="assets/images/columned_toggle.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Inline Toggles</strong></h5>
+    <img alt="html structure" src="assets/images/inline_toggle.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Ratings</strong></h5>
+    <img alt="html structure" src="assets/images/ratings.png" style="margin-left: 40px;" >
+<h5>
+    <strong>File Buttons</strong></h5>
+<p style="margin-left: 40px;">
+    File upload button available in four variations.</p>
+<p style="margin-left: 40px;">
+    Prepend wide button:</p>
+    <img alt="html structure" src="assets/images/prep_big_btn.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">
+    Append wide button:</p>
+    <img alt="html structure" src="assets/images/app_big_btn.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">
+    Prepend narrow button and append narrow button:</p>
+    <img alt="html structure" src="assets/images/narrow_btn.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">
+    For multiple file inputs you will have to adjust the markup. For example, it should look like this:</p>
+    <p><img alt="html structure" src="assets/images/multi_upload_btn.png" style="margin-left: 40px;" ></p>
+
+<div class="alert alert-info" style="margin-left: 40px;">
+    <strong>Notice:</strong> The &quot;onchange&quot;, the &quot;id&quot; and the &quot;name&quot; changed to &quot;file1&quot; and &quot;file2&quot;. &nbsp;</div>
+<h5>
+    <strong>Buttons</strong></h5>
+    <p style="margin-left: 40px;">Submit and Reset button are available.</p>
+    <img alt="html structure" src="assets/images/btn.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">For primary button you have to add <strong>class=&quot;primary-btn&quot;</strong> to the button.</p>
+    <p style="margin-left: 40px;">For secondary button you have to add <strong>class=&quot;secondary-btn&quot;</strong> to the button.</p>
+    <p style="margin-left: 40px;">For processing button you have to add <strong>class=&quot;processing&quot;</strong> to the button.</p>
+<h5>
+    <strong>Social buttons</strong></h5>
+<p style="margin-left: 40px;">
+    Demo for social buttons: &quot;<strong>extensions/social.html</strong>&quot;</p>
+    <img alt="html structure" src="assets/images/social.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">
+    For better user experience you may add social buttons to your form. &nbsp;<a href="https://www.google.com.ua/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=authorization+through+social+networks">Read more</a>&nbsp;about how you can make&nbsp;authorization through social networks.</p>
+<h5>
+    <strong>Widget</strong></h5>
+    <p style="margin-left: 40px;">You can use widget addons or widget buttons in your form. Widgets can be of of different widths: 50px and 130px. Also, widgets can be left-side and right-side.</p>
+    <strong>Widget addon</strong>
+    <p style="margin-left: 40px;">For instance, let's take a look to the html markup of narrow left-side widget addon:</p>
+    <img alt="html structure" src="assets/images/widget_add_pic.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/widget_add_html.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">As you can see, widget is created using <strong>class=&quot;widget&quot;</strong>. We set left padding for input using <strong>class=&quot;left-50&quot;</strong>. Widget addon is created using <strong>class=&quot;addon&quot;</strong>. Width and placement (left side or right side) of addon are configured by <strong>class=&quot;adn-50&quot;</strong> and <strong>class=&quot;adn-left&quot;</strong> accordingly. Pay attention that padding for the input has to be the same as addon width (in this example - 50px)</p>
+    <p style="margin-left: 40px;">Html markup for wide right-side widget addon</p>
+    <img alt="html structure" src="assets/images/widget_add_pic_wide.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/widget_add_html_wide.png" style="margin-left: 40px;" >
+    <p><strong>Widget button</strong></p>
+    <p style="margin-left: 40px;">All rules for widget addons are suitable for widget buttons. But widget button is created using <strong>class=&quot;addon-btn&quot;</strong>.</p>
+    <p style="margin-left: 40px;">Html markup for wide left-side widget button</p>
+    <img alt="html structure" src="assets/images/widget_btn_pic_wide.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/widget_btn_html_wide.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Captcha</strong></h5>
+    <p style="margin-left: 40px;">
+    This is a simple PHP session captcha which you can use to reduce spamming activity on your forms. Main idea: PHP server creates an image with a sum of the digits and outputs this image to the html page. User has to enter valid sum of the digits. jQuery Validation Plugin uses "remote" method to validate the captcha. More info about client-side validation methods - in the <strong>&quot;JS Validation&quot;</strong> section.</p>
+    <img alt="html structure" src="assets/images/captcha.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Disabled state</strong></h5>
+<p style="margin-left: 40px;">
+    Demo for disabled state: &quot;<strong>extensions/disable_state.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">You can make any form element disabled. Just add <strong>class=&quot;disabled-view&quot;</strong> and <strong>&quot;disabled&quot;</strong> attribute to the element. HTML markup for the disabled text input:</p>
+    <img alt="html structure" src="assets/images/disabled_view.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Error state</strong></h5>
+<p style="margin-left: 40px;">
+    Demo for error state: &quot;<strong>extensions/error_state.html</strong>&quot;</p>
+<p style="margin-left: 40px;">
+    HTML markup for error message:&nbsp;</p>
+    <img alt="html structure" src="assets/images/error_message.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">
+    HTML markup for input field with error state:</p>
+    <img alt="html structure" src="assets/images/error_view.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">
+    The "span" with <strong>class=&quot;error-view&quot;</strong> contains error message for the some particular field.</p>
+<h5>
+    <strong>Success state</strong></h5>
+<p style="margin-left: 40px;">
+    Demo for success state: &quot;<strong>extensions/success_state.html</strong>&quot;</p>
+<p style="margin-left: 40px;">
+    HTML markup for success message:&nbsp;</p>
+    <img alt="html structure" src="assets/images/success_message.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">
+    HTML markup for input field with success state:</p>
+    <img alt="html structure" src="assets/images/success_view.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">
+    The "span" with <strong>class=&quot;success-view&quot;</strong> contains success message for the some particular field.</p>
+<h5>
+    <strong>Info state</strong></h5>
+<p style="margin-left: 40px;">
+    Demo for info state: &quot;<strong>extensions/info_state.html</strong>&quot;</p>
+<p style="margin-left: 40px;">
+    HTML markup for info message:&nbsp;</p>
+    <img alt="html structure" src="assets/images/info_message.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">
+    HTML markup for input field with info state:</p>
+    <img alt="html structure" src="assets/images/info_view.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">
+    The "span" with <strong>class=&quot;info-view&quot;</strong> contains info message for the some particular field.</p>
+<h5>
+    <strong>Warning state</strong></h5>
+<p style="margin-left: 40px;">
+    Demo for warning state: &quot;<strong>extensions/warning_state.html</strong>&quot;</p>
+<p style="margin-left: 40px;">
+    HTML markup for warning message:&nbsp;</p>
+    <img alt="html structure" src="assets/images/warning_message.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">
+    HTML markup for input field with warning state:</p>
+    <img alt="html structure" src="assets/images/warning_view.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">
+    The "span" with <strong>class=&quot;warning-view&quot;</strong> contains warning message for the some particular field.</p>
+<h5>
+
+
+
+
+
+
+
+
+
+    <strong>Image blocks</strong></h5>
+    <p style="margin-left: 40px;">
+    Demo for image blocks: &quot;<strong>extensions/image_blocks.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">
+    You can use two types of image block: with or without text description. Html markup is similar for both types.</p>
+    <p style="margin-left: 40px;">
+    First of all - create a label with "checkbox-block" or "radio-block" class.</p>
+    <img alt="image block" src="assets/images/image_block_1.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">
+    Next - add span with class "block-content" and span with class "block-image". If you want you may add a title for image.</p>
+    <img alt="image block" src="assets/images/image_block_2.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">
+    For image blocks with text description you have to do the same, but add several elements: span with class="block-text-title" for text title. And span with class="block-text-desc" for text.</p>
+    <img alt="image block" src="assets/images/image_block_3.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">
+    <strong>Please note:</strong> you may use grid system for image blocks as you did for all another fields, but with one condition - use "span" tags "div" tags for grid system instead.</p>
+
+
+
+
+    <h5><strong>Tabs</strong></h5>
+    <p style="margin-left: 40px;">
+    Demo for tabs: &quot;<strong>extensions/tabs.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">
+    You may use tabbed window to display multiple forms at one screen. First - add div with class "j-tabs-container".</p>
+    <img alt="tabs" src="assets/images/tabs_1.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">
+    Next - add html elements for tabs with "id" attributes and "j-tabs-label" classes.</p>
+    <img alt="tabs" src="assets/images/tabs_2.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">
+    Add divs with forms, with "id" attributes and "j-tabs-section" classes.</p>
+    <img alt="tabs" src="assets/images/tabs_3.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">
+    In case you need more tabs - you may easily add css settings for new sections. Open "j-forms.css" file and add as many tabs as you need. Do not forget to add appropriate "id" and classes to the html markup.</p>
+    <img alt="tabs" src="assets/images/tabs_4.png" style="margin-left: 40px;" >
+
+
+
+
+
+
+
+
+
+<section id="css_structure">
+    <div class="page-header"><h3>CSS Structure</h3><hr class="notop"></div>
+<p>
+    Every form has next css files in the "head" sections:</p>
+    <img alt="html structure" src="assets/images/css_files.png" >
+<ul>
+    <li>
+        <strong>demo.css</strong> - this file is &nbsp;required only for demonstration purpose. It sets site background. The background image is located in the folder: &quot;<strong>img/</strong>&quot;;</li>
+    <li>
+        <strong>font-awesome.min.css</strong> - file is required for Font Awesome icons;</li>
+    <li>
+        <strong>j-forms.css</strong> - main css file. Contains all css properties. All sections in this file are commented and you can do your form customization. This file is duplicated for all forms and extensions.</li>
+</ul>
+<strong>j-forms.css</strong> contains all of the specific stylings for the page. The file is separated into sections using:
+<pre class="prettyprint lang-css linenums">
+/* Font
+=============================== */
+...
+/* Default
+=============================== */
+...
+/* Reset for -webkit / -moz browser
+=============================== */
+...
+/* Header
+=============================== */
+...
+/* Content
+=============================== */
+...
+/* Footer
+=============================== */
+...
+/* Dividers
+=============================== */
+...
+/* Gap-top / gap-bottom classes
+=============================== */
+...
+/* Labels
+=============================== */
+...
+/* Radio and checkbox
+=============================== */
+...
+/* Widget
+=============================== */
+...
+/* Inputs
+=============================== */
+...
+/* Placeholders
+=============================== */
+...
+/* Select
+=============================== */
+...
+/* Icons
+=============================== */
+...
+/* File for upload
+=============================== */
+...
+/* Buttons
+=============================== */
+...
+/* Tooltip
+=============================== */
+...
+/* Status message
+=============================== */
+...
+/* Disabled state
+=============================== */
+...
+/* Error state
+=============================== */
+...
+/* Success state
+=============================== */
+...
+/* Warning state
+=============================== */
+...
+/* Info state
+=============================== */
+...
+/* Ratings
+=============================== */
+...
+/* Social links
+=============================== */
+...
+/* Captcha
+=============================== */
+...
+/* Stepper
+=============================== */
+...
+/* Datapicker and Timepicker
+=============================== */
+...
+/* jQuery Slider
+=============================== */
+...
+/* Multistep form
+=============================== */
+...
+/* Modal form
+=============================== */
+...
+/* Pop-up form
+=============================== */
+...
+/* Grid layout
+=============================== */
+...
+/* Responsiveness
+=============================== */
+...
+/* Bootstrap compatibility
+=============================== */
+...
+/* Just Forms */
+/* version 2.0 */
+=============================== */
+...
+/* Just Forms */
+/* version 2.3 */
+=============================== */
+</pre>
+<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p>
+<p>
+    Example of the <strong>&quot;green</strong>&quot; color scheme from folder &quot;<strong>css/</strong>&quot;:</p>
+<pre class="prettyprint lang-css linenums">
+/* ========================================= */
+/* Color: green */
+/* ========================================= */
+
+/* Buttons
+=============================== */
+...
+
+/* Ratings
+=============================== */
+...
+
+/* Header + footer
+=============================== */
+...
+
+/* Other
+=============================== */
+...
+
+/* Radio and checkbox
+=============================== */
+...
+
+/* Toggle radio and toggle checkbox
+=============================== */
+...
+
+/* Tooltip
+=============================== */
+...
+
+/* Input
+=============================== */
+...
+/* TinyMCE input
+=============================== */
+...
+/* Image radio and Image checkbox
+=============================== */
+...
+/* Multiple Select Plugin
+=============================== */
+  </pre>
+  <p>If you want to make any changes with one of color schemes - just change the properties in the appropriate file in the folder &quot;<strong>css/</strong>&quot;.</p>
+</section>
+
+<section id="js_structure">
+    <div class="page-header"><h3>JavaScript Structure</h3><hr class="notop"></div>
+<p>Every form or template has some of the next files in the head sections:</p>
+    <img alt="html structure" src="assets/images/js_all_files.png" >
+    <ul>
+        <strong><li>j-forms-additions.js</strong> - additional methods for <strong>Just Forms full</strong> (show/hide password, hidden elements, select with conditions, etc.);</li>
+        <strong><li>j-forms-modal.js</strong> - js code for modal forms;</li>
+        <strong><li>j-forms-multistep.js</strong> - js code for multistep forms;</li>
+        <strong><li>jquery.1.11.1.min.js</strong> - jQuery library;</li>
+        <strong><li>jquery.form.min.js</strong> - jQuery Form Plugin allows you to use HTML forms with AJAX;</li>
+        <strong><li>jquery.ui.min.js</strong> - jQuery library for Sliders and Date Pickers. This library should be added to the forms with jQuery sliders and data pikers;</li>
+        <strong><li>jquery.maskedinput.min.js</strong> - jQuery plugin for masked inputs (date, phone, numbers, etc);</li>
+        <strong><li>jquery.placeholder.min.js</strong> - jQuery plugin for proper placeholder displaying in the old browsers;</li>
+        <strong><li>jquery.spectrum.min.js</strong> - jQuery plugin for color picker;</li>
+        <strong><li>jquery.stepper.min.js</strong> - jQuery plugin for nummeric stepper;</li>
+        <strong><li>jquery.ui.timepicker.min.js</strong> - jQuery plugin for time picker;</li>
+        <strong><li>jquery.ui.touch-punch.min.js</strong> - jQuery plugin for proper slider work on mobile devices;</li>
+        <strong><li>jquery.validate.min.js</strong> - jQuery plugin for client-side validation;</li>
+        <strong><li>additional-methods.min.js</strong> - additional methods for client-side validation (file validation, etc.)</li>
+    </ul>
+<p>If you want to add any extension to your form (such as date picker or color picker) - please be sure that you add appropriate js script to the "head" section on your html page.</p>
+</section>
+
+<section id="js_plugin">
+    <div class="page-header"><h3>JavaScript Plugins</h3><hr class="notop"></div>
+<h5>
+    <strong>Date Picker</strong></h5>
+<p style="margin-left: 40px;">
+    Demo for date pickers: &quot;<strong>extensions/datepicker.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">In this section we will discuss how you can add and configure date picker in your forms.</p>
+    <p style="margin-left: 40px;">First of all, you have to add <strong>jquery.ui.min.js</strong> script in the "head" section of the html page. Second, you have to configure date picker settings. </p>
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">In this step we add html markup for the date picker. Note: you have to configure some unique "id" attributes for date picker.</p>
+    <img alt="html structure" src="assets/images/js_plg_datepicker_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">In this step we add js code for the date picker. You can add js code directly to the html page where your form is placed. Or you can add it to the "main" js file of your website.</p>
+    <img alt="html structure" src="assets/images/js_plg_datepicker_2.png" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">In the <strong>"forms"</strong> folder you can find some form with date picker that has some differences. For instance, let's take a look to the <strong>"booking"</strong> form.</p>
+    <img alt="html structure" src="assets/images/js_plg_datepicker_3.png" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">The difference lies in the fact that we create a wrapper function for every DatePicker instance. This function is required if we want to create DatePicker instance when we want, but not when html page is loaded. All forms are sent to the server without page reloading - and we need to reload the DatePicker instance manually, every time when a form is submitted successfully. This is what we do every time after successful form submitting.</p>
+    <img alt="html structure" src="assets/images/js_plg_datepicker_4.png" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">The line - <strong>$( this ).valid();</strong> - is required for date picker validation at once after field is lost a focus. This improvement is binded with some DatePicker plugin features.</p>
+    <p style="margin-left: 80px;">More info about client-side form validation - in the <strong>JS Validation</strong> section.</p>
+<h5>
+    <strong>Time Picker</strong></h5>
+<p style="margin-left: 40px;">
+    Demo for time pickers: &quot;<strong>extensions/timepicker.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">First of all, you have to add js scripts in the "head" section of the html page. Second, you have to configure time picker settings.</p>
+    <img alt="html structure" src="assets/images/js_plg_timepicker_js.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">In this step we add html markup for the time picker. Note: you have to configure unique "id" attribute for time picker.</p>
+    <img alt="html structure" src="assets/images/js_plg_timepicker_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">In this step we add js code for the time picker. You can add js code directly to the html page where your form is placed. Or you can add it to the "main" js file of your website.</p>
+    <img alt="html structure" src="assets/images/js_plg_timepicker_2.png" style="margin-left: 80px;">
+<h5>
+    <strong>Color Picker</strong></h5>
+<p style="margin-left: 40px;">
+    Demo for color pickers: &quot;<strong>extensions/colorpicker.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">First of all, you have to add js scripts in the "head" section of the html page. Second, you have to configure color picker settings.</p>
+    <img alt="html structure" src="assets/images/js_plg_colorpicker_js.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">In this step we add html markup for the color picker. Note: you have to configure unique "id" attribute for color picker.</p>
+    <img alt="html structure" src="assets/images/js_plg_colorpicker_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">In this step we add js code for the color picker. You can add js code directly to the html page where your form is placed. Or you can add it to the "main" js file of your website.</p>
+    <img alt="html structure" src="assets/images/js_plg_colorpicker_2.png" style="margin-left: 80px;">
+<h5>
+    <strong>Nummeric Stepper</strong></h5>
+<p style="margin-left: 40px;">
+    Demo for numeric stepper: &quot;<strong>extensions/numeric_stepper.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">First of all, you have to add js scripts in the "head" section of the html page. Second, you have to configure numeric stepper settings.</p>
+    <img alt="html structure" src="assets/images/js_plg_numeric_js.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">In this step we add html markup for the numeric stepper. Note: you have to configure unique "id" attribute for numeric stepper.</p>
+    <img alt="html structure" src="assets/images/js_plg_numeric_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">In this step we add js code for the numeric stepper. You can add js code directly to the html page where your form is placed. Or you can add it to the "main" js file of your website.</p>
+    <img alt="html structure" src="assets/images/js_plg_numeric_2.png"  style="margin-left: 80px;">
+<h5>
+    <strong>Sliders</strong></h5>
+<p style="margin-left: 40px;">
+    Demo for sliders: &quot;<strong>extensions/sliders.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">First of all, you have to add js scripts in the "head" section of the html page. Second, you have to configure slider settings.</p>
+    <img alt="html structure" src="assets/images/js_plg_slider_js.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">In this step we add html markup for the slider. Note: you have to configure unique "id" attribute for slider.</p>
+    <img alt="html structure" src="assets/images/js_plg_slider_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">In this step we add js code for the slider. You can add js code directly to the html page where your form is placed. Or you can add it to the "main" js file of your website.</p>
+    <img alt="html structure" src="assets/images/js_plg_slider_2.png" style="margin-left: 80px;">
+<h5>
+    <strong>Masking</strong></h5>
+<p style="margin-left: 40px;">
+    Demo for masking: &quot;<strong>extensions/js_masking.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">First of all, you have to add js scripts in the "head" section of the html page. Second, you have to configure masking settings.</p>
+    <img alt="html structure" src="assets/images/js_plg_masking_js.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">In this step we add html markup for the masking. Note: you have to configure unique "id" attribute for masking.</p>
+    <img alt="html structure" src="assets/images/js_plg_masking_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">In this step we add js code for the masking. You can add js code directly to the html page where your form is placed. Or you can add it to the "main" js file of your website.</p>
+    <img alt="html structure" src="assets/images/js_plg_masking_2.png" style="margin-left: 80px;">
+<h5>
+    <strong>TinyMCE</strong></h5>
+    <p style="margin-left: 40px;">You can add WYSIWYG editor TinyMCE to any form.</p>
+    <p style="margin-left: 80px;">First, connect required  scripts in the html markup. Also do not forget to copy "tinymce" folder to your server. this folder contains all required files. Example forms with TinyMCE plugin you will find in the <strong>"forms/../contact_tinymce/"</strong> folder.</p>
+    <img alt="tinymce" src="assets/images/tiny_mce_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">Second, open "j-forms.js" file and add js code for tinymce plugin.</p>
+    <img alt="tinymce" src="assets/images/tiny_mce.png" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">you can configure this js code according to the TinyMCE API. Also this part of code already contains a validation function (for empty enter).</p>
+<h5>
+    <strong>Cloned elements</strong></h5>
+    <p style="margin-left: 40px;">Working form with cloned elements feature - in the <strong>"forms/../party_invitation_cloned_elements/"</strong> folder.</p>
+    <p style="margin-left: 40px;">
+    Demo for cloned elements: &quot;<strong>extensions/clone_elements.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">First of all, you have to add js scripts in the "head" section of the html page.</p>
+    <img alt="cloned elements" src="assets/images/clone_elem_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">Next, wrap a div for cloning in the div with some unique class.</p>
+    <img alt="cloned elements" src="assets/images/clone_elem_2.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 3:</strong></p>
+    <p style="margin-left: 80px;">Add js code required for the plugin.</p>
+    <img alt="cloned elements" src="assets/images/clone_elem_3.png" style="margin-left: 80px;">
+<h5>
+    <strong>Currency format</strong></h5>
+    <p style="margin-left: 40px;">
+    Demo for currency format: &quot;<strong>extensions/currency.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">Working form with currency format feature - in the <strong>"forms/../order_logic_field/"</strong> folder.</p>
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">First of all, you have to add js scripts in the "head" section of the html page.</p>
+    <img alt="currency" src="assets/images/currency_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">Next, define a data attribute and class for every field with currency feature.</p>
+    <img alt="currency" src="assets/images/currency_2.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 3:</strong></p>
+    <p style="margin-left: 80px;">Add js code required for the plugin.</p>
+    <img alt="currency" src="assets/images/currency_3.png" style="margin-left: 80px;">
+<h5>
+    <strong>Autocomplete</strong></h5>
+    <p style="margin-left: 40px;">
+    Demo for autocomplete: &quot;<strong>extensions/autocomplete.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">You have to add js library in the "head" section of the html page.</p>
+    <img alt="autocomplete" src="assets/images/autocomplete_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">Add id attribute to the input with autocomplete feature.</p>
+    <img alt="autocomplete" src="assets/images/autocomplete_2.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 3:</strong></p>
+    <p style="margin-left: 80px;">Add js code required for the autocomplete.</p>
+    <img alt="autocomplete" src="assets/images/autocomplete_3.png" style="margin-left: 80px;">
+<h5>
+    <strong>Google Map</strong></h5>
+    <strong>
+    <p style="margin-left: 40px;">
+    Simple Google Map</p></strong>
+    <p style="margin-left: 40px;">
+    Demo for google map: &quot;<strong>extensions/form_google_map.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">You have to add js library in the "head" section of the html page.</p>
+    <img alt="google map" src="assets/images/google_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">Add id attribute to the div with google map feature.</p>
+    <img alt="google map" src="assets/images/google_2.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 3:</strong></p>
+    <p style="margin-left: 80px;">Add js code required for the google map.</p>
+    <img alt="google map" src="assets/images/google_3.png" style="margin-left: 80px;">
+    <strong>
+    <p style="margin-left: 40px;">
+    Google Map with autocomplete as page background</p></strong>
+    <p style="margin-left: 40px;">
+    Demo for google map as background: &quot;<strong>extensions/form_map_background_autocomplete.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">You have to add js library in the "head" section of the html page. Also add a css styles for the map. It should has height and width equal to the height and width of the screen.</p>
+    <img alt="google map" src="assets/images/google_4.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">Add id attribute to the div with google map feature.</p>
+    <img alt="google map" src="assets/images/google_5.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 3:</strong></p>
+    <p style="margin-left: 80px;">Add js code required for the google map. This part of code contains a function for searching height of the screen every time when map is loaded.</p>
+    <img alt="google map" src="assets/images/google_6.png" style="margin-left: 80px;">
+    <img alt="google map" src="assets/images/google_7.png" style="margin-left: 80px;">
+<h5>
+    <strong>Youtube/Vimeo</strong></h5>
+    <p style="margin-left: 40px;">
+    Demo for video players: &quot;<strong>extensions/youtube_vimeo.html</strong>&quot;</p>
+    <p style="margin-left: 80px;">You can add a video player to any form. You have to add html markup with settings for the player.</p>
+    <img alt="video" src="assets/images/video.png" style="margin-left: 80px;">
+<h5>
+    <strong>Multiple Select Plugin</strong></h5>
+    <p style="margin-left: 40px;">
+    Demo for Multiple Select Plugin: &quot;<strong>extensions/custom_select.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">You have to add js library in the "head" section of the html page.</p>
+    <img alt="custom_select" src="assets/images/custom_select_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">Add "id" attribute to the select. Also pay attention to the "name" attribute. As it is a select with multiple values you have to add square brackets for proper array processing.</p>
+    <img alt="autocomplete" src="assets/images/custom_select_2.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 3:</strong></p>
+    <p style="margin-left: 80px;">Add js code required for the plugin.</p>
+    <img alt="autocomplete" src="assets/images/custom_select_3.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 4:</strong></p>
+    <p style="margin-left: 80px;">In case you want validate a field with multiple select plugin  - you have to add a custom line to the validation rules (see a pic). This line makes an exception for plugin hidden fields. Also do not forget to add quotes and brackets.</p>
+    <img alt="autocomplete" src="assets/images/custom_select_4.png" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">An example about how to process an array with values using php code you may find in the <strong>"forms/../subscribe_1"</strong> form.</p>
+    <img alt="autocomplete" src="assets/images/custom_select_5.png" style="margin-left: 80px;">
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="js_additions">
+    <div class="page-header"><h3>JS Additions</h3><hr class="notop"></div>
+<p>
+    Demo for js additions: &quot;<strong>extensions/js_additions.html</strong>&quot;</p>
+    <p>In this section we will discuss all javascript additions that are available in the <strong>Just Forms full</strong>. These additions will help your users during form submission process.</p>
+<h5>
+    <strong>Show / Hide Password</strong></h5>
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 40px;">You can add to your form "show/hide password" feature. Note: you have to configure unique "id" attribute for "show/hide password" feature.</p>
+    <img alt="html structure" src="assets/images/js_add_showpass_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">In this step we add js code for the "show/hide password" feature. You can add js code directly to the html page where your form is placed. Or you can add it to the "main" js file of your website.</p>
+    <img alt="html structure" src="assets/images/js_add_showpass_2.png" style="margin-left: 80px;">
+<h5>
+    <strong>Enabled input / button</strong></h5>
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 40px;">You can add to your form "enable/disable elements" feature. Note: you have to configure unique "id" attribute for "enable/disable elements" feature. Take a look to the <strong>class=&quot;disabled-view&quot;</strong> and attribute <strong>disabled</strong>. These class and attribute are required.</p>
+    <img alt="html structure" src="assets/images/js_add_disabled_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">In this step we add js code for the "enable/disable elements" feature. You can add js code directly to the html page where your form is placed. Or you can add it to the "main" js file of your website.</p>
+    <img alt="html structure" src="assets/images/js_add_disabled_2.png" style="margin-left: 80px;">
+<h5>
+    <strong>Hidden elements - checkbox</strong></h5>
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 40px;">You can add to your form "hidden elements" feature. Take a look to the <strong>class=&quot;hidden-elements&quot;</strong> and <strong>class=&quot;hidden&quot;</strong>. These classes are responsible for the next features:</p>
+    <ul style="margin-left: 40px;">
+        <li><strong>class=&quot;hidden-elements&quot;</strong> - this class is required for the js code. If this class is present - js code knows that current element should be hidden;</li>
+        <li><strong>class=&quot;hidden&quot;</strong> - this class is responsible for hiding elements. It contains css properties.</li>
+    </ul>
+    <img alt="html structure" src="assets/images/js_add_hidden_check_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">In this step we add js code for the "hidden elements" feature. You can add js code directly to the html page where your form is placed. Or you can add it to the "main" js file of your website.</p>
+    <img alt="html structure" src="assets/images/js_add_hidden_check_2.png" style="margin-left: 80px;">
+<h5>
+    <strong>Hidden elements - select</strong></h5>
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 40px;">You can add to your form "hidden elements" feature. Note: you have to configure unique "id" attribute for every hidden field. <strong>class=&quot;hidden&quot;</strong> - this class is responsible for hiding elements. It contains css properties. Main idea of this feature: when user select some value - some element appears.</p>
+    <img alt="html structure" src="assets/images/js_add_hidden_select_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">In this step we add js code for the "hidden elements" feature. You can add js code directly to the html page where your form is placed. Or you can add it to the "main" js file of your website.</p>
+    <img alt="html structure" src="assets/images/js_add_hidden_select_2.png" style="margin-left: 80px;">
+<h5>
+    <strong>Select with conditions</strong></h5>
+    <p style="margin-left: 40px;">Main idea of this feature: when user select some value in the first select field - appropriate values appear in the second select field. If user selects default value in the any select field - values in the next select fields should disappear.</p>
+    <p style="margin-left: 40px;">In this example we will work with cars and car models. You can add any values you want.</p>
+     <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">In the first step you have to add select fields to the html page. Note: you have to configure unique "id" attribute for every select field.</p>
+    <img alt="html structure" src="assets/images/js_add_cond_select_1.png" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">Because values in the select fields should appear dynamically - we should add values only for the first select field.</p>
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">Let's take a look to the js code</p>
+    <img alt="html structure" src="assets/images/js_add_cond_select_2.png" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">First - we have to create a list with models for every car. We do it in the <strong>select № 2</strong> section. For example, for the "BMW" car we added three models: M6, X5, Z3. We have created values for the select № 2.</p>
+    <p style="margin-left: 80px;">Second - for every model we have to define required colors. We do it in the <strong>select № 3</strong>. For example, for the model "BMW Z3" we added next colors: 'teal', 'purple', 'cyan'. That is, we have to create arrays with values for the next select field. Every array from these arrays must match to the value from current select field.</p>
+    <p style="margin-left: 40px;">
+    <strong>Step 3:</strong></p>
+    <p style="margin-left: 80px;">In this step we have to add js code that should dynamically add values to the next select fields if current select field is changed.</p>
+    <img alt="html structure" src="assets/images/js_add_cond_select_3.png" style="margin-left: 80px;">
+     <p style="margin-left: 80px;">If some value was selected in the first select field - we create list of values for the second select field and add this list to the html page.</p>
+    <img alt="html structure" src="assets/images/js_add_cond_select_4.png" style="margin-left: 80px;">
+     <p style="margin-left: 80px;">If some value was selected in the second select field - we create list of values for the third select field and add this list to the html page.</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="modal_form">
+    <div class="page-header"><h3>Modal Form</h3><hr class="notop"></div>
+<p>
+    Demo for modal forms: &quot;<strong>extensions/modal_form.html</strong>&quot;</p>
+<p>
+    You can easily use any form in modal window. All modal forms are responsive.</p>
+    <p>Insert your form to the div with <strong>class=&quot;modal-form&quot;</strong>. Add <strong>"id"</strong> attribute to this div.</p>
+    <img alt="html structure" src="assets/images/js_modal_form_1.png">
+    <p>Add a link with <strong>class=&quot;modal-open&quot;</strong> and reference to this <strong>"id"</strong>.</p>
+    <img alt="html structure" src="assets/images/js_modal_form_2.png">
+    <p>Add a close button to your form. Modal form will be hidden when this label will be clicked.</p>
+    <img alt="html structure" src="assets/images/js_modal_form_3.png">
+    <p>Add js code for a modal form. You can add js code directly to the html page where your form is placed. Or you can add it to the "main" js file of your website.</p>
+    <img alt="html structure" src="assets/images/js_modal_form_4.png">
+</section>
+<section id="multistep_form">
+    <div class="page-header"><h3>Multistep Form</h3><hr class="notop"></div>
+<p>
+    Three types of multistep form are allowed:
+    <ul>
+        <li>multistep form with steps - demo:&quot;<strong>extensions/multistep_with_steps.html</strong>&quot;</li>
+        <li>multistep form with clickable steps - demo:&quot;<strong>extensions/multistep_with_clickable_steps.html</strong>&quot;</li>
+        <li>multistep form with out steps - demo:&quot;<strong>extensions/multistep.html</strong>&quot;</li>
+    </ul>
+</p>
+<h5>
+    <strong>Multistep form with steps</strong></h5>
+    <p style="margin-left: 40px;">You can easily use any form in multistep window. All multistep forms are responsive. For example, we will work with next form: - &quot;<strong>extensions/multistep_with_steps.html</strong>&quot;</p>
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">Add js script to the "head" section of your html page.</p>
+    <img alt="html structure" src="assets/images/multistep_js.png" style="margin-left: 80px;">
+     <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">Add <strong>class=&quot;j-multistep&quot;</strong> to your form. Due to this class, js code knows that form will be with steps.</p>
+    <img alt="html structure" src="assets/images/multistep_1.png" style="margin-left: 80px;">
+     <p style="margin-left: 40px;">
+    <strong>Step 3:</strong></p>
+    <p style="margin-left: 80px;">Add to the div with <strong>class=&quot;content&quot;</strong> a div with steps. You can add as many steps as you want. Pay attention to the <strong>class=&quot;step&quot;</strong> and <strong>class=&quot;steps&quot;</strong>. These classes are required for proper form work.</p>
+    <img alt="html structure" src="assets/images/multistep_2.png" style="margin-left: 80px;">
+     <p style="margin-left: 40px;">
+    <strong>Step 4:</strong></p>
+    <p style="margin-left: 80px;">Add several <strong>fieldset</strong> tags to your form. Evenly distribute all rows with fields between all fieldsets. The optimum number of fieldsets - 3. But you can add as many fieldsets as you want. Note: quantity of the "fieldset" tags has to be equal to the quantity of the "step" divs from previous step.</p>
+    <img alt="html structure" src="assets/images/multistep_3.png" style="margin-left: 80px;">
+     <p style="margin-left: 40px;">
+    <strong>Step 5:</strong></p>
+    <p style="margin-left: 80px;">Add to the <strong>footer</strong> next buttons: "Next", "Back", "Submit". Note: <strong>class=&quot;multi-submit-btn&quot;</strong>, <strong>class=&quot;multi-next-btn&quot;</strong>, <strong>class=&quot;multi-prev-btn&quot;</strong> are required classes.</p>
+    <img alt="html structure" src="assets/images/multistep_4.png" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">Now your multistep form is ready for work.</p><h5>
+<h5>
+    <strong>Multistep form with out steps</strong></h5>
+    <p style="margin-left: 40px;">All rules for multistep form with steps are suitable for multistep form without steps. The only difference between these forms - you may not add "steps" to the html page. JS code will work properly without <strong>class=&quot;step&quot;</strong> and <strong>class=&quot;steps&quot;</strong>.
+    </p>
+<h5>
+    <strong>Multistep JS Code</strong></h5>
+    <p style="margin-left: 40px;">JavaScript code for multistep forms is multipurpose and doesn't depend from any "id" attribute. So, you can use it without any changes with any number of multistep forms at one page. More about how to validate multistep forms - in the <strong>New Form</strong> section.</p>
+    <p style="margin-left: 40px;">First, multistep script try to find a form with <strong>class=&quot;j-multistep&quot;</strong> on the page. And, for each form script configure settings (such as active step, active fieldset, show/hide buttons)</p>
+    <img alt="html structure" src="assets/images/multistep_5.png" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">When the "next" button is clicked - current fieldset became hidden, next fieldset became active, buttons are processed.</p>
+    <img alt="html structure" src="assets/images/multistep_6.png" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">When the "previous" button is clicked - current fieldset became hidden, previous fieldset became active, buttons are processed.</p>
+    <img alt="html structure" src="assets/images/multistep_7.png" style="margin-left: 40px;">
+<h5>
+    <strong>Multistep form with clickable steps</strong></h5>
+    <p style="margin-left: 40px;">You can use multistep form with clickable steps. It doesn't matter: you are a new buyer or you want to adjust your existing multistep form - an order of actions will be the same.</p>
+         <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">Open html markup and wrap every step with <strong>a</strong> tag with <strong>"step-link"</strong> class. Then add "data type" attribute with number of step. You may add as many steps as you need.</p>
+    <img alt="html structure" src="assets/images/multistep_8.png" style="margin-left: 80px;">
+     <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">Open <strong>"j-forms.js"</strong> file and add next js function. This function you will find in the <strong>"j-forms-multistep-clickable.js"</strong> file. This function is well commented and any problem shouldn't arise. Just copy it at the same place as in the demo file. Now your multistep form has clickable steps.</p>
+    <img alt="html structure" src="assets/images/multistep_9.png" style="margin-left: 80px;">
+    <img alt="html structure" src="assets/images/multistep_10.png" style="margin-left: 80px;">
+    <img alt="html structure" src="assets/images/multistep_11.png" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">Please pay attention to the next lines:</p>
+    <img alt="html structure" src="assets/images/multistep_12.png" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">These lines are required if you want to validate fields on current step when "step" button is clicked. More about how to combine multistep code with validation rules - in the <strong>"JS structure"</strong> subsection of the <strong>"New form"</strong> section.</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="multistep_form_logic">
+    <div class="page-header"><h3>Multistep Form with Logic</h3><hr class="notop"></div>
+    <p>In this section we will discuss variety extensions for the multistep forms. You can add these extensions to any multistep form (new one or already existing).</p>
+<h5>
+    <strong>Multistep Form with Form Details</strong></h5>
+    <p style="margin-left: 40px;">Demo: <strong>"extensions/multistep_form_with_details.html"</strong></p>
+    <p style="margin-left: 40px;">This extensions will help your user to check entered info. In the last step all data from the form will be shown.</p>
+    <p style="margin-left: 40px;">Specify id attribute for the input field.</p>
+    <img alt="multi logic" src="assets/images/multi_logic_1.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Add html markup to the last step</p>
+    <img alt="multi logic" src="assets/images/multi_logic_2.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Add js function for proper form work.</p>
+    <img alt="multi logic" src="assets/images/multi_logic_3.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Multistep Form with Variable Steps</strong></h5>
+    <p style="margin-left: 40px;">Demo: <strong>"extensions/multistep_form_with_variable_steps.html"</strong></p>
+    <p style="margin-left: 40px;">Working form: <strong>"forms/../multistep_form_with_variable_steps/"</strong></p>
+    <p style="margin-left: 40px;">In this type of extension user has the ability to choose what kind of info will be shown in the next step.</p>
+    <img alt="multi logic" src="assets/images/multi_logic_4.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Pay attention that by default all next steps are hidden. Only when user will click some button - appropriate div inside the fieldset became visible.</p>
+    <p style="margin-left: 40px;">Js function to make all work properly.</p>
+    <img alt="multi logic" src="assets/images/multi_logic_5.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Multistep Form with Dinamicaly Steps using Checkbox</strong></h5>
+    <p style="margin-left: 40px;">Demo: <strong>"extensions/multistep_with_dinamic_steps_checkbox.html"</strong></p>
+    <p style="margin-left: 40px;">Working form: <strong>"forms/../multistep_with_dinamic_steps_checkbox"</strong></p>
+    <p style="margin-left: 40px;">This type of extension allows to user add a step dynamically using checkbox. If user want enter additional info - next step will be shown.</p>
+    <p style="margin-left: 40px;">HTML markup</p>
+    <img alt="multi logic" src="assets/images/multi_logic_6.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Js function</p>
+    <img alt="multi logic" src="assets/images/multi_logic_7.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Multistep Form with Dinamicaly Steps using Radio Buttons</strong></h5>
+    <p style="margin-left: 40px;">Demo: <strong>"extensions/multistep_with_dinamic_steps_radio.html"</strong></p>
+    <p style="margin-left: 40px;">Working form: <strong>"forms/../multistep_with_dinamic_steps_radio"</strong></p>
+    <p style="margin-left: 40px;">This type of extension allows to user add a step dynamically using radio buttons. If user want enter additional info - next step will be shown.</p>
+    <p style="margin-left: 40px;">HTML markup</p>
+    <img alt="multi logic" src="assets/images/multi_logic_10.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Js function</p>
+    <img alt="multi logic" src="assets/images/multi_logic_11.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Multistep Form with Dinamicaly Steps using Select</strong></h5>
+    <p style="margin-left: 40px;">Demo: <strong>"extensions/multistep_with_dinamic_steps_select.html"</strong></p>
+    <p style="margin-left: 40px;">Working form: <strong>"forms/../multistep_with_dinamic_steps_select"</strong></p>
+    <p style="margin-left: 40px;">This type of extension allows to user add a step dynamically using dropdown field. If user want enter additional info - next step will be shown.</p>
+    <p style="margin-left: 40px;">HTML markup</p>
+    <img alt="multi logic" src="assets/images/multi_logic_12.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">HTML markup</p>
+    <img alt="multi logic" src="assets/images/multi_logic_13.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Multistep Form with Dinamicaly Steps using Input Field</strong></h5>
+    <p style="margin-left: 40px;">Demo: <strong>"extensions/multistep_with_dinamic_steps_input.html"</strong></p>
+    <p style="margin-left: 40px;">Working form: <strong>"forms/../multistep_with_dinamic_steps_input"</strong></p>
+    <p style="margin-left: 40px;">This type of extension allows to user add a step dynamically using input field. If user want enter additional info - next step will be shown.</p>
+    <p style="margin-left: 40px;">HTML markup</p>
+    <img alt="multi logic" src="assets/images/multi_logic_14.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">HTML markup</p>
+    <img alt="multi logic" src="assets/images/multi_logic_15.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Multistep Form with Dinamicaly Steps combine all types</strong></h5>
+    <p style="margin-left: 40px;">Demo: <strong>"extensions/multistep_with_dinamic_steps_all_types.html"</strong></p>
+    <p style="margin-left: 40px;">This type of extension combine all available types of logic (checkbox, radio, dropdown, input, select).</p>
+<h5>
+    <strong>Interesting Moments with Multistep Form with Dinamicaly Steps</strong></h5>
+    <p style="margin-left: 40px;">Some interesting moments. All rules are appropriate for all forms with dinamicaly steps:</p>
+    <p style="margin-left: 40px;">All extensions with dinamicaly steps require to check if user enter info in the additional step. And if yes - clear all fields in the additional step if a form was subbmitted from the first step, but not from the additional step. To fulfill this condition an additional js function was added.</p>
+    <img alt="multi logic" src="assets/images/multi_logic_8.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Also pay attention that we manually add a logic function to execute if first step is active. If you have several logic functions in one form - you have to add to the first step exactly the same function you have in the html markup. For example: first step contains checkbox logic fucntion, second step contains dropdown logic function. So, you have to add checkbox logic fucntion to execute when first step is active step.</p>
+    <img alt="multi logic" src="assets/images/multi_logic_9.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Next, pay attention to the next variables</p>
+    <img alt="multi logic" src="assets/images/multi_logic_16.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">These variables contain indexes of the fieldsets for every logic function. We will use these indexes for processing the buttons when appropriate step will be active.</p>
+    <img alt="multi logic" src="assets/images/multi_logic_17.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Note: when next button will be clicked only three logic functions will be executed. In this particulary example dropdown logic function (select field) is placed in the first step. So, it is not nessesary to execute it when next button is clicked.</p>
+    <p style="margin-left: 40px;">One more thing: if you are using working form with logic function - you have to execute the logic function after a form is submitted successfully. Note that you have to execute exactly the same function you have in the first step html markup. </p>
+    <img alt="multi logic" src="assets/images/multi_logic_18.png" style="margin-left: 40px;" >
+</section>
+
+
+
+
+<section id="order_logic">
+    <div class="page-header"><h3>Order Form with Calculations</h3><hr class="notop"></div>
+    <p>In this section we will discuss order forms with calculations.</p>
+    <p>
+    Demo for order form with checkboxes, radios and dropdowns: &quot;<strong>forms/../order_logic_field/</strong>&quot;</p>
+    <p>
+    Demo for order form with input fields: &quot;<strong>forms/../order_logic_check_radio/</strong>&quot;</p>
+        <p>
+    Demo for order form with date range: &quot;<strong>forms/../order_logic_date_range/</strong>&quot;</p>
+        <p>
+    Demo for order form with sliders: &quot;<strong>forms/../order_logic_sliders/</strong>&quot;</p>
+    <p>Demo for order form with chained dropdowns: &quot;<strong>forms/../order_logic_chained_dropdown/</strong>&quot;</p>
+<h5>
+    <strong>Order Form with checkboxes, radios and dropdowns</strong></h5>
+    <p style="margin-left: 40px;">Every variable in the html markup has "data-price" attribute. This attribute is required. Values of all this attributes are summed and final price obtained.</p>
+    <img alt="order logic" src="assets/images/order_logic_1.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In the js file we have several function. Every time when some field is changing - appropriate function obtain new price. calculateTotalPrice() function calculate total price.</p>
+    <img alt="order logic" src="assets/images/order_logic_2.png" style="margin-left: 40px;" >
+    <img alt="order logic" src="assets/images/order_logic_3.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Order Form with input fields</strong></h5>
+    <p style="margin-left: 40px;">This form is very simple. In the html markup some field has fixed value and some doesn't. Also unique id attributes are specified for every field.</p>
+    <img alt="order logic" src="assets/images/order_logic_4.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Js function grabs all values (predefined or not) and calculate a total price.</p>
+    <img alt="order logic" src="assets/images/order_logic_5.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Please pay attention to the next classes: <strong>"fruits-calculation"</strong> and <strong>"quantity-events"</strong>.</p>
+    <img alt="order logic" src="assets/images/order_logic_6.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;"><strong>"fruits-calculation"</strong> class is required for form calculation. If user click or change fields with values - "getFruitTotal()" function will be executed.</p>
+    <p style="margin-left: 40px;"><strong>"quantity-events"</strong> class adds events listeners for the "quantity" fields. If user press up and down buttons, scroll mousewheel - "getFruitTotal()" function will be executed.</p>
+    <img alt="order logic" src="assets/images/order_logic_7.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Order Form with date range</strong></h5>
+    <p style="margin-left: 40px;">Some variables in the html markup has "data-price" attribute. This attribute is required. Values of all this attributes are summed and final price obtained.</p>
+    <img alt="order logic" src="assets/images/order_logic_8.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In the <strong>"j-forms.js"</strong> file we have a few interesting moments. Let's take a look to these moments.</p>
+    <p style="margin-left: 40px;">Take a look to the "parseDate()" function.</p>
+    <img alt="order logic" src="assets/images/order_logic_9.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In this function you can select what type of the date format you want to use: "mm/dd/yyyy" or "dd/mm/yyyy". You can use any format. Just comment/uncomment appropriate line with code. Next, you also have to set a date format in the "dateFrom()" and "dateTo()" functions. Set the same format as you have already setted in the "parseDate()" function.</p>
+    <img alt="order logic" src="assets/images/order_logic_10.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Now your calculations using date range should work properly.</p>
+    <p style="margin-left: 40px;">All another code is well commented and any misunderstanding should not arise.</p>
+<h5>
+    <strong>Order Form with sliders</strong></h5>
+    <p style="margin-left: 40px;">Every slider in this form has a <strong>&lt;input type="hidden"&gt;</strong> field. This field is required for sending a value to the server. Also these fields have default values equal to the default values from the slider features.</p>
+    <img alt="order logic" src="assets/images/order_logic_11.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In the "j-forms.js" file every slider has it's own UI Slider instance. When user will drag a slider button - new value will be added to the <strong>&lt;label&gt;</strong> tag for displaying in the form and to the hidden input as we mentioned above.</p>
+    <img alt="order logic" src="assets/images/order_logic_12.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In the "square feets" and "feets price" sliders we execute "calculateTotalPrice()" function. This function will calculate total amount of the money and add it to the html page.</p>
+    <img alt="order logic" src="assets/images/order_logic_13.png" style="margin-left: 40px;" >
+
+<h5>
+    <strong>Order Form with chained dropdowns</strong></h5>
+    <p style="margin-left: 40px;">This form contains several "select" tags with related data. First "select" tag has options in the html markup, second and third tags - in js file.</p>
+    <img alt="order logic" src="assets/images/order_logic_14.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Js file has a few moments: pay attention to the two arrays. First array "models" is for notebook models. You can add as many as you wish. Second array "actions" is for service actions and prices. You can add as many services as you wish. Do not forget to "price" element for every new "action" attribute.</p>
+    <img alt="order logic" src="assets/images/order_logic_15.png" style="margin-left: 40px;" >
+
+
+
+
+
+</section>
+<section id="popup_form">
+    <div class="page-header"><h3>Popup Form</h3><hr class="notop"></div>
+<p>
+    Demo for popup forms: &quot;<strong>extensions/popup_form.html</strong>&quot;</p>
+<p>
+    You can easily use any form in pop up window. Two types of pop up forms are allowed: menu pop up form and bottom pop up form.</p>
+<h5>
+    <strong>Popup Menu Form</strong></h5>
+    <p style="margin-left: 40px;">Main idea of menu pop up foгm is that you can add any form to menu item on your website. And, when user will click this item - pop up menu form will appear. If you haven't enough space on your site - pop up menu form will solve this problem. You can use existen forms from "template" folder or "forms" folder or you can create your own form from scratch.</p>
+    <p style="margin-left: 40px;">For creating pop up menu form from scratch you have to make several steps:</p>
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">Add <strong>class=&quot;popup-list-open&quot;</strong> to the item of your menu.</p>
+    <img alt="html structure" src="assets/images/popup_list_open.png" style="margin-left: 80px;" >
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">Inside menu item with <strong>class=&quot;popup-list-open&quot;</strong> you have to add div with <strong>class=&quot;popup-list-wrapper&quot;</strong>. This div will hide the form when menu item isn't active.</p>
+    <img alt="html structure" src="assets/images/popup_list_wrapper.png" style="margin-left: 80px;" >
+    <p style="margin-left: 40px;">
+    <strong>Step 3:</strong></p>
+    <p style="margin-left: 80px;">Inside div with <strong>class=&quot;popup-list-wrapper&quot;</strong> you can add your form. You can add any kind of form. But if your form will be too big (will have too many rows and inputs) it may not please your users.</p>
+    <img alt="html structure" src="assets/images/popup_list_form.png" style="margin-left: 80px;" >
+    <p style="margin-left: 40px;">
+    <strong>Step 4:</strong></p>
+    <p style="margin-left: 80px;">In this step you have to add javascript code that will be responsible for the appearance of the form. So, first you have to add "id" attribute to your form. Second, you have to add code that will wait for user clicks. After that, when menu item will be clicked - the form will appear. When user will click anywhere outside the form - form will disappear. You can add this js code to the botton of the html page or in the main js file of your website. This code works well for desctop, tablet and mobile devices.</p>
+    <img alt="html structure" src="assets/images/popup_list_js.png" style="margin-left: 80px;" >
+
+    <p style="margin-left: 40px;">By default, the width of div with <strong>class=&quot;popup-list-wrapper&quot;</strong> is equal to 400px. So your form will have the same width. </p>
+    <p style="margin-left: 40px;">All elements inside pop up menu form are responsive. Pop up menu form is responsive as well. When a screen width will be equal to 620px or less - pop up menu form will have width equal to width of parent element (in this case - width of all menu). If there is no parent element, pop up menu form will have screen width.</p>
+    <p style="margin-left: 40px;">We have discussed all required classes for pop up menu form. <strong>class=&quot;popup-menu&quot;</strong> and <strong>class=&quot;popup-list&quot;</strong> - are not required classes and were added only for demonstration purpose.</p>
+<h5>
+    <strong>Popup Bottom Form</strong></h5>
+<p style="margin-left: 40px;">You can use existen forms from "template" folder or "forms" folder or you can create your own form from scratch. For creation pop up bottom form from scratch you have to make several steps:</p>
+<p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">Add div with <strong>class=&quot;popup-btm-400&quot;</strong> to your html page. There are two types of pop up bottom forms: <strong>class=&quot;popup-btm-400&quot;</strong> - 400px width, <strong>class=&quot;popup-btm-640&quot;</strong> - 640px width.</p>
+    <img alt="html structure" src="assets/images/poup_btm_both.png" style="margin-left: 80px;" >
+     <p style="margin-left: 80px;">You can select any width for your pop up bottom form.</p>
+     <p style="margin-left: 80px;">Note: all forms are responsive. When your form will be opened on mobile devices all rows will be placed one under another. As pop up bottom forms have fixed position on the page - users will not be able to scroll the forms if some rows will disappear behind the top of the screen. Therefore, it is the better way do not add a lot of rows to the form. Example of this issue you can see on the screenshots below:</p>
+    <img alt="html structure" src="assets/images/poup_btm_desc.png" style="margin-left: 80px;" >
+    <img alt="html structure" src="assets/images/poup_btm_mob.png" style="margin-left: 80px;" >
+    <p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">Main idea of pop up bottom form is that user clicks on label and form slips from the bottom. This goal can be achieved using <strong>&lt;input type=&quot;radio&quot;&gt;</strong>. That's why in this step you have to add <strong>&lt;input type=&quot;radio&quot;&gt;</strong> on the page.</p>
+    <img alt="html structure" src="assets/images/poup_btm_close_open.png" style="margin-left: 80px;" >
+    <p style="margin-left: 80px;">When input with <strong>id=&quot;popup-input-open&quot;</strong> is clicked - form slips from the bottom. When input with <strong>id=&quot;popup-input-close&quot;</strong> is clicked - form disappears. Note: by default input with <strong>id=&quot;popup-input-close&quot;</strong> has attribute <strong>checked</strong>, so the form isn't shown.</p>
+    <p style="margin-left: 40px;">
+    <strong>Step 3:</strong></p>
+    <p style="margin-left: 80px;">Now let's add a label to the page. When this label will be clicked - the form will arise.</p>
+    <img alt="html structure" src="assets/images/poup_btm_open.png" style="margin-left: 80px;" >
+    <p style="margin-left: 40px;">
+    <strong>Step 4:</strong></p>
+    <p style="margin-left: 80px;">In this step we have to add a wrapper to a form. This wrapper will hide a form outside the screen.</p>
+    <img alt="html structure" src="assets/images/poup_btm_wrapper.png" style="margin-left: 80px;" >
+    <p style="margin-left: 40px;">
+    <strong>Step 5:</strong></p>
+    <p style="margin-left: 80px;">In this final step the form will be added inside the wrapper from previous step. Also, we have to add a close button. Note that label with <strong>class=&quot;popup-btm-close&quot;</strong> has an attribute <strong>for=&quot;popup-input-close&quot;</strong>. Therefore, when this label (close-button) is clicked - form disappears.</p>
+    <img alt="html structure" src="assets/images/poup_btm_close.png" style="margin-left: 80px;" >
+    <p style="margin-left: 40px;">After you will make all previous steps done - your pop up bottom form will be ready for use.</p>
+</section>
+<section id="foot_head_form">
+    <div class="page-header"><h3>Form without Footer and Header</h3><hr class="notop"></div>
+    <p>
+    Demo for forms without footer and header: &quot;<strong>forms/smtp_sendmail/booking_without_footer_header</strong>&quot;</p>
+    <p>As you may guess, this type of form is created very easy. You have to delete <strong>"header"</strong> and <strong>"footer"</strong> class from your form. Button from <strong>"footer"</strong> you have to copy to the bottom of the <strong>"content"</strong>.</p>
+    <img alt="html structure" src="assets/images/footer_header.png">
+</section>
+<section id="js_validation">
+    <div class="page-header"><h3>JS Validation</h3><hr class="notop"></div>
+    <p>In the <strong>Just Forms full</strong> for client-side validation we will use jQuery Validation Plugin. In this section we will disccus how you can add validation to any field.</p>
+    <p>Demo for available validation methods: &quot;<strong>extensions/js_validation.html</strong>&quot;</p>
+    <p>If you want to add client-side validation to your form you have to make some steps:</p>
+    <p style="margin-left: 40px;">
+    <strong>Step 1:</strong></p>
+    <p style="margin-left: 80px;">First, you have to connect js scripts to your html page.</p>
+    <img alt="html structure" src="assets/images/js_validation_1.png" style="margin-left: 80px;" >
+<p style="margin-left: 80px;">
+    <ul style="margin-left: 80px;">
+        <li>&quot;<strong>jquery.validate.min.js</strong>&quot; - contains core validation mathods (required, length, value, etc)</li>
+        <li>&quot;<strong>additional-methods.min.js</strong>&quot; - contains additional validation methods ("remote" method for captcha, file for upload validation, etc)</li>
+    </ul>
+</p>
+<p style="margin-left: 40px;">
+    <strong>Step 2:</strong></p>
+    <p style="margin-left: 80px;">In this step we will discuss main steps of the validation process.</p>
+    <img alt="html structure" src="assets/images/js_validation_2.png" style="margin-left: 80px;" >
+    <p style="margin-left: 80px;">On the picture above you can see a js script that is responsible for the form validation. We can divide this script to the next sections:</p>
+    <ul style="margin-left: 80px;">
+        <li>&quot;<strong>@validation states + elements</strong>&quot; - define error class, success class, error element and other settings;</li>
+        <li>&quot;<strong>@validation rules</strong>&quot; - define rules(min length or required field) and messages('Please enter your value') for validation process;</li>
+        <li>&quot;<strong>Add class 'error-view'</strong>&quot; - define where error classes will be placed;</li>
+        <li>&quot;<strong>Add class 'success-view'</strong>&quot; - define where success classes will be placed;</li>
+        <li>&quot;<strong>Error placement</strong>&quot; - define where error messages will be placed;</li>
+        <li>&quot;<strong>Submit the form</strong>&quot; - contains instruction for performing if form doesn't have any errors.</li>
+    </ul>
+<p style="margin-left: 40px;">
+    <strong>Step 3:</strong></p>
+    <p style="margin-left: 80px;">So, let's validate some field:</p>
+    <img alt="html structure" src="assets/images/js_validation_3.png" style="margin-left: 80px;" >
+    <p style="margin-left: 80px;">Let's assume that we want to check if a field is empty.</p>
+    <img alt="html structure" src="assets/images/js_validation_4.png" style="margin-left: 80px;" >
+    <p style="margin-left: 80px;">We have added a rule and a message for our field. Now if user will try to submit a form when this field is empty - error message will appear.</p>
+    <p style="margin-left: 80px;">So, let's validate some group of elements:</p>
+    <img alt="html structure" src="assets/images/js_validation_5.png" style="margin-left: 80px;" >
+    <img alt="html structure" src="assets/images/js_validation_6.png" style="margin-left: 80px;" >
+    <p style="margin-left: 80px;">Rules for group elements are the same as for fields. But pay attention to the <strong>class=&quot;check&quot;</strong>. If you want to validate group of elements - this class is required. The validation script will be looking for this class because after div with <strong>class=&quot;check&quot;</strong> error message will be placed. So, if you validate some groups of checkboxes or radios - do not forget to add this class.</p>
+<p style="margin-left: 40px;">
+    <strong>Captcha validation:</strong></p>
+    <p style="margin-left: 80px;">Demo for captcha validation: &quot;<strong>extensions/captcha.html</strong>&quot;</p>
+    <p style="margin-left: 80px;">For captcha validation we will use "remote" method:</p>
+    <img alt="html structure" src="assets/images/js_validation_7.png" style="margin-left: 80px;" >
+    <img alt="html structure" src="assets/images/js_validation_8.png" style="margin-left: 80px;" >
+    <p style="margin-left: 80px;">Main idea of the "remote" method - script gets the captcha value from the form and (without page reloading) send this value to the server script (path to the server script is in the remote rule). If server script returns true - we have success validation. If not - we have error message. <strong>Just Forms full</strong> contains captcha that based on a PHP session. PHP script creates the image with a sum of the digits. And, user has to enter a valid sum to make successful captcha validation. You can add a captcha to any form. For proper captcha work do not forget to add "php/captcha" folder to your server.</p>
+<p style="margin-left: 40px;">
+    <strong>Delete validation:</strong></p>
+    <p style="margin-left: 80px;">Sometimes you may need to validate only particular field, not all fields. In this case you can comment (or delete) rules from &quot;<strong>@validation rules</strong>&quot; section.</p>
+    <img alt="html structure" src="assets/images/js_validation_10.png" style="margin-left: 80px;" >
+    <p style="margin-left: 80px;">In the picture above we have canceled validation of the group of elements which has name "checkbox".</p>
+    <p style="margin-left: 80px;">Note: you can canceled only client-side validation by doing this action. If you want to cancel server-side validation - take a look to the <strong>PHP Structure</strong> section.</p>
+<p style="margin-left: 40px;">
+    <strong>Submit the form:</strong></p>
+    <p style="margin-left: 80px;">After successful validation, data from the form should be sent to a server for further processing. <strong>jQuery Form Plugin</strong> send data to the server. Let's talk about <strong>Submit the form</strong> section using <strong>forms/booking1</strong> form like an example.</p>
+    <img alt="html structure" src="assets/images/js_validation_9.png" style="margin-left: 80px;" >
+    <p style="margin-left: 80px;"><strong>Submit the form</strong> section contains only one <strong>jQuery Form Plugin</strong> function - ajaxSubmit(). This function sends data from the form to the server without page reloading. This function contains next parts:</p>
+    <ul style="margin-left: 80px;">
+        <li>&quot;<strong>target:</strong>&quot; - response from server will be appended to this div;</li>
+        <li>&quot;<strong>error:</strong>&quot; - function that defines instruction if error will happen;</li>
+        <li>&quot;<strong>beforeSubmit:</strong>&quot; - function that defines what will happen during form submitting process (submit button will be disabled);</li>
+        <li>&quot;<strong>success:</strong>&quot; - function that defines what will happen if successful response from server will be received.</li>
+    </ul>
+    <p style="margin-left: 80px;">All js code is well commented so, any problem with understanding of the meaning of the code shouldn't arise.</p>
+</section>
+<section id="php_structure">
+    <div class="page-header"><h3>PHP Structure</h3><hr class="notop"></div>
+<p>In this section we will discuss structure of the php folder, php files and a few interesting moment.</p>
+<p>So, let's start from the beginning. For example, take a look to the &quot;<strong>forms/smtp_sendmail_database/order_multistep_with_steps</strong>&quot; form</p>
+<p><strong>php</strong> folder has next structure:</p>
+    <ul>
+        <li><strong>phpmailer</strong> folder - contains PHPMailer files;</li>
+        <li><strong>action.php</strong> - contains all php settings;</li>
+        <li><strong>csrf.php</strong> - php class for csrf protection;</li>
+        <li><strong>message.php</strong> - email template for sending through a form;</li>
+        <li><strong>mysql.php</strong> - php function to connect to a database using MySQLi extension;</li>
+        <li><strong>pdo.php</strong> - php function to connect to a database using PDO extension;</li>
+        <li><strong>validation.php</strong> - contains all server-side validation functions.</li>
+    </ul>
+<p>All working forms from <strong>"forms/"</strong> folder have similar structure so you don`t need to change a lot of code with other forms</p>
+<h4>
+    action.php</h4>
+<p>This is the main php file that contains all properties for the fields validation, <strong>upload_file"</strong> action, <strong>"duplicate_to_database"</strong> action and <strong>"send_letter"</strong> action. </p>
+<p><strong>action.php</strong> consists of next sections:</p>
+<h5>
+    <strong>Your data</strong></h5>
+    <img alt="html structure" src="assets/images/php_1.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In this section you define your email, name, subject and settings to access a database.</p>
+<h5>
+    <strong>Settings</strong></h5>
+    <img alt="html structure" src="assets/images/php_2.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In this section you have to choose what action you want to do with data received through form. If you want to do the action with data - set true, if you don`t want - set false.</p>
+    <p style="margin-left: 40px;">For example, if you don`t want to validate name, phone and message. And, you don`t have a database to duplicate the data - your "Settings" should look like below:</p>
+    <img alt="html structure" src="assets/images/php_3.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Variables</strong></h5>
+    <img alt="html structure" src="assets/images/php_4.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/php_5.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In this section PHP script work with data received through the form.</p>
+<h5>
+    <strong>CSRF protection</strong></h5>
+    <img alt="html structure" src="assets/images/php_6.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In this section PHP script validates token which was obtained by submitting a form. More about token in the <strong>"Security"</strong> section.</p>
+    <p style="margin-left: 40px;">Note: this section contains message that your clients will see if a token will be incorrect. You can change this message if you want.</p>
+<h5>
+    <strong>Validation</strong></h5>
+    <img alt="html structure" src="assets/images/php_7.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/php_8.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In this section PHP script validates all fields that you have defined as mandatory to validation in the <strong>"Settings"</strong> section. All validation methods for this form are located in the <strong>"validation.php"</strong> file.</p>
+    <p style="margin-left: 40px;">Main idea of the validation process:.</p>
+    <p style="margin-left: 40px;">Php script calls validation function for every variable, recieved through the form. If result of this validation process isn't equal to <strong>"valid"</strong> - we have an error and we are adding this error to the <strong>"$error_text"</strong> array.</p>
+    <img alt="html structure" src="assets/images/php_9.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">If <strong>"$error_text"</strong> array has any errors - script creates a list with errors and returns this list to the html page.</p>
+    <img alt="html structure" src="assets/images/php_10.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Upload file to the server</strong></h5>
+    <img alt="html structure" src="assets/images/php_11.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In this section, script downloads a file to the "upload_file" folder.</p>
+<h5>
+    <strong>Duplicate info to a database</strong></h5>
+    <img alt="html structure" src="assets/images/php_12.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In this section, script duplicates infp to a database. More about database - in the <strong>"Database"</strong> section.</p>
+<h5>
+    <strong>Sending email</strong></h5>
+    <img alt="html structure" src="assets/images/php_13.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/php_14.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In this section, script sends email. You can send email by two ways: using sendmail function or using smtp function. Depending on which way you will choose, you have to set <strong>$sendmail</strong> or <strong>$smtp</strong> to <strong>"true"</strong>. By default, all form using <strong>$sendmail</strong> function.</p>
+    <p style="margin-left: 40px;">Script sends the letter to the email that you defined in the <strong>"Your data"</strong> section. Also, you want to use smtp function - you have to configure smtp connection.</p>
+    <p style="margin-left: 40px;">In case you need the letter to be send to more than one email address just change the variable <strong>$recipients = false;</strong> Set this variable to <strong>"true"</strong> and add other email addresses. Replace <strong>"email@domain.com"</strong> with recipient's email, replace <strong>"name of recipient"</strong> with recipient's name (optional).</p>
+    <img alt="html structure" src="assets/images/php_15.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Note: your own email address you have to add at the “Your data” section.</p>
+    <p style="margin-left: 40px;">If you want to send a copy of the email to the sender - just add sender's email and sender's name to this section. See a screenshot below:</p>
+    <img alt="html structure" src="assets/images/php_16.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">In this particular case, variables $name and $email contain sender's name and sender's email, which were received through the form. Note: your form must contain fields for sender's name and sender's email if you want to send copy of the letter using this way.</p>
+    <p style="margin-left: 40px;">If you want to send successful message to the client after submitting – look at the "contact_captcha_autoresponse" or "contact_captcha_checkbox_autoresponse" forms. These forms differ how success message will be send: automatically or by selecting the checkbox.</p>
+<h5>
+    <strong>Success message</strong></h5>
+    <img alt="html structure" src="assets/images/php_17.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">If any error doesn't occurs - script creates a success message and returns this message to the html page. You can change it if you want.</p>
+<h4>
+    validation.php</h4>
+    <p>This php file contains validation methods for the input fields. You can easily modify or replace any of the methods.</p>
+    <img alt="html structure" src="assets/images/php_18.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/php_19.png" style="margin-left: 40px;" >
+<h4>
+    message.php</h4>
+    <p>This file contains html message template.</p>
+<h4>
+    response.php</h4>
+    <p>At the folders <strong>"form/../contact_captcha_autoresponse/"</strong> and <strong>"form/../contact_captcya_checkbox_autoresponse/"</strong> you can find file "response.php". This file contains html template that will be sent to the sender as a confirmation message.</p>
+<h4>
+    mysql.php and pdo.php</h4>
+    <p>This files contain functions that duplicate information from your form to the database. If you want to do that - don`t forget to change lines with information to get access to the database.</p>
+</section>
+<section id="new_form">
+    <div class="page-header"><h3>New Form</h3><hr class="notop"></div>
+<p>In this section we will create a new form. Based on this example, you can create your own forms or adjust already existing forms.</p>
+<p>Example of this working form: &quot;<strong>forms/smtp_sendmail_database/order_multistep_with_steps</strong>&quot;</p>
+<p>So, let`s start from the beginning and divide form creation to several steps:</p>
+    <ol>
+        <li>create folder structure</li>
+        <li>add all required javascript files</li>
+        <li>add all required css files</li>
+        <li>add all required php files</li>
+        <li>create html document, add form elements and scripts</li>
+        <li>create main javascript file with validation rules</li>
+        <li>create action.php file and add required validation rules</li>
+    </ol>
+<h5>
+    <strong>Folder structure</strong></h5>
+    <p style="margin-left: 40px;">We start by creating required folders.</p>
+    <img alt="html structure" src="assets/images/new_form_1.png" style="margin-left: 40px;" >
+    <ul style="margin-left: 40px;">
+        <li>css folder - contains all css files;</li>
+        <li>fonts folder - contains Font Awesome fonts;</li>
+        <li>img folder - contains background picture;</li>
+        <li>js folder - contains all js files;</li>
+        <li>php folder - contains all php files;</li>
+        <li>sql folder - contains dump of a database table;</li>
+        <li>upload_file folder - for downloaded files.</li>
+    </ul>
+    <p style="margin-left: 40px;">As all css files and Font Awesome fonts are the same for all forms - you can just copy these files from any form.</p>
+    <p style="margin-left: 40px;">Let's take a look to the js folder:</p>
+    <img alt="html structure" src="assets/images/new_form_2.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">For our new form we don't need all js files that are in js folder. But we will copy all files in case if our form will be updated in the future.</p>
+    <p style="margin-left: 40px;">Most important js file - &quot;<strong>j-forms.js</strong>&quot;. This file contains all js code required for proper form work.</p>
+<h5>
+    <strong>HTML structure</strong></h5>
+    <p style="margin-left: 40px;">In this section we will create &quot;<strong>index.html</strong>&quot; All elements and scripts will be added to this file. As we want to create multistep form - we have to abide by the rules. More details about multistep form - in the <strong>Multistep Form</strong> section.</p>
+    <img alt="html structure" src="assets/images/new_form_3.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">We have added all required scripts to the html page.</p>
+    <img alt="html structure" src="assets/images/new_form_4.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Do not forget to add <strong>class=&quot;j-multistep&quot;</strong> to our form. Pay attention to the <strong>action</strong> attribute. It contains the path to the file with server script. Also, take a look to the <strong>method</strong> and <strong>enctype</strong> attributes. These attributes are required as we want to build form with file uploaded feature.</p>
+    <p style="margin-left: 40px;">First fieldset.</p>
+    <img alt="html structure" src="assets/images/new_form_5.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Second fieldset.</p>
+    <img alt="html structure" src="assets/images/new_form_6.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/new_form_7.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Third fieldset.</p>
+    <img alt="html structure" src="assets/images/new_form_8.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Take a look to the div with <strong>id=&quot;response&quot;</strong>. Server message will be added into this div.</p>
+    <p style="margin-left: 40px;">Footer</p>
+    <img alt="html structure" src="assets/images/new_form_9.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">We finished with html markup. Let's do some js magic))</p>
+<h5>
+    <strong>JS structure</strong></h5>
+    <p style="margin-left: 40px;">In this section we will create main js file that contains all js code for our form.</p>
+    <p style="margin-left: 40px;">First, we create a function. This function will include all other function and instruction.</p>
+    <img alt="html structure" src="assets/images/new_form_10.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Add phone masking.</p>
+    <img alt="html structure" src="assets/images/new_form_11.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Add datepicker.</p>
+    <img alt="html structure" src="assets/images/new_form_12.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Add settings for the jQuery Validation Plugin. Note: we validate our form (form "id" attribute is equal to "id" in the "j-forms.js").</p>
+    <img alt="html structure" src="assets/images/new_form_13.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Add validation rules. Pay attention to the file extensions. You can add any correct file extension. More about jQuery Validation Plugin you can read on the official plugin page from the "Credits" section.</p>
+    <img alt="html structure" src="assets/images/new_form_14.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Add validation messages. You can change these messages as you wish.</p>
+    <img alt="html structure" src="assets/images/new_form_15.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Add rules for error view and error messages.</p>
+    <img alt="html structure" src="assets/images/new_form_16.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Next we start to work with jQuery Form Plugin. "submitHandler" section contains only one function that responsible for submitting the form without page reloading.</p>
+    <img alt="html structure" src="assets/images/new_form_17.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">We send form data to the server. If we get response from the server - we delete "error-view" and "success-view" classes from the form, make the submit button available.</p>
+    <p style="margin-left: 40px;">But if we get a "success message" class form the server - it means that form submitted successfully. In this case, we can reset the form, update datapickers, make all buttons disabled while success message is shown.</p>
+    <img alt="html structure" src="assets/images/new_form_18.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">After that, we want to hide success message. And, we create a function that will contain some rules: delete success message, make all buttons available, hide all buttons except "next" button (as we work with multistep form), make first fieldset and first step active (only for multistep form)</p>
+    <img alt="html structure" src="assets/images/new_form_19.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Next we have to add js code for multistep form. These code is multipurpose and doesn't depend from any "id" attribute.</p>
+    <img alt="html structure" src="assets/images/new_form_20.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">There is some interesting moment with form validation. We don't want to allow users to go to the next fieldset if current fieldset has any validation errors. So, every time when "next" button will be clicked - we will validate all fields from current fieldset. And, if any errors will occur - "next" button won't work.</p>
+    <img alt="html structure" src="assets/images/new_form_21.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">With "previous" button - nothing won't change. "Previous" button will work no matter if any validation errors exist in the fieldset or not.</p>
+    <img alt="html structure" src="assets/images/new_form_22.png" style="margin-left: 40px;" >
+<h5>
+    <strong>PHP structure</strong></h5>
+    <p style="margin-left: 40px;">Next step - is to create action.php and add all required configuration. First we will create section with POST variables.</p>
+    <img alt="html structure" src="assets/images/php_4.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/php_5.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;"><strong>$file_name</strong> - php variable that contains name for uploaded file. If you will decide not to upload file to a server - this variable won't be empty and message will send properly.</p>
+    <p style="margin-left: 40px;"><strong>$row_id</strong> - php variable that contains ID of the last row from database. If you will decide not to duplicate data to a database - this variable won't be empty and message will send properly.</p>
+    <p style="margin-left: 40px;"><strong>$valid_types</strong> - php variable that contains allowed types for the uploaded file.</p>
+    <p style="margin-left: 40px;">After <strong>"Variables"</strong> section we will create <strong>"CSRF protection"</strong> section where we validate token received through the form.</p>
+    <img alt="html structure" src="assets/images/new_form_25.png" style="margin-left: 40px;" >
+    <p style="margin-left: 80px;">Note: token name has to be equal to the token name from the html page.</p>
+    <img alt="html structure" src="assets/images/new_form_24.png" style="margin-left: 80px;" >
+    <img alt="html structure" src="assets/images/new_form_23.png" style="margin-left: 80px;" >
+    <p style="margin-left: 40px;">After <strong>"CSRF protection"</strong> section we will create <strong>"Settings"</strong> section where we define actions with data received through the form.</p>
+    <img alt="html structure" src="assets/images/php_2.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Next step - <strong>"Your data"</strong> section where you define your email, name and database settings to get access to it.</p>
+    <img alt="html structure" src="assets/images/php_1.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;"><strong>$mysql_table</strong> - variable that contains name of the table in the database.</p>
+    <p style="margin-left: 40px;">Further - the <strong>"Validation"</strong> section.</p>
+    <img alt="html structure" src="assets/images/php_7.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/new_form_26.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">All validation function will be placed at the "validation.php" file that is connected at the top of the "action.php".</p>
+    <img alt="html structure" src="assets/images/new_form_27.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Next section - <strong>Upload file to the server</strong></p>
+    <img alt="html structure" src="assets/images/php_11.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Next section - <strong>Duplicate info to a database</strong></p>
+    <img alt="html structure" src="assets/images/php_12.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Next section - <strong>Sending email</strong></p>
+    <img alt="html structure" src="assets/images/new_form_28.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/new_form_29.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/new_form_30.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">And final section - <strong>Success message</strong>. Section contains the success message.</p>
+    <img alt="html structure" src="assets/images/new_form_31.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">For proper email sending - do not forget to copy <strong>"phpmailer"</strong> folder that contains PHPMailer class.</p>
+<h5>
+    <strong>validation.php</strong></h5>
+    <p style="margin-left: 40px;">This file contains validation functions which were used in the "Validation" section of the action.php.</p>
+    <img alt="html structure" src="assets/images/php_18.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/php_19.png" style="margin-left: 40px;" >
+<h5>
+    <strong>mysql.php and pdo.php</strong></h5>
+    <p style="margin-left: 40px;">This files contain functions that allow you to duplicate all information from the form to the database.</p>
+    <p style="margin-left: 40px;">mysql.php file</p>
+    <img alt="html structure" src="assets/images/new_form_33.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">pdo.php file</p>
+    <img alt="html structure" src="assets/images/new_form_32.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/new_form_34.png" style="margin-left: 40px;" >
+<h5>
+    <strong>message.php</strong></h5>
+    <p style="margin-left: 40px;">All message templates have the same structure. You can easily modify any template (add or delete any variable).</p>
+    <img alt="html structure" src="assets/images/new_form_35.png" style="margin-left: 40px;" >
+<p style="margin-left: 40px;">Let's summarize: we have created multistep form with steps from scratch. We have discussed all interesting moments and functions. All other forms have the same structure and validation rules. So, this section will help you understand how to create a new form.</p>
+</section>
+<section id="mailchimp">
+    <div class="page-header"><h3>Subscribe form with MailChimp</h3><hr class="notop"></div>
+    <p style="margin-left: 40px;">In this section you will find an example how you can create a subscribe form using MailChimp API.</p>
+    <p style="margin-left: 40px;">Demo of this form you can find in the <strong>"forms/subscribe_mailchimp/"</strong> folder.</p>
+    <p style="margin-left: 40px;">Let's take a look to the file structure:</p>
+    <img alt="mailchimp" src="assets/images/mailchimp_1.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">You have to copy a <strong>"MCAPI.class"</strong> on your server. This file contains a PHP class to work with MailChimp API without any special knowledge. More about available methods you can read <a href="https://github.com/jbrooksuk/MCAPI-PHP">here</a>.</p>
+    <p style="margin-left: 40px;"><strong>"subscribe_message"</strong> file contains an email template. This "confirm" email will be sent to every user who passed subscription process successfully.</p>
+    <p style="margin-left: 40px;">Now, let's take a look to the "action.php" file where subscription function is placed. By default, this function has only one method - listSubscribe(). This method is required if you want to add an user's email to your subscribe list.</p>
+    <img alt="mailchimp" src="assets/images/mailchimp_2.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Pay attention to the underlined values. For proper work you have to add your own MailChimp API key and MailChimp list ID. <strong>"MCAPI.class"</strong> will use these values for connection to the MailChimp API and copying user's email to your subscription list.</p>
+    <p style="margin-left: 40px;">MailChimp API key you may find in the admin panel of your MailChimp account.</p>
+    <img alt="mailchimp" src="assets/images/mailchimp_4.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">MailChimp list ID you may find in the admin panel of your MailChimp account.</p>
+    <img alt="mailchimp" src="assets/images/mailchimp_3.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Next, if subscription will be successful - the user will receive an custom "confirmation" email ("subscribe_message.php"). You may configure this template as you want.</p>
+</section>
+<section id="few_forms">
+    <div class="page-header"><h3>Several Forms at One Page</h3><hr class="notop"></div>
+    <p>It is very easy to use several forms at one page. You can add any quantity of forms to the one page. You can add any kind of forms to the one page: multistep forms, pop up forms or classic forms. Let us start.</p>
+    <p>
+    Demo for several forms at one page: &quot;<strong>forms/smtp_sendmail/login_recovery_1.html</strong>&quot;</p>
+    <p>For example, we will combine "booking" form and "callback" form at one page.</p>
+<h5>
+    <strong>Step 1:</strong></h5>
+    <p style="margin-left: 40px;">For better understanding, we will add a specific prefix to every form. <strong>"book"</strong> - for the  booking form, <strong>"call"</strong> - for the callback form.</p>
+    <p style="margin-left: 40px;">So, first step - rename <strong>"j-folder"</strong> for every form according with prefixes. Copy folder with new name to one folder.</p>
+    <img alt="html structure" src="assets/images/several_forms_1.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Step 2:</strong></h5>
+    <p style="margin-left: 40px;">We have to add html markup for both forms at one page.</p>
+    <p style="margin-left: 40px;">Create independent tokens for every form.</p>
+    <img alt="html structure" src="assets/images/several_forms_2.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/several_forms_3.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Do not pay attention that html markup isn't optimal. We will fix it later.</p>
+<h5>
+    <strong>Step 3:</strong></h5>
+    <p style="margin-left: 40px;">In this step we will change path in the <strong>"action"</strong> attribute and <strong>"id"</strong> attribute for every form. We start to divide our forms.</p>
+    <img alt="html structure" src="assets/images/several_forms_4.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Step 4:</strong></h5>
+    <p style="margin-left: 40px;">As all forms have the same structure and fields, it may happen that fields with equal <strong>"id"</strong> attribute are present in both forms. In this step we will change equal <strong>"id"</strong>, according to unique form prefix. In this particular case, we have three equal <strong>"id"</strong>: "phone", "name", "response". In your case equal <strong>"id"</strong> may not be present.</p>
+    <p style="margin-left: 40px;">New <strong>"id"</strong> attributes for booking form</p>
+    <img alt="html structure" src="assets/images/several_forms_5.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">New <strong>"id"</strong> attributes for callback form</p>
+    <img alt="html structure" src="assets/images/several_forms_6.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Step 5:</strong></h5>
+    <p style="margin-left: 40px;">As we have changed <strong>"id"</strong> for the fields and forms - we have to change <strong>"id"</strong> in the "j-forms.js" files.</p>
+    <p style="margin-left: 40px;">Change <strong>"id"</strong> in the <strong>"j-forms.js"</strong> for booking form.</p>
+    <img alt="html structure" src="assets/images/several_forms_7.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/several_forms_8.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">Change <strong>"id"</strong> in the <strong>"j-forms.js"</strong> for callback form.</p>
+    <img alt="html structure" src="assets/images/several_forms_9.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/several_forms_10.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Step 6:</strong></h5>
+    <p style="margin-left: 40px;">Now both forms are independent from each other, both forms don't have equal fields and <strong>"id"</strong>.</p>
+    <p style="margin-left: 40px;">In this step we will connect all required scripts and files in the "head" section of the html page.</p>
+    <img alt="html structure" src="assets/images/several_forms_11.png" style="margin-left: 40px;" >
+    <img alt="html structure" src="assets/images/several_forms_12.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">We have added scripts and files to the html page. But as we can see every file is connecting several times. It doesn't make sense and we want to optimize our html code.</p>
+    <p style="margin-left: 40px;">As all form have the same structure - there is no difference from which folder we will connect any script. that is why we can delete all repeating connection.</p>
+    <img alt="html structure" src="assets/images/several_forms_13.png" style="margin-left: 40px;" >
+    <p style="margin-left: 40px;">We have deleted all repeating connection. If you want, you can combine j-forms-call.js and j-forms-book.js files in one file.</p>
+    <p style="margin-left: 40px;">If you want the forms have different colors - add appropriate color files and add "color" class to the each form.</p>
+    <img alt="html structure" src="assets/images/several_forms_14.png" style="margin-left: 40px;" >
+<h5>
+    <strong>Several multistep forms at one page</strong></h5>
+    <p style="margin-left: 40px;">There are no special rules for several multistep forms at one page. You have to complete all steps from this section and from <strong>Multistep Form</strong> section (if you are creating multistep form from scratch). If you want to have multistep form with validation - please take a look to the <strong>New Form</strong> section. In this section we created a new multistep form with validation and discussed some interesting moments about multistep form validation.</p>
+
+    <p>Let us summarize: All this may seem scary, but do not worry - this is easier than it seems. As all form from the pack have the similar folder structure, you just have to divide files for one form from files for another form. After you will move through previous steps – your forms will be ready for work independently from each other.</p>
+</section>
+<section id="security">
+    <div class="page-header"><h3>Security</h3><hr class="notop"></div>
+    <p><strong>Just Forms full</strong> contains strong defence against XSS attack and CSRF attack. You have already known about captcha, let's take a look to another defence methods.</p>
+<h5>
+    <strong>CSRF protection</strong></h5>
+<p style="margin-left: 40px;">
+    Each working form contains next code in the HTML markup:</p>
+    <img alt="html structure" src="assets/images/token_1.png" style="margin-left: 40px;">
+<p style="margin-left: 40px;">
+    At the beginning of each HTML document, we include PHP class <strong>csrf.php</strong> and create instance of this class. This instance is necessary and helps create unique token. Every time, when a form is submitted, this token is checked on the server. If token isn't correct, user have to reload web page where form is placed. So, no one has opportunity to connect to your form and submit it with your information, like login and password.</p>
+<div class="alert alert-info" style="margin-left: 40px;">
+<strong>Tips</strong>: If you have several forms at one page - you have to create unique token for each form. It can be done with easy using instance of the <strong>csrf.php</strong> class.</div>
+<p style="margin-left: 40px;">Example with two tokens at one page:</p>
+    <img alt="html structure" src="assets/images/token_2.png" style="margin-left: 40px;">
+<p style="margin-left: 40px;">
+    File <strong>action.php</strong> contains section with CSRF token validation:</p>
+    <img alt="html structure" src="assets/images/token_3.png" style="margin-left: 40px;">
+<p style="margin-left: 40px;">
+    At this section we create instance of <strong>csrf.php</strong> again and use <strong>check_token()</strong> method to check a token received through the form.</p>
+<p style="margin-left: 40px;">
+    Next, take a look to the code at <strong>csrf.php</strong> file.</p>
+    <img alt="html structure" src="assets/images/token_4.png" style="margin-left: 40px;">
+    <img alt="html structure" src="assets/images/token_5.png" style="margin-left: 40px;">
+<p style="margin-left: 40px;">
+    This code are  well commented and it easy to understand. Pay attention to the <strong>timeout</strong> variable at the beginning of the code. This variable contains time period for each token in seconds. By default token will be valid 300 seconds (5 minutes). You can set any time period for tokens.</p>
+<div class="alert alert-info" style="margin-left: 40px;">
+<strong>Tips</strong>: Be sure that your users will have enough time to fill and submit the form on your site. Do not set too short time periods for tokens.</div>
+<h5>
+    <strong>XSS protection</strong></h5>
+<p style="margin-left: 40px;">
+    All input data are validated on the server. PHP function htmlspecialchars() and strip_tags() are used for validation. Also, all variables, except the tokens, have limited length. Examples of data validation you can find at the <strong>PHP Structure</strong> section.</p>
+<div class="alert alert-info" style="margin-left: 40px;">
+<strong>Notice</strong>: Server side validation of all input data is requered! It will help you to secure your information.</div>
+</section>
+<section id="recaptcha">
+    <div class="page-header"><h3>Google reCaptcha</h3><hr class="notop"></div>
+    <p>Live demo how google reCaptcha works you can find on the demo site of the <strong>"Just Forms full"</strong> version <a target="_blank" href="http://lazy-coding.com/j-forms-full/forms/call_me_google_captcha/index.php">here</a>.</p>
+    <p>Demo forms for the google reCaptcha - in the <strong>"forms/smtp_sendmail_google_reCaptcha_2.0"</strong> folder.</p>
+    <p>Inside any forms you can use two types of the captcha: build-in captcha and google reCaptcha. Build-in captcha was discussed in the previous sections ("HTML Structure" and "JS Validation"). In this section we will discuss the google reCaptcha v 2.0: how to install, customize and use.</p><h5>
+    <strong>Step 1:</strong></h5>
+    <p style="margin-left: 40px;">First of all you have to go to this google page:<a href="https://www.google.com/recaptcha/intro/index.html">https://www.google.com/recaptcha/intro/index.html</a> and click "get reCaptcha" button. Sign in into your google account and register your site where the captcha will be placed.</p>
+    <img alt="captcha" src="assets/images/recaptcha_1.png" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">You should get two keys: a site key - this key you have to insert into your html form</p>
+    <img alt="captcha" src="assets/images/recaptcha_2.png" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">and the secret key: this key is required  for the validation process on your server</p>
+    <img alt="captcha" src="assets/images/recaptcha_3.png" style="margin-left: 40px;">
+    <h5><strong>Step 2:</strong></h5>
+    <p style="margin-left: 40px;">Open a html form and add next script to the bottom of the <strong>"head"</strong> section:</p>
+    <img alt="captcha" src="assets/images/recaptcha_4.png" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">Next, insert a div with google reCaptcha instance in the html markup. Use <strong>"site key"</strong> from the previous step to insert inside this div.</p>
+    <img alt="captcha" src="assets/images/recaptcha_5.png" style="margin-left: 40px;">
+    <h5><strong>Step 3:</strong></h5>
+    <p style="margin-left: 40px;">Now your reCaptcha works. But we should add verification rules to the php scripts, because now reCaptcha is only a nice looking checkbox in the user's browser.</p>
+    <p style="margin-left: 40px;">Please open your <strong>"j-folder/php"</strong> folder and copy a <strong>"reCaptcha"</strong> folder if it isn't there yet. <strong>"reCaptcha"</strong> folder you may find in the demo form in the "forms/smtp_sendmail_google_reCaptcha_2.0" folder. <strong>"reCaptcha"</strong> folder contains all required classes for proper verifications.</p>
+    <img alt="captcha" src="assets/images/recaptcha_6.png" style="margin-left: 40px;">
+    <h5><strong>Step 4:</strong></h5>
+    <p style="margin-left: 40px;">Open <strong>"action.php"</strong> file and add next lines of code:</p>
+    <img alt="captcha" src="assets/images/recaptcha_7.png" style="margin-left: 40px;">
+    <p style="margin-left: 40px;"><strong>$secret</strong> variable contains a secret key from the first step.</p>
+    <p style="margin-left: 40px;">Before <strong>"Sending email"</strong> section you have to add <strong>"reCaptcha verification" section.</strong>. In this section we will include a class for the reCaptcha verification. If an answer from the google server will not be a success - error message will arise.</p>
+    <img alt="captcha" src="assets/images/recaptcha_8.png" style="margin-left: 40px;">
+    <h5><strong>Step 5:</strong></h5>
+    <p style="margin-left: 40px;">If the form will be submitted successfully  - you have to reload reCaptcha instance. Add a line with code to the <strong>"j-forms.js"</strong></p>
+    <img alt="captcha" src="assets/images/recaptcha_9.png" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">If you want to set custom language for your reCaptcha - just add language abbreviation to the line with script</p>
+    <img alt="captcha" src="assets/images/recaptcha_10.png" style="margin-left: 40px;"><p></p>
+
+    <h5><strong>Step 6:</strong></h5>
+    <p style="margin-left: 40px;">By default, reCaptcha appears inside an iframe. This iframe isn't responsive. If you want to make your captcha responsive (at least, it shouldn't break your site on mobile devices) - you have to connect <strong>"google-recaptcha.css"</strong> file to your form. This file you may find in the "forms/smtp_sendmail_google_reCaptcha_2.0" folder.</p>
+    <p style="margin-left: 40px;">You can connect this file like on the pic below or you can just copy the code from this file to your main css file ("j-forms.css") to avoid one more request to the server.</p>
+    <img alt="captcha" src="assets/images/recaptcha_11.png" style="margin-left: 40px;"><p></p>
+
+
+    <strong>Useful links:</strong></h5><br />
+    <a href="https://developers.google.com/recaptcha/intro">Google Docs</a><br />
+    <a href="https://github.com/google/ReCAPTCHA">the library to work with reCaptcha</a><br />
+    <a href="https://developers.google.com/recaptcha/docs/language">Language abbreviations</a><br />
+</section>
+<section id="database">
+    <div class="page-header"><h3>Database</h3><hr class="notop"></div>
+<p>In this section we will discuss how to work with database (DB): - how to create new connection to the DB&nbsp; -how to duplicate data to the DB&nbsp; - and how you can configure work with DB (add or delete new field and variables).</p>
+<p>For example, we will take &nbsp;<strong>forms/smtp_sendmail_database/error_report</strong>&nbsp; form. For example we assume that variables, recieved through the form, contain next data:</p>
+<pre class="prettyprint lang-php linenums" style="margin-left: 40px;">
+  $message   = &quot;Message from your client&quot;;
+  $email     = &quot;Your client's email&quot;;
+  $file_name = &quot;some-file-name.jpg&quot;;
+</pre>
+<h5>
+    <strong>Step 1: Create table in the DB</strong></h5>
+<p style="margin-left: 40px;">We need to create a table in the DB to store data recieved through the form. Dump of the mysql table is placed in the &nbsp;<strong>sql</strong>&nbsp; folder. You can use this dump for table creation in your DB on your server. Data types for the rows in the DB table you can define by your own based on the type of data recieved through the form.</p>
+<p style="margin-left: 40px;">Pay attention to table's name and column's names: table's name and prefix for every column's name are equal.</p>
+<img src="assets/images/table_name.jpg" alt="table name" style="margin-left: 40px;">
+<p style="margin-left: 40px;">It did like that for better user experience. If you want to change table name in your DB - don't forget to change table name in the <strong>action.php</strong>. All prefixes in the column names will change automatically.</p>
+<img src="assets/images/action_table_name.jpg" alt="table name in the action.php" style="margin-left: 40px;">
+<p style="margin-left: 40px;">So, step №1 - create table in the DB with name that you want.</p>
+<h5>
+    <strong>Step 2: DB connection</strong></h5>
+<p style="margin-left: 40px;">Two types of DB connection are allowed in every working form from the pack: <strong>mysqli</strong> and <strong>PDO</strong> connection. To select the type of connection you have to set &nbsp;<strong>true</strong>&nbsp; or &nbsp;<strong>false</strong>&nbsp; value to the appropriate variables in the action.php.</p>
+<img src="assets/images/action_type_connect.jpg" alt="select DB connection" style="margin-left: 40px;">
+<p style="margin-left: 40px;">In this section we are working with PDO connection. Work with mysqli connection is similar.</p>
+<h5>
+    <strong>Step 3: Variables</strong></h5>
+<p style="margin-left: 40px;">We collect all variables from our form and passing them to the function. This function contains all setting for connection with DB.</p>
+<p style="margin-left: 40px;">PDO function:</p>
+<img src="assets/images/pdo.jpg" alt="PDO function" style="margin-left: 40px;">
+<p style="margin-left: 40px;">mysqli function:</p>
+<img src="assets/images/mysqli.jpg" alt="mysqli function" style="margin-left: 40px;">
+<p style="margin-left: 40px;">All settings for the DB access we already configured in the action.php</p>
+<img src="assets/images/db_settings.jpg" alt="DB connect settings" style="margin-left: 40px;">
+<h5>
+    <strong>Step 4: Processing data</strong></h5>
+<p style="margin-left: 40px;">PDO function uses DB settings and sets connection with DB. When all data will be recorded to the DB, function will create <strong>$row_id</strong> variable. This variable contains ID of the last row with new data in the DB table. This ID will send in message. If connection to the DB won't be successful - <strong>$row_id</strong> will contain error description and also will be send in message.</p>
+<p style="margin-left: 40px;">So, if our previous action were successful - we will see a new row in our table:</p>
+<img src="assets/images/new_row.jpg" alt="new row" style="margin-left: 40px;">
+<h5>
+    <strong>Add new variable</strong></h5>
+<p style="margin-left: 40px;">You can easily add or remove data from the connection function. For example we add new variable <strong>$phone</strong> that contains a phone number of your client.</p>
+<p style="margin-left: 40px;">Step №1: create new row in the DB table:</p>
+<img src="assets/images/new_phone_row.jpg" alt="new record" style="margin-left: 40px;">
+<p style="margin-left: 40px;">Step №2: add variable to the function:</p>
+<img src="assets/images/new_var.jpg" alt="new variable" style="margin-left: 40px;">
+<p style="margin-left: 40px;">Step №3: process variable and store it to the DB:</p>
+<img src="assets/images/new_var_func_pdo.jpg" alt="new variable" style="margin-left: 40px;">
+<img src="assets/images/new_var_func_mysqli.jpg" alt="new variable" style="margin-left: 40px;">
+<p style="margin-left: 40px;">Step №4: enjoy new record in the DB :-)) </p>
+<img src="assets/images/new_phone_table.jpg" alt="new record" style="margin-left: 40px;">
+<p style="margin-left: 40px;">If you want to delete any variable - repeat previous steps but delete variable.</p>
+</section>
+<section id="csv">
+    <div class="page-header"><h3>CSV Files</h3><hr class="notop"></div>
+<p>Forms with CSV feature are placed in the <strong>"source/forms/smtp_sendmail_csv"</strong> folder.</p>
+<p>You have the opportunity to save all data received through the form to a CSV file. Let's take a look to the callback form which you can find in the <strong>"smtp_sendmail_csv/call_me/"</strong> folder.</p>
+<p>First of all, in the folder structure you will find a new folder - <strong>"csv_file"</strong>. In this folder a CSV file will be placed.</p>
+<img src="assets/images/csv1.png" alt="csv">
+<p>File <strong>"action.php"</strong> contains a section named <strong>"Duplicate info to a CSV file"</strong>. This section contains all code required for CSV file processing (create a new file, add a new line to the CSV file, etc.)</p>
+<img src="assets/images/csv2.png" alt="csv">
+<img src="assets/images/csv3.png" alt="csv">
+<p>Take a look to the <strong>"$header_csv"</strong> array. This array contains names for the rows in the CSV file. If a CSV file doesn't yet exist - the script will use this array to create rows in the file. If you want to rename any row - you should change this array.</p>
+<p><strong>"$variable_csv"</strong> array contains variables with data received through the form. Add the variables you want to be added to a CSV file.</p>
+<p>Note: if you will change one of these arrays (add or delete variable, change a name, etc) - do not forget to change another one. As both arrays have the same order for row names and variables.</p>
+<p>Next, take a look to the <strong>"$file_csv"</strong> variable. This variable contains a name for the future CSV file. In this particular case - a file will have a <strong>"j-forms-csv"</strong> name and will be placed in the <strong>"csv_file"</strong> folder.</p>
+</section>
+<section id="extensions">
+    <div class="page-header"><h3>Extensions</h3><hr class="notop"></div>
+<p>
+    You have already known about folder &quot;<strong>extensions/</strong>&quot;. These extensions represent the features of the <strong>Just Forms full</strong> framework that allows you to create and customize any forms with client-side validation.</p>
+</section>
+
+<section id="faq">
+    <div class="page-header"><h3>FAQ</h3><hr class="notop"></div>
+<h5>
+    <strong>How to redirect to thanks page after submitting the form?</strong></h5>
+    <p style="margin-left: 40px;">Redirect after success message:</p>
+    <p style="margin-left: 40px;">Please, add next line with code to your main javascript file (j-forms.js)</p>
+    <img src="assets/images/after_success_message.png" alt="faq" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">Redirect without success message:</p>
+    <p style="margin-left: 80px;">First, you have to change your js code. In this case javascript code will redirect you to your page if an answer from the server will be <strong>not</strong> error message.</p>
+    <img src="assets/images/without_success_message.png" alt="faq" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">Second, you have to comment (or delete) success message in the <strong>"action.php"</strong>:</p>
+    <img src="assets/images/without_success_message_1.png" alt="faq" style="margin-left: 80px;">
+<h5>
+    <strong>After form submission I get error/success message at "action.php" file but not inside form.</strong></h5>
+    <p style="margin-left: 40px;">If you get error/success message at "action.php" file like below:</p>
+    <img src="assets/images/js_error_1.png" alt="faq" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">instead to get message like below:</p>
+    <img src="assets/images/js_error_2.png" alt="faq" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">It means that you have an error in javascript code and javascript code doesn't work. To find out what exactly error you have you may use two tools:</p>
+    <ul style="margin-left: 40px;">
+        <li><strong>Chrome dev tools</strong> in the Chrome browser - it is build-in tools for developer. Open your page and press F12. In the "Console" tab you should see js error description;</li>
+        <li><strong>FireBug plugin</strong> for Firefox browser - it is not build-in tools and you have to download it first. You may download it on official web site <a href="https://addons.mozilla.org/en-US/firefox/addon/firebug/">here</a>. After installation you have to open your page and press F12. In the "Console" tab you should see js error description.</li>
+    </ul>
+    <p style="margin-left: 40px;">Now you know what exactly error you have.</p>
+    <p style="margin-left: 40px;">Next, for avoiding a lot of errors please be sure that:</p>
+    <ul style="margin-left: 40px;">
+        <li>you don't connect the same js script twice to your html page (for example jQuery library, at the top and bottom of the html page);</li>
+        <li>you have a proper order of js scripts at your page (for Just Forms js plugins- use default form as an example of proper order). Js scripts should be connected as below:
+            <ul>
+                <li>jQuery library</li>
+                <li>any js plugin...</li>
+                <li>jQuery validation plugin</li>
+                <li>jQuery additional methods (for file or captcha validation)</li>
+                <li>any js plugin...</li>
+                <li>j-forms.js</li>
+            </ul>
+        </li>
+    </ul>
+
+
+<h5>
+    <strong>I want to create a button instead a link to open a modal form</strong></h5>
+    <p style="margin-left: 40px;">It is very easy. Take a look to the screenshot. All you need to do - is to set your own css properties for the button. As this button is beyond the form wrapper and css properties won't work for this button.</p>
+    <img src="assets/images/button_modal.png" alt="new record" style="margin-left: 40px;">
+<h5>
+    <strong>How to duplicate the message to the user that sent the form?</strong></h5>
+    <p style="margin-left: 40px;">You can do it by two ways</p>
+    <p style="margin-left: 40px;">First:
+    <p style="margin-left: 40px;">You can find <strong>"contact_captcha_autoresponse"</strong> and <strong>"contact_captcha_checkbox_autoresponse"</strong> forms in the pack. These forms allow you to send copy of the email to the sender. The difference between those forms is how the confirmation letter will be sent: automaticaly or if sender will check a checkbox.</p>
+    <p style="margin-left: 40px;">Second:
+    <p style="margin-left: 40px;">Every form has opportunity to send letter to many recipients. You can find this code in the <strong>"Sending email"</strong> section in the <strong>"action.php"</strong> file. Change <strong>"$recipients"</strong> to <strong>"true"</strong> and replace email address with variable <strong>"$email"</strong>. <strong>"$email"</strong> contains sender's email address.</p>
+    <img src="assets/images/dupl_1.png" alt="new record" style="margin-left: 40px;">
+    <img src="assets/images/dupl_2.png" alt="new record" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">Please note: for proper wok your html form should contain <strong>"Email"</strong> field. And in the <strong>"action.php"</strong> you should validate <strong>"$email"</strong> variable. Because without sender's email where will you send a letter?))
+    <p style="margin-left: 40px;">In the <strong>"recipients"</strong> section required only email. Name is optional, therefore you may don't add it.</p>
+<h5>
+    <strong>I want to upload a file. When I click on the button to choose the file to upload, I get "C://fakepath/filename". I want to see a real path to the file instead the fake path.</strong></h5>
+    <p style="margin-left: 40px;">The browser changes the real path to "C:\fakepath\"" so malicious sites can't use javascript to glean information about your computer's directory structure.</p>
+    <p style="margin-left: 40px;">Try to change "onchange" function in your html page: <strong>onchange="document.getElementById('file-one').value = this.files[0].name;"</strong></p>
+
+
+
+
+
+<h5>
+    <strong>I want to to add a new field to my form.</strong></h5>
+    <p>If you want to add a new variable - you have to add it in all required files. For example you want to add "New name" field. Take a look to the pics and use them as an example:</p>
+    <p style="margin-left: 40px;"><strong>index.php</strong> file:</p>
+    <img src="assets/images/new_field_1.png" alt="new field" style="margin-left: 40px;">
+    <p style="margin-left: 40px;"><strong>j-forms.js</strong> file:</p>
+    <img src="assets/images/new_field_2.png" alt="new field" style="margin-left: 40px;">
+    <p style="margin-left: 40px;"><strong>action.php</strong> file:</p>
+    <img src="assets/images/new_field_3.png" alt="new field" style="margin-left: 40px;">
+    <img src="assets/images/new_field_4.png" alt="new field" style="margin-left: 40px;">
+    <img src="assets/images/new_field_5.png" alt="new field" style="margin-left: 40px;">
+    <p style="margin-left: 40px;"><strong>validation.php</strong> file:</p>
+    <img src="assets/images/new_field_6.png" alt="new field" style="margin-left: 40px;">
+    <p style="margin-left: 40px;"><strong>message.php</strong> file:</p>
+    <img src="assets/images/new_field_7.png" alt="new field" style="margin-left: 40px;">
+    <p style="margin-left: 40px;"><strong>If database feature is used</strong></p>
+    <p style="margin-left: 40px;"><strong>action.php</strong> file:</p>
+    <img src="assets/images/new_field_8.png" alt="new field" style="margin-left: 40px;">
+    <p style="margin-left: 40px;"><strong>mysql.php</strong> file:</p>
+    <img src="assets/images/new_field_9.png" alt="new field" style="margin-left: 40px;">
+    <p style="margin-left: 40px;"><strong>pdo.php</strong> file:</p>
+    <img src="assets/images/new_field_10.png" alt="new field" style="margin-left: 40px;">
+    <p style="margin-left: 40px;"><strong>database table dump</strong> file:</p>
+    <img src="assets/images/new_field_11.png" alt="new field" style="margin-left: 40px;">
+    <p style="margin-left: 40px;"><strong>If csv feature is used</strong></p>
+    <p style="margin-left: 40px;"><strong>action.php</strong> file:</p>
+    <img src="assets/images/new_field_12.png" alt="new field" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">If you want to delete any field - take all steps in reverse order.</p>
+
+
+
+
+
+
+
+
+
+<h5>
+    <strong>I have changed variable's name and now my form doesn't work. What should I do?</strong></h5>
+    <p style="margin-left: 40px;">Before you will change any variable's name in the <strong>"action.php"</strong>, please, take a look to the <strong>"forms"</strong> folder from the pack. You will find there 2 folders:
+<ul style="margin-left: 40px;">
+<li>smtp_sendmail - this folder contains ready for use forms with smtp or sendmail function. Use this forms only for sending emails;</li>
+<li>smtp_sendmail_database - this folder contains ready for use forms with smtp or sendmail function + database functions. Use this form if you want to copy data to the database.</li>
+<li>smtp_sendmail_csv - this folder contains ready for use forms with smtp or sendmail function + "save to csv file" feature. Use this form if you want to save data to a csv file.</li>
+</ul>
+<p style="margin-left: 40px;">For example, you want to use sendmail function without duplicate data to a database - please, select one form from <strong>"smtp_sendmail"</strong> folder. Do not modify forms from another folders because you can make some mistakes and your form won't work.</p>
+<p style="margin-left: 40px;">Next, after you will select a form, install it to your server, according to the instruction from <strong>"Quick Installation"</strong> section. Do not modify any variables (you will do it later).</p>
+<p style="margin-left: 40px;">Submit the form. It should works properly.</p>
+<p style="margin-left: 40px;">And, if you want to change any variables name - please change it only after your form will be successfully installed to your server. In other case - some errors may occur and it will be difficult to find these errors. Also, if you want to modify any variable - you have to modify it in all files: "action.php", "validation.php", "message.php"</p>
+<h5>
+    <strong>I want to attach a photo to an email / I do not get attached photos when I receive an email</strong></h5>
+    <p style="margin-left: 40px;">If you want to send uploaded file to your email you have to add next line of code: <strong>$mail->AddAttachment("../upload_file/".$file_name);</strong> (if you use a form with multiple upload - you have to add two lines, for every file name - $first_file_name and $second_file_name). Place it anywhere between <strong>$mail = new PHPMailer();</strong> and <strong>!$mail->Send();</strong> in the <strong>"action.php"</strong>.</p>
+    <p style="margin-left: 40px;">For sendmail() function.</p>
+    <img src="assets/images/file_1.png" alt="faq" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">For smtp() function.</p>
+    <img src="assets/images/file_2.png" alt="faq" style="margin-left: 40px;">
+
+    <p style="margin-left: 40px;">By default, file will uploaded to the <strong>"upload_file"</strong> folder on your server. But maybe your host doesn’t allow to upload files directly to the server and saves them to some folder in your host account. Please check, have you any uploaded files in the <strong>"upload_file"</strong> folder</p>
+    <p style="margin-left: 40px;">And if <strong>"upload_file"</strong> folder doesn’t contain any file – <strong>$mail->AddAttachment("../upload_file/".$file_name);</strong> function won’t work.</p>
+    <p style="margin-left: 40px;">So, you have to find where your file was uploaded and add the correct path to the <strong>$mail->AddAttachment();</strong> function.</p>
+<h5>
+    <strong>How to change allowed file extensions/change allowed file size?</strong></h5>
+    <p style="margin-left: 40px;">Client side validation of the file (in the user's browser) - open "j-forms.js" file and add your extension:</p>
+    <img src="assets/images/file_3.png" alt="faq" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">Server side validation of the file (on your server) - open "action.php" file and add your extensions:</p>
+    <img src="assets/images/file_4.png" alt="faq" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">Max file size you can set in the "validation.php" file. For example:
+    <ul style="margin-left: 40px;">
+        <li>$attach_file_size = 1*1024*1024; - it will be 1 MB</li>
+        <li>$attach_file_size = 2*1024*1024; - it will be 2 MB</li>
+    </ul>
+    </p>
+    <img src="assets/images/file_5.png" alt="faq" style="margin-left: 40px;">
+
+<h5>
+    <strong>I want to have upload file fields NOT required and still have all validation rules for files.</strong></h5>
+    <p style="margin-left: 40px;">Please open "action.php" file and set "false" for files validation:</p>
+    <img src="assets/images/file_validation_1.png" alt="faq" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">Next, change lines for files in the <strong>"Validation"</strong> section. If <strong>$_FILES</strong> array will contain user files - apply validation rules. Pay attention, that "file1" and "file2" values are name attributes in the html markup for <strong>&lt;input type="file"&gt;</strong> tags. If you have one file field in your form - do the same actions with your file name and validation rules.</p>
+    <img src="assets/images/file_validation_2.png" alt="faq" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">And do not forget to disable/comment out file validation rules in the "j-forms.js" file:</p>
+    <img src="assets/images/file_validation_3.png" alt="faq" style="margin-left: 40px;">
+
+
+<h5>
+    <strong>I have an error message: Incorrect token. Please reload this webpage. How can I add/delete security token? Why web page with form has ".php" extension?</strong></h5>
+    <p style="margin-left: 40px;">Web page with form has ".php" extension because the form has php security token. In the top of every default form pages you may find php code.</p>
+    <p style="margin-left: 40px;"><strong>If you need a token (blue line on pics):</strong></p>
+    <p style="margin-left: 80px;">In case you need a token - the extension of the web page where form is placed should be ".php", because there is php function. Also be sure that name of the token is the same in all files</p>
+    <p style="margin-left: 80px;"><strong>index.php</strong> file:</p>
+    <img src="assets/images/token_delete_1.png" alt="token" style="margin-left: 80px;">
+    <p style="margin-left: 80px;"><strong>action.php</strong> file:</p>
+    <img src="assets/images/token_delete_4.png" alt="token" style="margin-left: 80px;">
+    <img src="assets/images/token_delete_6.png" alt="token" style="margin-left: 80px;">
+    <p style="margin-left: 40px;"><strong>If you don't need a token (red line on pics):</strong></p>
+    <p style="margin-left: 80px;">You may delete code for token in the html markup and in the "action.php" file. Now your form doesn't have a token and you may set any extension for the html page - ".html" or ".php" </p>
+    <p style="margin-left: 80px;"><strong>html markup</strong></p>
+    <img src="assets/images/token_delete_1.png" alt="token" style="margin-left: 80px;">
+    <img src="assets/images/token_delete_2.png" alt="token" style="margin-left: 80px;">
+    <p style="margin-left: 80px;"><strong>action.php</strong> file:</p>
+    <img src="assets/images/token_delete_3.png" alt="token" style="margin-left: 80px;">
+    <img src="assets/images/token_delete_4.png" alt="token" style="margin-left: 80px;">
+    <img src="assets/images/token_delete_5.png" alt="token" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">The same actions you could make for post code, credit card number, etc.</p>
+
+
+<h5>
+    <strong>I want to change phone mask / phone validation rule.</strong></h5>
+    <p style="margin-left: 40px;">Phone number has two types of validation. You have to change both of them.</p>
+    <p style="margin-left: 40px;"><strong>Client side validation (in the user browser):</strong></p>
+    <p style="margin-left: 80px;">Open "j-forms.js" file and change a line with mask like on the pic below. Now you have a phone mask like "(xxxxx xxx xxx)" in the js file.</p>
+    <p style="margin-left: 80px;">Home page of the mask plugin - <a href="http://digitalbush.com/projects/masked-input-plugin">here</a></p>
+    <img src="assets/images/phone_mask_1.png" alt="phone" style="margin-left: 80px;">
+    <p style="margin-left: 40px;"><strong>Server side validation (on your server):</strong></p>
+    <p style="margin-left: 80px;">Open "validation.php" file and change a line with regular expression like on the pic below. Now you have a phone mask like "(xxxxx xxx xxx)" in the php file.</p>
+    <p style="margin-left: 80px;">Live php regular expression tester - <a href="http://www.phpliveregex.com/">here</a></p>
+    <img src="assets/images/phone_mask_2.png" alt="phone" style="margin-left: 80px;">
+
+<h5>
+    <strong>How could my form accept email addresses like "any_chars@domain.com" only? I want use regular expression for my email.</strong></h5>
+    <p style="margin-left: 40px;">Email address has two types of validation. You have to change both of them.</p>
+    <p style="margin-left: 40px;"><strong>Client side validation (in the user browser):</strong></p>
+    <p style="margin-left: 80px;">You have to create custom validation rule for email with your own regular expression. Take a look to the pic below:</p>
+    <img src="assets/images/email_mask_1.png" alt="email" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">Open "j-forms.js" file and add a new function for email validation. After, use this function in validation process. Now an email address like "any_chars@domain.com" will be valid in the js file.</p>
+    <p style="margin-left: 80px;">Home page of the jQuery validation plugin - <a href="http://jqueryvalidation.org/">here</a></p>
+    <p style="margin-left: 40px;"><strong>Server side validation (on your server):</strong></p>
+    <p style="margin-left: 80px;">Open "validation.php" file and change a line with regular expression like on the pic below. Now an email address like "any_chars@domain.com" will be valid in the php file.</p>
+    <img src="assets/images/email_mask_2.png" alt="email" style="margin-left: 80px;">
+
+<h5>
+    <strong>I want to use TinyMCE Editor, but I get some chars instead french/greek symbols. I want to get TinyMCE message with all styles (bold, etc).</strong></h5>
+    <p style="margin-left: 40px;">Message contains special html chars instead french/greek symbols (ΧΡΗΣΤΟΣ) because all data is processed with htmlspecialchars() php function. You can comment next line in the "action.php" file (see pic - blue line) and all chars will be sent as it is.</p>
+    <p style="margin-left: 40px;">If you want to send a message with all styles - you have to add minor changes to the "action.php" file (see pic - red line).</p>
+    <img src="assets/images/tiny_mce_2.png" alt="tiny_mce" style="margin-left: 40px;">
+
+<h5>
+    <strong>How can I change the width of my form?</strong></h5>
+    <p style="margin-left: 40px;">All forms have two variants of width:</p>
+    <ul style="margin-left: 40px;">
+        <li><strong>class="wrapper-640"</strong> - 640 px;</li>
+        <li><strong>class="wrapper-400"</strong> - 400 px.</li>
+    </ul>
+    <p style="margin-left: 40px;">For example, you want multistep form will have a width 800px. Open <strong>"j-forms.css"</strong> file and make changes:</p>
+    <img src="assets/images/new_width_1.png" alt="new record" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">Now your form have a width - 800 px, and it will be responsive when screen width will be equal to 620px. If you want your form will be responsive earlier, for example when screen width will be 750 px, change next line of code:</p>
+    <img src="assets/images/new_width_2.png" alt="new record" style="margin-left: 40px;">
+<h5>
+    <strong>I have an error message: Mailer Error: Could not execute: /usr/sbin/sendmail -t –i.</strong></h5>
+    <p style="margin-left: 40px;">If you sometimes get this error - you are probably using a shared hosting. Quality of this hosting is not good. You can try to change your hosting.
+    <p style="margin-left: 40px;">If you always get this error:</p>
+    <p style="margin-left: 80px;">First, this type of error arise when you don't have permission to use directory <strong>"usr/sbin"</strong> or there is no installed sendmail function in this directory. You can create a support ticket and ask your host about sendmail.</p>
+    <p style="margin-left: 80px;">Second, you can try to comment one line of code in the <strong>"action.php"</strong>. Find the next line: <strong>"$mail->isSendmail();"</strong> in the "Sending email" section and comment it. This line should look like this <strong>"//$mail->isSendmail();"</strong>.</p>
+<h5>
+    <strong>Hello, I encounter an error: Mailer Error: SMTP connect () failed when I submit the form. Why this error?</strong></h5>
+    <p style="margin-left: 40px;">This error occurs because many reasons: smtp settings, your host settings etc. This error means that your form can't connect to your mail server. Most probable, error occurs because smtp settings on your host. Every host has his own smtp settings(port connection, authentication rules) You can make a request to your host support and ask them about how you can solve this problem.</p>
+    <p style="margin-left: 40px;">You have to know what kind of error is appears when you try to connect to the server. Because this issue can occur for many reasons.</p>
+<h5 style="margin-left: 40px;">
+    <strong>Step 1:</strong></h5>
+    <p style="margin-left: 80px;">First, please open <strong>"action.php"</strong> and find next line:</p>
+    <img src="assets/images/smtp_1.png" alt="new record" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">Replace 0 with 1. So the line will be like:</p>
+    <img src="assets/images/smtp_2.png" alt="new record" style="margin-left: 80px;">
+<h5 style="margin-left: 40px;">
+    <strong>Step 2:</strong></h5>
+    <p style="margin-left: 80px;">Comment the <strong>"j-forms.js"</strong> file with all js code in the <strong>"index.php"</strong> file:</p>
+    <img src="assets/images/smtp_3.png" alt="new record" style="margin-left: 80px;">
+<h5 style="margin-left: 40px;">
+    <strong>Step 3:</strong></h5>
+    <p style="margin-left: 80px;">Submit your form as usual, with all valid information (because server-side validation doesn't allow you to submit a form). And after form will be submitted - you should see a message from the PHPMailer with smtp error:</p>
+    <img src="assets/images/smtp_4.png" alt="new record" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">You should see an error description and an error number in the brackets.</p>
+    <p style="margin-left: 80px;">If instead error description you get strange characters - go to the <strong>"action.php"</strong> and comment next line. Then submit your form again.</p>
+    <img src="assets/images/smtp_5.png" alt="new record" style="margin-left: 80px;">
+    <p style="margin-left: 40px;">Now you know what exactly smtp error arise while you are trying to connect to your server. You can find the answers using links below.</p>
+    <p style="margin-left: 40px;">Do not forget to change the code back in the <strong>"action.php"</strong> and <strong>"index.php"</strong>.</p>
+    <p style="margin-left: 40px;">Also, a screenshot with working smtp settings as an example:</p>
+    <img src="assets/images/working_settings.png" alt="new record" style="margin-left: 40px;">
+    <p style="margin-left: 40px;">Some useful links where you can find why smtp error occurs:</p>
+    <a href="http://stackoverflow.com/questions/16048347/send-email-using-gmail-smtp-server-through-php-mailer/16048485#16048485" style="margin-left: 40px;">send-email-using-gmail-smtp-server-through-php-mailer</a><br />
+    <a href="http://stackoverflow.com/questions/19288162/smtp-connect-failed-error-in-phpmailer" style="margin-left: 40px;">smtp-connect-failed-error-in-phpmailer</a><br />
+    <a href="http://stackoverflow.com/questions/6168882/phpmailer-to-use-gmail-as-smtp-server-could-not-connect-to-smtp-host-mailer-err" style="margin-left: 40px;">phpmailer-to-use-gmail-as-smtp-server-could-not-connect-to-smtp-host-mailer-err</a><br />
+    <a href="http://stackoverflow.com/questions/16048347/send-email-using-gmail-smtp-server-through-php-mailer" style="margin-left: 40px;">send-email-using-gmail-smtp-server-through-php-mailer</a><br />
+    <a href="http://stackoverflow.com/questions/20523285/phpmailer-and-gmail-smtp-error-failed-to-connect-to-server-network-is-unreacha" style="margin-left: 40px;">phpmailer-and-gmail-smtp-error-failed-to-connect-to-server</a><br />
+    <a href="http://stackoverflow.com/questions/18535294/mail-not-sending-with-phpmailer-over-ssl-using-smtp" style="margin-left: 40px;">mail-not-sending-with-phpmailer-over-ssl-using-smtp</a><br />
+    <a href="https://www.google.com.ua/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#lr=lang_ru&tbs=lr:lang_1ru&q=phpmailer+SMTP+ERROR:+110" style="margin-left: 40px;">google-1</a><br />
+    <a href="https://www.google.com.ua/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#lr=lang_ru&tbs=lr:lang_1ru&q=phpmailer+SMTP+ERROR:+Failed+to+connect+to+server:+Connection+timed+out+(110)+SMTP+connect()+failed" style="margin-left: 40px;">google-2</a><br />
+    <a href="https://github.com/PHPMailer/PHPMailer/issues/149" style="margin-left: 40px;">PHPMailer - issue-1</a><br />
+    <a href="https://github.com/PHPMailer/PHPMailer/issues/270" style="margin-left: 40px;">PHPMailer - issue-2</a><br />
+    <a href="https://github.com/PHPMailer/PHPMailer/issues/239" style="margin-left: 40px;">PHPMailer - issue-3</a><br />
+<h5>
+    <strong>I have submitted my form and some error arise. Why this error?</strong></h5>
+<h5 style="margin-left: 40px;">
+    <strong>Case 1:</strong></h5>
+    <img src="assets/images/error_1.png" alt="new record" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">If you get such type of error - most probably you have an error in the form attribute <strong>"action"</strong> in the <strong>"index.php"</strong>. Because javascript code can't find a file which is written in the <strong>"action"</strong> attribute. Be sure that this attribute contains correct path to the <strong>“action.php”</strong> file.</p>
+<h5 style="margin-left: 40px;">
+    <strong>Case 2:</strong></h5>
+    <img src="assets/images/error_2.png" alt="new record" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">If you get such type of error - most probably you don't have a connection to the internet. Please, check your internet connection.</p>
+<h5 style="margin-left: 40px;">
+    <strong>Case 3:</strong></h5>
+    <img src="assets/images/error_3.png" alt="new record" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">If you get such type of error - most probably you are working on local host and you try to submit a form without localhost connection.</p>
+<h5 style="margin-left: 40px;">
+    <strong>Case 4:</strong></h5>
+    <img src="assets/images/error_4.png" alt="new record" style="margin-left: 80px;">
+    <p style="margin-left: 80px;">If you can see this function when your form is placed on a real web server - for some reasons php code doesn't executing on your server. Please, check logs on your server.</p>
+<h5 style="margin-left: 40px;">
+    <strong>Case 5:</strong></h5>
+    <p style="margin-left: 80px;">If you get an <strong>500 Server Error</strong> - please check your backend files. This error may arise because any problem with server files: a typo, server settings, parse error, etc. Also, please take a look to the server log file, error description may be there. If you get this error after any changes in server files - check these files.</p>
+</section>
+<section id="changelog">
+    <div class="page-header"><h3>Changelog</h3><hr class="notop"></div>
+    <ul>
+
+
+
+
+        <li><strong>01/31/2016 - Just Forms full v 2.3</strong>
+            <p style="margin-left: 40px;"><strong>Note:</strong> if you are not a new buyer - please update main css file <strong>"j-forms.css"</strong> and css files with color settings. All changes are placed in the bottom of the file in the <strong>"Just Forms version 2.3"</strong> section.</p>
+           <p style="margin-left: 40px;">Multiple Select plugin was added. Demo<strong>"extensions/custom_select.html"</strong></p>
+           <p style="margin-left: 40px;">"Modal form" extension has been improved (page scroll was added). Demo<strong>"extensions/modal_form.html"</strong></p>
+           <p style="margin-left: 40px;">"Tabs" extension was added. Demo<strong>"extensions/tabs.html"</strong></p>
+           <p style="margin-left: 40px;">Multistep form with clickable steps was added. Demo<strong>"extensions/multistep_with_clickable_steps.html"</strong></p>
+           <p style="margin-left: 40px;">Image blocks were added. Demo<strong>"extensions/image_blocks.html"</strong></p>
+           <p style="margin-left: 40px;">Order form with logic using chained dropdowns. Demo<strong>"forms/../order_logic_chained_dropdown/"</strong></p>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <li><strong>09/04/2015 - Just Forms full v 2.1</strong>
+           <p style="margin-left: 40px;">Order form with logic using date range. Demo<strong>"forms/../order_logic_date_range/"</strong></p>
+           <p style="margin-left: 40px;">Order form with logic using sliders. Demo<strong>"forms/../order_logic_sliders/"</strong></p>
+        </li>
+        <li><strong>08/13/2015 - Just Forms full v 2.0</strong>
+            <p style="margin-left: 40px;"><strong>Note:</strong> if you are not a new buyer - please update main css file <strong>"j-forms.css"</strong> and css files with color settings. All changes are placed in the bottom of the file in the <strong>"Just Forms version 2.0"</strong> section. This update required <strong>only</strong> for new elements and forms. If you won't use any element from the version 2.0 - you may ignore this recommendation.</p>
+         <p style="margin-left: 40px;">Contact form with TinyMCE editor was added. Demo: <strong>"forms/../contact_tinymce"</strong></p>
+         <p style="margin-left: 40px;">Multistep form with variable steps was added. Demo: <strong>"forms/../multistep_form_with_variable_steps"</strong></p>
+         <p style="margin-left: 40px;">Multistep form with form details was added. Demo: <strong>"extensions/multistep_form_with_details.html"</strong></p>
+           <p style="margin-left: 40px;">Were added multistep forms with dinamically steps:
+                <ul>
+                    <li style="margin-left: 80px;"><p>using checkbox - demo: <strong>"forms/../multistep_with_dinamic_steps_checkbox"</strong></p></li>
+                    <li style="margin-left: 80px;"><p>using radio button - demo: <strong>"forms/../multistep_with_dinamic_steps_radio"</strong></p></li>
+                    <li style="margin-left: 80px;"><p>using select - demo: <strong>"forms/../multistep_with_dinamic_steps_select"</strong></p></li>
+                    <li style="margin-left: 80px;"><p>using input field - demo: <strong>"forms/../multistep_with_dinamic_steps_input"</strong></p></li>
+                    <li style="margin-left: 80px;"><p>combine all types - demo: <strong>"extensions/multistep_with_dinamic_steps_all_types.html"</strong></p></li>
+                </ul>
+           </p>
+           <p style="margin-left: 40px;">Form with google map was added. Demo: <strong>"extensions/form_google_map.html"</strong></p>
+           <p style="margin-left: 40px;">Form with autocomplete google map as a site background was added. Demo: <strong>"extensions/form_map_background_autocomplete.html"</strong></p>
+           <p style="margin-left: 40px;">Were added next plugins:
+               <ul>
+                   <li style="margin-left: 80px;"><p>autocomplete feature - demo: <strong>"extensions/autocomplete.html"</strong></p></li>
+                   <li style="margin-left: 80px;"><p>cloned element fearure - demo: <strong>"extensions/clone_element.html"</strong></p></li>
+                   <li style="margin-left: 80px;"><p>currency feature - demo: <strong>"extensions/currency.html"</strong></p></li>
+                   <li style="margin-left: 80px;"><p>youtube and vimeo players - demo: <strong>"extensions/youtube_vimeo.html"</strong></p></li>
+               </ul>
+           </p>
+           <p style="margin-left: 40px;">Subscribe form with MailChimp was added. Demo:<strong>"forms/subscribe_mailchimp/"</strong></p>
+           <p style="margin-left: 40px;">Order form with logic using checkbox and radio. Demo<strong>"forms/../order_logic_check_radio/"</strong></p>
+           <p style="margin-left: 40px;">Order form with logic using input fields. Demo<strong>"forms/../order_logic_field/"</strong></p>
+           <p style="margin-left: 40px;">Form with cloned elements was added. Demo<strong>"forms/../party_invitation_cloned_elements/"</strong></p>
+        </li>
+        <li><strong>06/06/2015 - Just Forms full v 1.1</strong>
+           <p style="margin-left: 40px;">CSV feature added. Added the opportunity to save all data received through the form to the CSV file. More about - in the <strong>"CSV"</strong> section.</p>
+        </li>
+        <li><strong>04/15/2015 - Just Forms full v 1.0</strong>
+           <p style="margin-left: 40px;">Initial release</p>
+        </li>
+    </ul>
+</section>
+<section id="credits">
+    <div class="page-header"><h3>Credits</h3><hr class="notop"></div>
+<p>
+    I`ve used the following product in my work:</p>
+<ul>
+    <li>
+        <a href="http://jquery.com/">jQuery library</a> by jQuery foundation</li>
+    <li>
+        <a href="http://jqueryui.com/">jQuery UI library</a> by jQuery foundation</li>
+    <li>
+        <a href="http://github.com/malsup/form">jQuery Form Plugin</a> by malsup</li>
+    <li>
+        <a href="http://matoilic.github.io/jquery.placeholder/">jQuery Placeholder Plugin</a> by Mato Ilic</li>
+    <li>
+        <a href="http://fontawesome.io/">Font Awesome</a> by Dave Gandy</li>
+    <li>
+        <a href="http://jqueryvalidation.org/">jQuery Validation Plugin</a> by Jörn Zaefferer</li>
+    <li>
+        <a href="http://digitalbush.com/projects/masked-input-plugin/">jQuery Masked Input Plugin</a> by Josh Bush</li>
+    <li>
+        <a href="https://github.com/bgrins/spectrum">Spectrum Colorpicker</a> by Brian Grinstead</li>
+    <li>
+        <a href="http://xflatlinex.github.io/Numeric-Stepper/">Numeric Stepper jQuery plugin</a> by Luciano Longo</li>
+    <li>
+        <a href="http://trentrichardson.com/">jQuery Timepicker Addon</a> by Trent Richardson</li>
+    <li>
+        <a href="http://touchpunch.furf.com/">jQuery UI Touch Punch</a> by Dave Furfero</li>
+    <li>
+        <a href="http://github.com/PHPMailer/PHPMailer">PHPMailer</a> - The classic email sending library for PHP</li>
+    <li>
+        <a href="https://github.com/jbrooksuk/MCAPI-PHP">MCAPI-PHP</a> - MailChimp PHP API Wrapper 1.3</li>
+    <li>
+        <a href="http://www.tinymce.com/">TinyMCE</a> - Javascript HTML WYSIWYG editor</li>
+    <li>
+        <a href="https://github.com/yapapaya/jquery-cloneya">jQuery Cloneya</a> - jQuery class for cloning DOM elements with their children</li>
+    <li>
+        <a href="https://github.com/BobKnothe/autoNumeric">autoNumeric</a> - International currency formatting</li>
+    <li>
+        <a href="https://www.google.com/maps/">Google Maps</a></li>
+    <li>
+        <a href="https://www.youtube.com">Youtube Player</a></li>
+    <li>
+        <a href="https://vimeo.com/player">Vimeo Player</a></li>
+    <li>
+        <a href="https://www.google.com/recaptcha/intro/index.html">Google reCaptcha</a></li>
+    <li>
+        <a href="https://github.com/google/recaptcha">reCAPTCHA PHP client library</a> - the library to work with the reCaptcha</li>
+    <li>
+        <a href="http://wenzhixin.net.cn/p/multiple-select/">MULTIPLE SELECT</a> - jQuery plugin to select multiple elements with checkboxes</li>
+</ul>
+<hr>
+<p>
+    Thank you for your attention and thank you for making the decision to buy this product. I hope you found it worthwhile.</p>
+    <p>Please, don`t forget to leave nice feedback about this product and rate it <strong>5 stars</strong> :))</p>
+    <br />
+    <br />
+    <p>Best Regards, Alex.</p>
+</section>
+
+    </div>
+</body>
+</html>

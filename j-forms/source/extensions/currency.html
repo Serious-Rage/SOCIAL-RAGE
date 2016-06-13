@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Currency format</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/autoNumeric.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+
+		<form action="" method="" class="j-forms" id="j-forms" novalidate>
+
+			<div class="header">
+				<p>Currency format</p>
+			</div>
+			<!-- end /.header-->
+
+			<div class="content">
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Numeric separator</span>
+				</div>
+
+				<!-- start comma apostrophe -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">Coma</label>
+						<div class="input">
+							<label class="icon-right" for="coma">
+								<i class="fa fa-usd"></i>
+							</label>
+							<input type="text" id="coma" class="currency">
+						</div>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Apostrophe</label>
+						<div class="input">
+							<label class="icon-right" for="apostrophe">
+								<i class="fa fa-euro"></i>
+							</label>
+							<input type="text" id="apostrophe" class="currency" data-a-dec="." data-a-sep="'">
+						</div>
+					</div>
+				</div>
+				<!-- end comma apostrophe -->
+
+				<!-- start period space -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">Period</label>
+						<div class="input">
+							<label class="icon-right" for="period">
+								<i class="fa fa-gbp"></i>
+							</label>
+							<input type="text" id="period" class="currency" data-a-dec="," data-a-sep=".">
+						</div>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Space</label>
+						<div class="input">
+							<label class="icon-right" for="space">
+								<i class="fa fa-jpy"></i>
+							</label>
+							<input type="text" id="space" class="currency" data-a-dec="." data-a-sep=" ">
+						</div>
+					</div>
+				</div>
+				<!-- end period space -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Currency signs</span>
+				</div>
+
+				<!-- start dollar yen -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">US Dollar</label>
+						<div class="input">
+							<input type="text" class="currency" data-a-sign="$ ">
+						</div>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Yen</label>
+						<div class="input">
+							<input type="text" class="currency" data-a-sign="¥ ">
+						</div>
+					</div>
+				</div>
+				<!-- end dollar yen -->
+
+				<!-- start euro pound -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">Euro</label>
+						<div class="input">
+							<input type="text" class="currency" data-a-sign="€ ">
+						</div>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Pound</label>
+						<div class="input">
+							<input type="text" class="currency" data-a-sign="£ ">
+						</div>
+					</div>
+				</div>
+				<!-- end euro pound -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Select your currency</span>
+				</div>
+
+				<!-- start currency input -->
+				<div class="unit">
+					<div class="input">
+						<input type="text" placeholder="enter the amount" id="input-select-currency">
+					</div>
+				</div>
+				<!-- end currency input -->
+
+				<!-- start inline currency radio -->
+				<div class="unit">
+					<div class="inline-group" id="radio-select-currency">
+						<label class="radio">
+							<input type="radio" name="currency" checked="" value="dollar">
+							<i></i>
+							$ - US Dollar
+						</label>
+						<label class="radio">
+							<input type="radio" name="currency" value="euro">
+							<i></i>
+							€ - Euro
+						</label>
+						<label class="radio">
+							<input type="radio" name="currency" value="pound">
+							<i></i>
+							£ - Pound
+						</label>
+						<label class="radio">
+							<input type="radio" name="currency" value="yen">
+							<i></i>
+							¥ - Yen
+						</label>
+					</div>
+				</div>
+				<!-- end inline currency radio -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Range values</span>
+				</div>
+
+				<!-- start range values -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<div class="input">
+							<input type="text" class="currency" placeholder="0 - 5000.00" data-v-max="5000.00" data-v-min="0">
+						</div>
+					</div>
+					<div class="span6 unit">
+						<div class="input">
+							<input type="text" class="currency" placeholder="-1000.00 - 1000.00" data-v-min="-1000.00" data-v-max="1000.00">
+						</div>
+					</div>
+				</div>
+				<!-- end range values -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn">Send</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+	<script>
+	$(document).ready(function(){
+		/***************************************/
+		/* Initiallizing for the plugin */
+		/***************************************/
+		$('.currency').autoNumeric('init');
+		/***************************************/
+		/* end Initiallizing for the plugin */
+		/***************************************/
+
+		/***************************************/
+		/* Select currency section */
+		/***************************************/
+		$('#input-select-currency').autoNumeric('init');
+
+		$('#radio-select-currency').change(function(){
+			var value = $('#radio-select-currency input:checked').val();
+
+			if ( value == 'dollar') {
+				$('#input-select-currency').autoNumeric('update', {aSign: '$ '});
+			}
+			if ( value == 'euro') {
+				$('#input-select-currency').autoNumeric('update', {aSign: '€ '});
+			}
+			if ( value == 'pound') {
+				$('#input-select-currency').autoNumeric('update', {aSign: '£ '});
+			}
+			if ( value == 'yen') {
+				$('#input-select-currency').autoNumeric('update', {aSign: '¥ '});
+			}
+		}).change();
+		/***************************************/
+		/* end Select currency section */
+		/***************************************/
+	});
+	</script>
+</body>
+</html>

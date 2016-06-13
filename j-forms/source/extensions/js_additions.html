@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript additions</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/j-forms-additions.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+
+		<form action="" method="" class="j-forms" novalidate>
+
+			<div class="header">
+				<p>JavaScript additions</p>
+			</div>
+			<!-- end /.header-->
+
+			<div class="content">
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Show/hide password</span>
+				</div>
+
+				<!-- start show password -->
+				<div class="unit">
+					<label class="label">Password</label>
+					<div class="input">
+						<label class="icon-right" for="password">
+							<i class="fa fa-lock"></i>
+						</label>
+						<input type="password" id="password">
+						<label class="checkbox">
+							<input type="checkbox" id="show-pass">
+							<i></i>
+							Show password
+						</label>
+					</div>
+				</div>
+				<!-- end show password -->
+
+				<div class="divider-text gap-top-45 gap-bottom-45">
+					<span>Enable/disable elements</span>
+				</div>
+
+				<!-- start enable input -->
+				<div class="j-row">
+					<div class="span4">
+						<label class="checkbox">
+							<input type="checkbox" id="check-enable-input">
+							<i></i>
+							Enable input
+						</label>
+					</div>
+					<div class="span8 unit">
+						<div class="input disabled-view">
+							<label class="icon-right" for="enable-input">
+								<i class="fa fa-edit"></i>
+							</label>
+							<input type="text" id="enable-input" placeholder="enable/disable input" disabled="">
+						</div>
+					</div>
+				</div>
+				<!-- end enable input -->
+
+				<!-- start enable button -->
+				<div class="j-row">
+					<div class="span4">
+						<label class="checkbox">
+							<input type="checkbox" id="check-enable-button">
+							<i></i>
+							Enable button
+						</label>
+					</div>
+					<div class="span8">
+						<button type="submit" class="primary-btn disabled-view" id="enable-button" disabled="">Button</button>
+					</div>
+				</div>
+				<!-- end enable button -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Show/hide elements</span>
+				</div>
+
+				<!-- start show/hide elements checkbox -->
+				<div class="unit">
+					<label class="checkbox">
+						<input type="checkbox" id="show-elements-checkbox">
+						<i></i>
+						Show additional elements
+					</label>
+				</div>
+				<!-- end show/hide elements checkbox -->
+
+				<!-- start hidden elements -->
+				<div class="j-row hidden-elements hidden">
+					<div class="span9 unit">
+						<div class="input">
+							<label class="icon-right" for="input">
+								<i class="fa fa-edit"></i>
+							</label>
+							<input type="text" id="input" placeholder="placeholder text">
+						</div>
+					</div>
+					<div class="span3">
+						<button type="submit" class="primary-btn">Button</button>
+					</div>
+				</div>
+				<!-- end hidden elements -->
+
+				<div class="divider gap-bottom-25"></div>
+
+				<!-- start show/hide elements select -->
+				<div class="unit">
+					<label class="label">Show additional elements</label>
+					<label class="input select" id="show-elements-select">
+						<select>
+							<option value="none">select action...</option>
+							<option value="field-1">show field № 1</option>
+							<option value="field-2">show field № 2</option>
+							<option value="field-1-2">show field № 1 and field № 2</option>
+						</select>
+						<i></i>
+					</label>
+				</div>
+				<!-- end show/hide elements select -->
+
+				<!-- start field 1 select -->
+				<div class="unit hidden" id="field-1">
+					<label class="label">Field № 1</label>
+					<div class="input">
+						<input type="text" placeholder="field № 1">
+					</div>
+				</div>
+				<!-- end field 1 select  -->
+
+				<!-- start field 2 select -->
+				<div class="unit hidden" id="field-2">
+					<label class="label">Field № 2</label>
+					<div class="input">
+						<input type="text" placeholder="field № 2">
+					</div>
+				</div>
+				<!-- end field 2 select  -->
+
+				<div class="divider-text gap-top-45 gap-bottom-45">
+					<span>Select condition</span>
+				</div>
+
+				<!-- start selects -->
+				<div class="j-row">
+					<div class="span4 unit">
+						<label class="label">Car</label>
+						<select id="car">
+							<option value="none">select a car...</option>
+							<option value="VO">Volvo</option>
+							<option value="VW">Volkswagen</option>
+							<option value="BMW">BMW</option>
+						</select>
+					</div>
+					<div class="span4 unit">
+						<label class="label">Model</label>
+						<select id="car-model">
+							<option value="">select a model...</option>
+						</select>
+					</div>
+					<div class="span4 unit">
+						<label class="label">Color</label>
+						<select id="car-model-color">
+							<option value="">select a color...</option>
+						</select>
+					</div>
+				</div>
+				<!-- end selects -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Checkbox conditions</span>
+				</div>
+
+				<!-- start checkbox conditions with checkboxes -->
+				<div class="unit">
+					<div class="j-row">
+						<label class="label">Do you want to subscribe to our newsletter?</label>
+						<div class="span5">
+							<label class="checkbox-toggle">
+								<input type="checkbox" id="subscribe">
+								<i></i>
+							</label>
+						</div>
+						<div class="span7">
+							<label class="checkbox disabled-view subscribe">
+								<input type="checkbox" disabled="">
+								<i></i>
+								News and Articles (only the latest)
+							</label>
+							<label class="checkbox disabled-view subscribe">
+								<input type="checkbox" disabled="">
+								<i></i>
+								Weekly newsletter
+							</label>
+							<label class="checkbox disabled-view subscribe">
+								<input type="checkbox" disabled="">
+								<i></i>
+								Mothly newsletter
+							</label>
+
+						</div>
+					</div>
+				</div>
+				<!-- end checkbox conditions with checkboxes -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn">Submit</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Autocomplete</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/jquery.ui.min.js"></script>
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-400">
+
+		<form action="" method="" class="j-forms" id="j-forms" novalidate>
+
+			<div class="header">
+				<p>Autocomplete</p>
+			</div>
+			<!-- end /.header-->
+
+			<div class="content">
+
+				<!-- start data list -->
+				<!-- for proper data list work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="unit">
+					<label class="label">Data list</label>
+					<div class="input">
+						<input type="text" placeholder="enter a letter" id="list-autocomplete" name="list-autocomplete">
+					</div>
+				</div>
+				<!-- end data list -->
+
+				<div class="divider gap-bottom-25"></div>
+
+				<!-- start multiple data list -->
+				<!-- for proper multiple data list work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="unit">
+					<label class="label">Multiple Data list</label>
+					<div class="input">
+						<input type="text" placeholder="enter a letter" id="multi-list-autocomplete" name="multi-list-autocomplete">
+					</div>
+				</div>
+				<!-- end multiple data list -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn">Send</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+	<script>
+	$(document).ready(function(){
+
+		/***************************************/
+		/* single Data list */
+		/***************************************/
+		$('#list-autocomplete').autocomplete({
+			source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ],
+			messages: {
+				noResults:''
+			}
+		});
+		/***************************************/
+		/* end single Data list */
+		/***************************************/
+
+		/***************************************/
+		/* multiple Data list */
+		/***************************************/
+		$(function(){
+
+			// array with values for the field
+			var listTags = [
+					"ActionScript",
+					"AppleScript",
+					"Asp",
+					"BASIC",
+					"C",
+					"C++",
+					"Clojure",
+					"COBOL",
+					"ColdFusion",
+					"Erlang",
+					"Fortran",
+					"Groovy",
+					"Haskell",
+					"Java",
+					"JavaScript",
+					"Lisp",
+					"Perl",
+					"PHP",
+					"Python",
+					"Ruby",
+					"Scala",
+					"Scheme"
+			];
+
+			function split( val ) {
+				return val.split( /,\s*/ );
+			}
+
+			function extractLast( term ) {
+				return split( term ).pop();
+			}
+
+			$( "#multi-list-autocomplete" )
+				// don't navigate away from the field on tab when selecting an item
+				.bind( "keydown", function( event ) {
+					if ( event.keyCode === $.ui.keyCode.TAB &&
+						$( this ).autocomplete( "instance" ).menu.active ) {
+							event.preventDefault();
+						}
+					})
+				.autocomplete({
+					minLength: 0,
+					source: function( request, response ) {
+						// delegate back to autocomplete, but extract the last term
+						response( $.ui.autocomplete.filter(
+						listTags, extractLast( request.term ) ) );
+					},
+					focus: function() {
+						// prevent value inserted on focus
+						return false;
+					},
+					select: function( event, ui ) {
+						var terms = split( this.value );
+						// remove the current input
+						terms.pop();
+						// add the selected item
+						terms.push( ui.item.value );
+						// add placeholder to get the comma-and-space at the end
+						terms.push( "" );
+						this.value = terms.join( ", " );
+						return false;
+					}
+				});
+		});
+		/***************************************/
+		/* end multiple Data list */
+		/***************************************/
+
+	});
+	</script>
+</body>
+</html>

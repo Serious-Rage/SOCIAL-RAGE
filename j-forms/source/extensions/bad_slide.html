@@ -1,0 +1,294 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sliders Layout</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+
+
+
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/jquery.ui.min.js"></script>
+	<script src="j-folder/js/jquery.ui.touch-punch.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+
+		<form action="" method="" class="j-forms" style="background-color:transparent;" novalidate>
+
+
+<div class="divider gap-bottom-25"></div>
+
+				<!-- start slider select -->
+				<!-- for proper slider work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">Select with slider</label>
+						<label class="select unit">
+							<select autocomplete="off" id="select-value">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3" selected="">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+							</select>
+							<i></i>
+						</label>
+						<div id="slider-select"></div>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Input with slider</label>
+						<div class="input unit">
+							<input type="text" id="2-m" value="15">
+						</div>
+						<div id="slider-2-m"></div>
+					</div>
+				</div>
+
+
+
+		</form>
+	</div>
+	<script>
+
+	$(document).ready(function(){
+
+			/* Vertical sliders */
+			/********************************************************/
+			// Single value slider with fixed minimum - vertical
+			$(function() {
+				$( '#slider-1-v' ).slider({
+					orientation: "vertical",
+					range: "min",
+					min: 0,
+					max: 100,
+					value: 30,
+					slide: function( event, ui ) {
+						$( '#1-v' ).html( ui.value );
+					}
+				});
+				$( '#1-v' ).html( $( '#slider-1-v' ).slider( 'value' ) );
+			});
+
+			// Range value slider
+			$(function() {
+				$( '#slider-2-v' ).slider({
+					orientation: "vertical",
+					range: true,
+					min: 0,
+					max: 500,
+					values: [ 75, 300 ],
+					slide: function( event, ui ) {
+						$( '#2-v' ).html( '$' + ui.values[ 0 ] + ' - $' + ui.values[ 1 ] );
+					}
+				});
+				$( '#2-v' ).html( '$' + $( '#slider-2-v' ).slider( 'values', 0 ) +' - $' + $( '#slider-2-v' ).slider( 'values', 1 ) );
+			});
+
+			// Single value slider with fixed maximum
+			$(function() {
+				$( '#slider-3-v' ).slider({
+					orientation: "vertical",
+					range: "max",
+					min: 0,
+					max: 300,
+					value: 240,
+					slide: function( event, ui ) {
+						$( '#3-v' ).html( ui.value );
+					}
+				});
+				$( '#3-v' ).html( $( '#slider-3-v' ).slider( 'value' ) );
+			});
+
+
+			/* Horizontal sliders */
+			/********************************************************/
+			// Single value slider with fixed minimum
+			$(function() {
+				$( '#slider-1-h' ).slider({
+					range: "min",
+					min: 0,
+					max: 300,
+					value: 99,
+					slide: function( event, ui ) {
+						$( '#1-h' ).html( ui.value );
+					}
+				});
+				$( '#1-h' ).html( $( '#slider-1-h' ).slider( 'value' ) );
+			});
+
+			// Range value slider
+			$(function() {
+				$( '#slider-2-h' ).slider({
+					range: true,
+					min: 0,
+					max: 500,
+					values: [ 75, 300 ],
+					slide: function( event, ui ) {
+						$( '#2-h' ).html( '$' + ui.values[ 0 ] + ' - $' + ui.values[ 1 ] );
+					}
+				});
+				$( '#2-h' ).html('$' + $('#slider-2-h' ).slider( 'values', 0 ) +
+					' - $' + $( '#slider-2-h' ).slider( 'values', 1 ) );
+			});
+
+			// Single value slider with fixed maximum
+			$(function() {
+				$( '#slider-3-h' ).slider({
+					range: "max",
+					min: 0,
+					max: 300,
+					value: 240,
+					slide: function( event, ui ) {
+						$( '#3-h' ).html( ui.value );
+					}
+				});
+				$( '#3-h' ).html( $( '#slider-3-h' ).slider( 'value' ) );
+			});
+
+
+			/* Manually sliders */
+			/********************************************************/
+			// Select slider
+			$(function() {
+				$( "#slider-select" ).slider({
+					min: 1,
+					max: 8,
+					range: "min",
+					value: $( "#select-value" )[ 0 ].selectedIndex + 1,
+					slide: function( event, ui ) {
+						$( "#select-value" )[ 0 ].selectedIndex = ui.value - 1;
+					}
+				});
+				$( "#select-value" ).change(function() {
+					$( "#slider-select" ).slider( "value", this.selectedIndex + 1 );
+					showUser(this.selectedIndex + 1 );
+				});
+			});
+
+			// Input slider
+			$(function() {
+				$( '#slider-2-m' ).slider( {
+					range: "min",
+					min: 0,
+					max: 50,
+					value: 15,
+					// step: 5,
+					slide: function( event, ui ){
+						$( '#2-m' ).val(ui.value);
+					}
+				});
+			});
+
+			// Enter value for input slider
+			$( '#2-m' ).change( function() {
+				var input_value = $( '#2-m' ).val();
+
+				if ( parseInt( input_value ) > 50 ) {
+					input_value = 50;
+					$( '#2-m' ).val( input_value );
+				}
+
+				if ( parseInt( input_value ) < 0 ) {
+					input_value = 0;
+					$( '#2-m' ).val( input_value );
+				}
+				$('#2-m').blur(function() {
+					$( '#slider-2-m' ).slider( 'value', $(this).val() );
+				});
+			});
+
+			// Range slider with input fields
+			$(function() {
+				$( '#slider-1-m' ).slider( {
+					min: 0,
+					max: 2000,
+					values: [500,1500],
+					range: true,
+					stop: function( event, ui ) {
+						$( '#1-m-min' ).val( $( '#slider-1-m' ).slider( 'values',0 ) );
+						$( '#1-m-max' ).val( $( '#slider-1-m' ).slider( 'values',1 ) );
+					},
+					slide: function( event, ui ){
+						$( '#1-m-min' ).val( $( '#slider-1-m' ).slider( 'values',0 ) );
+						$( '#1-m-max' ).val( $( '#slider-1-m' ).slider( 'values',1 ) );
+					}
+				});
+			});
+
+			// Enter "from" price for Range slider with input fields
+			$( '#1-m-min' ).change( function() {
+				var value1 = $( '#1-m-min' ).val();
+				var value2 = $( '#1-m-max' ).val();
+
+				if( parseInt( value1 ) > parseInt( value2 ) ) {
+					value1 = value2;
+					$( '#1-m-min' ).val( value1 );
+				}
+				$( '#slider-1-m' ).slider( 'values' ,0, value1 );
+			});
+
+			// Enter "to" price for Range slider with input fields
+			$( '#1-m-max' ).change( function() {
+				var value1 = $( '#1-m-min' ).val();
+				var value2 = $( '#1-m-max' ).val();
+				if ( value2 > 2000 ) {
+					value2 = 2000;
+					$( '#1-m-max' ).val( 2000 )
+				}
+				if( parseInt( value1 ) > parseInt( value2 ) ) {
+					value2 = value1;
+					$( '#1-m-max' ).val( value2 );
+				}
+				$( '#slider-1-m' ).slider( 'values', 1, value2 );
+			});
+
+			// Validation for Range slider with input fields, for Input slider
+			$('#1-m-max, #1-m-min, #2-m').keypress(function(event){
+				var key, keyChar;
+				if(!event) {
+					var event = window.event;
+				}
+				if (event.keyCode) {
+					key = event.keyCode;
+				} else {
+					if(event.which) {
+						key = event.which;
+					}
+				}
+				if (key==null || key==0 || key==8 || key==13 || key==9 || key==46 || key==37 || key==39 ) {
+					return true;
+				}
+				keyChar=String.fromCharCode(key);
+				if (!/\d/.test(keyChar)) {
+					return false;
+				}
+			});
+		});
+	</script>
+</body>
+</html>

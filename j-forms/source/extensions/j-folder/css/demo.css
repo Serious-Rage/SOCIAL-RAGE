@@ -1,0 +1,17 @@
+html,
+body {
+	background-attachment:fixed;
+	background-position:50% 50%;
+	background-size:cover;
+	margin:0;
+	padding:0;
+	color:red;
+}
+.bg-pic { background-image:url("../img/02_wet_red_logo_large.gif"); }
+
+.form-details { color:blue; }
+.form-details span { color:red; }
+
+#info-name, #info-email, #info-phone, #info-date-from, #info-date-to, #info-message {
+    color:red;
+    }

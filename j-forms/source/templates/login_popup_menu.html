@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login form</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+
+	<div class="popup-menu">
+		<div class="popup-list">
+			<ul>
+				<!-- for proper work of the popup form -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<li class="popup-list-open" id="log-popup-menu">
+					Login form
+					<div class="popup-list-wrapper">
+						<form action="" method="" class="j-forms" novalidate>
+
+							<div class="content">
+
+								<!-- start social -->
+								<div class="unit">
+									<div class="social-center">
+										<div class="social-icon twitter">
+											<i class="fa fa-twitter"></i>
+											<button type="button"></button>
+										</div>
+										<div class="social-icon google-plus">
+											<i class="fa fa-google-plus"></i>
+											<button type="button"></button>
+										</div>
+										<div class="social-icon facebook">
+											<i class="fa fa-facebook"></i>
+											<button type="button"></button>
+										</div>
+									</div>
+								</div>
+								<!-- end social -->
+
+								<div class="divider gap-bottom-25"></div>
+
+								<!-- start login -->
+								<div class="unit">
+									<div class="input">
+										<label class="icon-left" for="login">
+											<i class="fa fa-user"></i>
+										</label>
+										<input type="text" id="login" name="login" placeholder="your login...">
+									</div>
+								</div>
+								<!-- end login -->
+
+								<!-- start password -->
+								<div class="unit">
+									<div class="input">
+										<label class="icon-left" for="password">
+											<i class="fa fa-lock"></i>
+										</label>
+										<input type="password" id="password" name="password" placeholder="your password...">
+									</div>
+								</div>
+								<!-- end password -->
+
+								<button type="submit" class="primary-btn">Sign in</button>
+
+							</div>
+							<!-- end /.content -->
+
+						</form>
+					</div>
+					<!-- /. popup-list-wrapper -->
+				</li>
+				<!-- /. popup-list-open -->
+
+			</ul>
+		</div>
+		<!-- end /.popup-list -->
+	</div>
+	<!-- end /.popup-menu -->
+	<script>
+	$(document).ready(function() {
+		/***************************************/
+		/* Popup menu forms */
+		/***************************************/
+		// If user clicks on the 'subscribe' item
+		// Open popup-menu subscribe form
+		$('#log-popup-menu').on('click', function() {
+			if ( $('#log-popup-menu .popup-list-wrapper').css('display') == 'none' ) {
+				$('#log-popup-menu .popup-list-wrapper').css({ display:'block', left:'auto', right:'0', opacity:'1' });
+			}
+		});
+
+		// Add an event listener
+		// If user clicks outside a form
+		// The form will disappear
+		$(document).on('click touchstart', function(event) {
+			// Close popup-menu 'subscribe' form
+			if (!$(event.target).closest('#log-popup-menu').length) {
+				if ( $('#log-popup-menu .popup-list-wrapper').css('display') == 'block' ) {
+					$('#log-popup-menu .popup-list-wrapper').css({ display:'none', left:'-9999px', opacity:'0' });
+				}
+			}
+		});
+		/***************************************/
+		/* end popup menu forms */
+		/***************************************/
+	});
+	</script>
+</body>
+</html>

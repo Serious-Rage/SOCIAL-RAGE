@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Numeric stepper</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/jquery.stepper.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+		<form action="" method="" class="j-forms" novalidate>
+
+			<!-- start header -->
+			<div class="header">
+				<p>Numeric stepper</p>
+			</div>
+			<!-- end /.header -->
+
+			<div class="content">
+
+				<!-- start stepper -->
+				<!-- for proper numeric stepper work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">Default</label>
+						<label class="input">
+							<input type="text" id="stepper1">
+						</label>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Disable mouse wheel</label>
+						<label class="input">
+							<input type="text" value="3" id="stepper2">
+						</label>
+					</div>
+				</div>
+				<!-- end stepper -->
+
+				<!-- start stepper -->
+				<!-- for proper numeric stepper work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">Value range (min: -10; max: 10)</label>
+						<label class="input">
+							<input type="text" id="stepper3">
+						</label>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Limit (min: 5)</label>
+						<label class="input">
+							<input type="text" id="stepper4">
+						</label>
+					</div>
+				</div>
+				<!-- end stepper -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn">Send</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+	<script>
+		$(function() {
+			// Default
+			$("#stepper1").stepper({});
+
+			// Disable mouse wheel
+			$("#stepper2").stepper({
+				allowWheel:false,
+				UI:false,
+				arrowStep: 0.1
+			});
+
+			// Value range (min: -10; max: 10)
+			$("#stepper3").stepper({
+				limit: [-10, 10],
+				wheelStep: 0.2,
+			});
+
+			// Limit (min: 5)
+			$("#stepper4").stepper({
+				limit: [5,]
+			});
+		});
+	</script>
+</body>
+</html>

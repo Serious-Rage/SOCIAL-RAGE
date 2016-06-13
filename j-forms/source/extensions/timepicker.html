@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Timepicker</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/jquery.ui.min.js"></script>
+	<script src="j-folder/js/jquery.ui.timepicker.min.js"></script>
+	<script src="j-folder/js/jquery.ui.touch-punch.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+
+		<form action="" method="" class="j-forms" novalidate>
+
+			<div class="header">
+				<p>Timepicker Layout</p>
+			</div>
+			<!-- end /.header -->
+
+			<div class="content">
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Single date and time</span>
+				</div>
+
+				<!-- start single date and time -->
+				<!-- for proper timepicker work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="j-row">
+					<div class="span6 unit">
+						<div class="input">
+							<label class="icon-right" for="timepic-1">
+								<i class="fa fa-calendar"></i>
+							</label>
+							<input type="text" id="timepic-1" name="timepic-1" placeholder="datepicker with time" readonly="">
+						</div>
+					</div>
+					<div class="span6 unit">
+						<div class="widget right-50">
+							<div class="input">
+								<input type="text" id="timepic-2" name="timepic-2" placeholder="timepicker" readonly="">
+							</div>
+							<label class="addon adn-50 adn-right" for="timepic-2">
+								<i class="fa fa-clock-o"></i>
+							</label>
+						</div>
+					</div>
+				</div>
+				<!-- end single date and time -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Popup date/time interval</span>
+				</div>
+
+				<!-- start popup time interval -->
+				<!-- for proper timepicker work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="j-row">
+					<div class="span6 unit">
+						<div class="input">
+							<label class="icon-right" for="pop-time-1">
+								<i class="fa fa-calendar"></i>
+							</label>
+							<input type="text" id="pop-time-1" name="pop-time-1" placeholder="date from..." readonly="">
+						</div>
+					</div>
+					<div class="span6 unit">
+						<div class="input">
+							<label class="icon-right" for="pop-time-2">
+								<i class="fa fa-calendar"></i>
+							</label>
+							<input type="text" id="pop-time-2" name="pop-time-2" placeholder="date to..." readonly="">
+						</div>
+					</div>
+				</div>
+				<!-- end popup time interval -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Inline date/time</span>
+				</div>
+
+				<!-- start inline date/time picker -->
+				<!-- for proper timepicker work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="unit">
+					<div class="input unit">
+						<label class="icon-right" for="i-single-alt">
+							<i class="fa fa-calendar"></i>
+						</label>
+						<input type="text" name="inline" id="i-single-alt" readonly="">
+					</div>
+					<div id="i-single"></div>
+				</div>
+				<!-- end inline date/time picker -->
+
+			</div>
+			<!-- ebd /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn">Send</button>
+			</div>
+			<!-- end /.footer -->
+		</form>
+	</div>
+	<script>
+		$(document).ready(function(){
+			// Single date time picker
+			$('#timepic-1').datetimepicker({
+				prevText: '<i class="fa fa-caret-left"></i>',
+				nextText: '<i class="fa fa-caret-right"></i>'
+			});
+////////////////////////////////////////////////////////////
+			// Single time picker
+			$('#timepic-2').timepicker({
+				prevText: '<i class="fa fa-caret-left"></i>',
+				nextText: '<i class="fa fa-caret-right"></i>'
+			});
+///////////////////////////////////////////////////////////
+			// Popup date/time interval
+			var startPopupTime = $('#pop-time-1');
+			var endPopupTime = $('#pop-time-2');
+			$.timepicker.datetimeRange(
+				startPopupTime,
+				endPopupTime,
+				{
+					prevText: '<i class="fa fa-caret-left"></i>',
+					nextText: '<i class="fa fa-caret-right"></i>',
+					minInterval: (1000*60*60), // 1hr time difference
+					dateFormat: 'mm/dd/yy',
+					timeFormat: 'HH:mm',
+					start: {}, // start picker options
+					end: {} // end picker options
+				}
+			);
+//////////////////////////////////////////////////////////////
+			// Inline date/time picker
+			$('#i-single').datetimepicker({
+				prevText: '<i class="fa fa-caret-left"></i>',
+				nextText: '<i class="fa fa-caret-right"></i>',
+				altField: "#i-single-alt",
+				altFieldTimeOnly: false
+			});
+		});
+	</script>
+</body>
+</html>

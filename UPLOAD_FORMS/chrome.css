@@ -1,0 +1,100 @@
+.clear { /* generic container (i.e. div) for floating buttons */
+	overflow: auto !important;
+	width: 100% !important;
+}
+
+a.fantasybutton {
+	background: black /* url("chrome://vcu/content/img/button_normal.png")  no-repeat */ !important;
+	color: red !important;
+	display: black !important;
+	float: left !important;
+	font: normal 12px arial, sans-serif !important;
+	height: 29px !important;
+	width: 112px !important;
+
+}
+
+a.fantasybutton:active {
+	 background: black /* url("chrome://vcu/content/img/button_down.png") no-repeat */ !important;
+	background-position: bottom right !important;
+	color: red !important;
+	outline: none !important; /* hide dotted outline in Firefox */
+}
+
+a.wsplaylistbutton{
+    background: black /* url("chrome://vcu/content/img/down_all_normal.png") no-repeat */!important;
+	color: red !important;
+	display: black !important;
+	float: left !important;
+	font: normal 12px arial, sans-serif !important;
+	height: 28px !important;
+	width: 124px !important;
+    margin-left:8px !important;
+    margin-top:2px !important;
+}
+
+a.wsplaylistbutton:active{
+    background: black */ url("chrome://vcu/content/img/down_all_down.png") no-repeat */ !important;
+
+}
+
+button.wsplaylist {
+	background: black /* url("chrome://vcu/content/img/down_all_normal.png") no-repeat */ !important;
+	height: 28px !important;
+	width: 124px !important;
+    margin-left: 10px !important;
+    margin-top: 0px !important;
+    padding-left:1px !important;
+    padding-right:4px !important;
+    padding-top:6px !important;
+
+}
+
+button.wsplaylist:active {
+	background: black /* url("chrome://vcu/content/img/down_all_down.png") no-repeat */ !important;
+}
+
+#mytubem {
+	margin: 0 !important;
+	padding: 0 !important;
+	z-index: 30 !important;
+}
+
+#mytubem li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	font: bold 11px arial
+}
+
+#mytubem div {
+	position: absolute;
+	top: 28px;
+	width: 110px;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background: #9CC02B;
+    /*background: #000000;*/
+	border: 1px solid #4C4C4C !important
+}
+
+#mytubem div a {
+	position: relative !important;
+	display: black !important;
+	margin: 0 !important;
+	padding: 5px 10px !important;
+	width: auto;
+	white-space: nowrap !important;
+	text-align: center !important;
+	text-decoration: none !important;
+	background: #000000 !important;
+	color: #FFFFFF !important;
+	font: 12px arial, sans-serif !important
+}
+
+#mytubem div a:hover {
+	background: rgb(135,10,10) !important;
+	color: #FFFFFF !important
+}

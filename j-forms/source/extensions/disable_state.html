@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Disabled state</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+
+		<form action="" method="" class="j-forms" novalidate>
+
+			<div class="header">
+				<p>Disabled state</p>
+			</div>
+			<!-- end /.header -->
+
+			<div class="content">
+
+				<!-- start text input -->
+				<div class="unit">
+					<label class="label">Text input</label>
+					<div class="input disabled-view">
+						<label class="icon-left" for="text">
+							<i class="fa fa-edit"></i>
+						</label>
+						<input type="text" id="text" placeholder="some text..." disabled="">
+					</div>
+				</div>
+				<!-- end text input -->
+
+				<!-- start textarea -->
+				<div class="unit">
+					<label class="label">Textarea</label>
+					<div class="input disabled-view">
+						<label class="icon-left" for="textarea">
+							<i class="fa fa-file-text-o"></i>
+						</label>
+						<textarea placeholder="message..." spellcheck="false" id="textarea" disabled=""></textarea>
+					</div>
+				</div>
+				<!-- end textarea -->
+
+				<!-- start select -->
+				<div class="unit">
+					<label class="label">Select</label>
+					<label class="input select disabled-view">
+						<select disabled="">
+							<option value="none">Select fruit</option>
+							<option value="0">Apple</option>
+							<option value="1">Banana</option>
+							<option value="2">Coconut</option>
+							<option value="3">Mango</option>
+							<option value="4">Melon</option>
+							<option value="5">Orange</option>
+							<option value="6">Pear</option>
+							<option value="7">Watermelon</option>
+						</select>
+						<i></i>
+					</label>
+				</div>
+				<!-- end select -->
+
+				<!-- start append big button -->
+				<div class="unit">
+					<label class="label">File input</label>
+					<label class="input append-big-btn disabled-view">
+						<label class="icon-left" for="append-big-btn">
+							<i class="fa fa-download"></i>
+						</label>
+						<div class="file-button">
+							Browse
+							<input type="file" onchange="document.getElementById('append-big-btn').value = this.value;" disabled="">
+						</div>
+						<input type="text" id="append-big-btn" readonly="" placeholder="no file selected" disabled="">
+					</label>
+				</div>
+				<!-- end append big button -->
+
+				<div class="divider gap-bottom-25"></div>
+
+				<!-- start widget -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">Widget addon</label>
+						<div class="widget left-50 disabled-view">
+							<div class="input">
+								<input type="text" id="@" placeholder="email" disabled="">
+							</div>
+							<label class="addon adn-50 adn-left" for="@">
+								<i class="fa fa-at"></i>
+							</label>
+						</div>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Widget button</label>
+						<div class="widget right-50 disabled-view">
+							<div class="input">
+								<input type="search" placeholder="i'm looking for..." disabled="">
+							</div>
+							<button type="submit" class="addon-btn adn-50 adn-right" disabled="">
+								<i class="fa fa-search"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- end widget -->
+
+				<div class="divider gap-bottom-25"></div>
+
+				<!-- start checkboxes -->
+				<div class="unit">
+					<div class="j-row">
+						<label class="label">Checkbox and Radio</label>
+						<div class="span3">
+							<label class="checkbox disabled-view">
+								<input type="checkbox" disabled="">
+								<i></i>
+								Apple
+							</label>
+							<label class="checkbox disabled-view">
+								<input type="checkbox" disabled="">
+								<i></i>
+								Banana
+							</label>
+							<label class="checkbox disabled-view">
+								<input type="checkbox" disabled="">
+								<i></i>
+								Coconut
+							</label>
+						</div>
+						<div class="span3">
+							<label class="checkbox disabled-view">
+								<input type="checkbox" disabled="">
+								<i></i>
+								Mango
+							</label>
+							<label class="checkbox disabled-view">
+								<input type="checkbox" disabled="">
+								<i></i>
+								Melon
+							</label>
+							<label class="checkbox disabled-view">
+								<input type="checkbox" disabled="">
+								<i></i>
+								Lemon
+							</label>
+						</div>
+						<div class="span3">
+							<label class="radio disabled-view">
+								<input type="radio" name="radio" checked="" disabled="">
+								<i></i>
+								Apricot
+							</label>
+							<label class="radio disabled-view">
+								<input type="radio" name="radio" disabled="">
+								<i></i>
+								Grapes
+							</label>
+							<label class="radio disabled-view">
+								<input type="radio" name="radio" disabled="">
+								<i></i>
+								Kiwi
+							</label>
+						</div>
+						<div class="span3">
+							<label class="radio disabled-view">
+								<input type="radio" name="radio" disabled="">
+								<i></i>
+								Orange
+							</label>
+							<label class="radio disabled-view">
+								<input type="radio" name="radio" disabled="">
+								<i></i>
+								Pear
+							</label>
+							<label class="radio disabled-view">
+								<input type="radio" name="radio" disabled="">
+								<i></i>
+								Watermelon
+							</label>
+						</div>
+					</div>
+				</div>
+				<!-- end checkboxes -->
+
+				<div class="divider gap-bottom-25"></div>
+
+				<!-- start switches -->
+				<div class="unit">
+					<div class="j-row">
+						<label class="label">Switch</label>
+						<div class="span4">
+							<label class="checkbox-toggle disabled-view">
+								<input type="checkbox" disabled="">
+								<i></i>
+								Apple
+							</label>
+							<label class="checkbox-toggle disabled-view">
+								<input type="checkbox" disabled="">
+								<i></i>
+								Banana
+							</label>
+							<label class="checkbox-toggle disabled-view">
+								<input type="checkbox" disabled="">
+								<i></i>
+								Coconut
+							</label>
+						</div>
+						<div class="span4">
+							<label class="checkbox-toggle disabled-view">
+								<input type="checkbox" disabled="">
+								<i></i>
+								Mango
+							</label>
+							<label class="checkbox-toggle disabled-view">
+								<input type="checkbox" disabled="">
+								<i></i>
+								Melon
+							</label>
+							<label class="checkbox-toggle disabled-view">
+								<input type="checkbox" disabled="">
+								<i></i>
+								Lemon
+							</label>
+						</div>
+						<div class="span4">
+							<label class="radio-toggle disabled-view">
+								<input type="radio" name="radio-toggle" disabled="">
+								<i></i>
+								Orange
+							</label>
+							<label class="radio-toggle disabled-view">
+								<input type="radio" name="radio-toggle" disabled="">
+								<i></i>
+								Pear
+							</label>
+							<label class="radio-toggle disabled-view">
+								<input type="radio" name="radio-toggle" disabled="">
+								<i></i>
+								Watermelon
+							</label>
+						</div>
+					</div>
+				</div>
+				<!-- end switches -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn disabled-view" disabled="">Submit</button>
+				<button type="reset" class="secondary-btn disabled-view" disabled="">Reset</button>
+			</div>
+			<!-- end /.footer -->
+		</form>
+	</div>
+</body>
+</html>

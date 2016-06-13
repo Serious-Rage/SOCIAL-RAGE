@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact form</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/jquery.maskedinput.min.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+
+		<form action="" method="" class="j-forms" id="j-forms" novalidate>
+
+			<div class="header">
+				<p>Contact form</p>
+			</div>
+			<!-- end /.header-->
+
+			<div class="content">
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Google Map</span>
+				</div>
+
+				<!-- start google map -->
+				<div class="unit" id="google-map" style="width:100%;height:380px;">
+				</div>
+				<!-- end google map -->
+
+				<div class="divider-text gap-top-45 gap-bottom-45">
+					<span>Contact details</span>
+				</div>
+
+				<!-- start name -->
+				<div class="unit">
+					<div class="input">
+						<label class="icon-right" for="name">
+							<i class="fa fa-user"></i>
+						</label>
+						<input type="text" id="name" placeholder="name">
+					</div>
+				</div>
+				<!-- end name -->
+
+				<!-- start email phone -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<div class="input">
+							<label class="icon-right" for="email">
+								<i class="fa fa-envelope-o"></i>
+							</label>
+							<input type="email" id="email" placeholder="email">
+						</div>
+					</div>
+					<div class="span6 unit">
+						<div class="input">
+							<label class="icon-right" for="phone">
+								<i class="fa fa-phone"></i>
+							</label>
+							<input type="text" id="phone" placeholder="phone">
+						</div>
+					</div>
+				</div>
+				<!-- end email phone -->
+
+				<!-- start message -->
+				<div class="unit">
+					<div class="input">
+						<textarea spellcheck="false" placeholder="message/comments"></textarea>
+					</div>
+				</div>
+				<!-- end message -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn">Contact</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+	<script>
+	$(document).ready(function(){
+
+		/***************************************/
+		/* Google map */
+		/***************************************/
+		function initialize() {
+			var mapProp = {
+				center:new google.maps.LatLng(40.7456584,-73.9787703,12),
+				zoom:12,
+				mapTypeId:google.maps.MapTypeId.ROADMAP
+			};
+			var map=new google.maps.Map(document.getElementById("google-map"), mapProp);
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+		/***************************************/
+		/* end Google map */
+		/***************************************/
+
+		// Phone masking
+		$('#phone').mask('(999) 999-9999', {placeholder:'x'});
+
+	});
+	</script>
+</body>
+</html>

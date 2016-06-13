@@ -1,0 +1,37 @@
+body {
+
+	background-color:black;
+	color:red;
+}
+button {
+
+    background-color:black;
+	color:red;
+    border: 2px groove #3F3C3C;
+}
+form input #fileToUpload {
+	background-color:black;
+	color:red;
+    border: 2px groove #3F3C3C;background-color: black;
+
+}
+
+#submitButt {
+    background-color:black;
+	color:red;
+    border: 2px groove #3F3C3C;background-color: black;
+}
+
+form {
+	 background-color:black;
+	color:red;
+    border: 2px groove #3F3C3C;background-color: black;
+}
+input[type="file" ] {
+	background-color: black;
+	color:white;
+	  border: 2px groove #3F3C3C;background-color: black;
+}
+#9a745d2f-108e-cb88-9aae-d2f5218c400 {
+	color:red;
+}

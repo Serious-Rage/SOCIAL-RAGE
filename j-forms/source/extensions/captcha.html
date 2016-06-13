@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Captcha</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/jquery.validate.min.js"></script>
+	<script src="j-folder/js/additional-methods.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+		<form action="" method="" class="j-forms" id="j-forms" novalidate>
+
+			<!-- start header -->
+			<div class="header">
+				<p>Captcha</p>
+			</div>
+			<!-- end header -->
+
+			<div class="content">
+
+				<!-- start captcha -->
+				<div class="unit">
+					<div class="captcha-group">
+						<div class="input">
+							<label class="icon-right" for="captcha_code">
+								<i class="fa fa-unlock-alt"></i>
+							</label>
+							<input type="text" id="captcha_code" name="captcha_code" placeholder="solve the captcha">
+							<span class="tooltip tooltip-right-top">Enter sum of the digits</span>
+						</div>
+						<label class="captcha" for="captcha_code">
+							<img src="j-folder/php/captcha/captcha-image.php" alt="captcha" />
+						</label>
+					</div>
+				</div>
+				<!-- end captcha -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn">Send</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+	<script>
+		$(document).ready(function() {
+
+			var form = $( '#j-forms' );
+
+			form.validate({
+
+				/* @validation states + elements
+				------------------------------------------- */
+
+				errorClass: 'error-view',
+				validClass: 'success-view',
+				errorElement: 'span',
+
+				/* @validation rules
+				------------------------------------------ */
+				rules: {
+					captcha_code: {
+						required: true,
+						remote: 'j-folder/php/captcha/captcha-processing.php'
+					}
+				},
+				messages: {
+					captcha_code: {
+						required: 'Captcha is required',
+						remote: 'Correct captcha is required'
+					}
+				},
+				highlight: function(element, errorClass, validClass) {
+						$(element).closest('.input').removeClass(validClass).addClass(errorClass);
+						if ( $(element).is(":checkbox") || $(element).is(":radio") ) {
+							$(element).closest('.check').removeClass(validClass).addClass(errorClass);
+						}
+				},
+				unhighlight: function(element, errorClass, validClass) {
+						$(element).closest('.input').removeClass(errorClass).addClass(validClass);
+						if ( $(element).is(":checkbox") || $(element).is(":radio") ) {
+							$(element).closest('.check').removeClass(errorClass).addClass(validClass);
+						}
+				},
+				errorPlacement: function(error, element) {
+					if ( $(element).is(":checkbox") || $(element).is(":radio") ) {
+						$(element).closest('.check').append(error);
+					} else {
+						$(element).closest('.unit').append(error);
+					}
+				}
+			});
+
+		});
+
+	</script>
+</body>
+</html>

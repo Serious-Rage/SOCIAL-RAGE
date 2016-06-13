@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tooltips</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+
+		<form action="" method="" class="j-forms" novalidate>
+
+			<div class="header">
+				<p>Tooltips</p>
+			</div>
+			<!-- end /.header -->
+
+			<div class="content">
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Text tooltip</span>
+				</div>
+
+				<!-- start top tooltips -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">Top-left tooltip</label>
+						<div class="input">
+							<label class="icon-left" for="left-top">
+								<i class="fa fa-user"></i>
+							</label>
+							<input type="text" id="left-top" placeholder="your name...">
+							<span class="tooltip tooltip-left-top">Tooltip or useful information</span>
+						</div>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Top-right tooltip</label>
+						<div class="input">
+							<label class="icon-right" for="right-top">
+								<i class="fa fa-phone"></i>
+							</label>
+							<input type="text" id="right-top" placeholder="your phone...">
+							<span class="tooltip tooltip-right-top">Tooltip or useful information</span>
+						</div>
+					</div>
+				</div>
+				<!-- end top tooltips -->
+
+				<!-- start side tooltips -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">Left tooltip</label>
+						<div class="input">
+							<label class="icon-left" for="left-side">
+								<i class="fa fa-lock"></i>
+							</label>
+							<input type="password" id="left-side" placeholder="your password...">
+							<span class="tooltip tooltip-left-side">Tooltip or useful information</span>
+						</div>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Right tooltip</label>
+						<div class="input">
+							<label class="icon-right" for="right-side">
+								<i class="fa fa-unlock"></i>
+							</label>
+							<input type="password" id="right-side" placeholder="confirm password...">
+							<span class="tooltip tooltip-right-side">Tooltip or useful information</span>
+						</div>
+					</div>
+				</div>
+				<!-- end side tooltips -->
+
+				<!-- start bottom tooltips -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">Bottom-left tooltip</label>
+						<div class="input">
+							<label class="icon-left" for="left-bottom">
+								<i class="fa fa-envelope"></i>
+							</label>
+							<input type="text" id="left-bottom" placeholder="example@domain.com">
+							<span class="tooltip tooltip-left-bottom">Tooltip or useful information</span>
+						</div>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Bottom-right tooltip</label>
+						<div class="input">
+							<label class="icon-right" for="right-bottom">
+								<i class="fa fa-globe"></i>
+							</label>
+							<input type="text" id="right-bottom" placeholder="http://www.example.com">
+							<span class="tooltip tooltip-right-bottom">Tooltip or useful information</span>
+						</div>
+					</div>
+				</div>
+				<!-- end bottom tooltips -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Image tooltip</span>
+				</div>
+
+				<!-- start image tooltip -->
+				<div class="unit">
+					<label class="label">Credit card information</label>
+					<div class="input">
+						<label class="icon-right" for="first-name">
+							<i class="fa fa-user"></i>
+						</label>
+						<input type="text" id="first-name" placeholder="Name on credit card...">
+						<span class="tooltip-image tooltip-right-top"><img src="j-folder/img/name.jpg" /></span>
+					</div>
+				</div>
+				<!-- end image tooltip -->
+
+				<!-- start image tooltip -->
+				<div class="j-row">
+					<div class="span9 unit">
+						<div class="input">
+							<label class="icon-right" for="number">
+								<i class="fa fa-credit-card"></i>
+							</label>
+							<input type="text" id="number" placeholder="Number on credit card...">
+							<span class="tooltip-image tooltip-right-top"><img src="j-folder/img/number.jpg" /></span>
+						</div>
+					</div>
+					<div class="span3 unit">
+						<div class="input">
+							<label class="icon-right" for="cvv2">
+								<i class="fa fa-unlock"></i>
+							</label>
+							<input type="text" id="cvv2" placeholder="cvv2">
+							<span class="tooltip-image tooltip-right-top"><img src="j-folder/img/cvv.jpg" /></span>
+						</div>
+					</div>
+				</div>
+				<!-- end image tooltip -->
+
+				<!-- start image tooltip -->
+				<div class="j-row">
+					<div class="span3">
+						<label class="label label-center">Expires End</label>
+					</div>
+					<div class="span4 unit">
+						<label class="input select">
+							<select>
+								<option value="01">01</option>
+								<option value="02">02</option>
+								<option value="03">03</option>
+								<option value="04">04</option>
+								<option value="05">05</option>
+								<option value="06">06</option>
+								<option value="07">07</option>
+								<option value="08">08</option>
+								<option value="09">09</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select>
+							<span class="tooltip-image tooltip-left-side"><img src="j-folder/img/month.jpg" /></span>
+							<i></i>
+						</label>
+					</div>
+					<div class="span5 unit">
+						<label class="input select">
+							<select>
+								<option value="2015">2015</option>
+								<option value="2016">2016</option>
+								<option value="2017">2017</option>
+								<option value="2018">2018</option>
+								<option value="2019">2019</option>
+								<option value="2020">2020</option>
+								<option value="2021">2021</option>
+								<option value="2022">2022</option>
+							</select>
+							<span class="tooltip-image tooltip-left-side"><img src="j-folder/img/year.jpg" /></span>
+							<i></i>
+						</label>
+					</div>
+				</div><!-- end image tooltip -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn">Send</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+</body>
+</html>

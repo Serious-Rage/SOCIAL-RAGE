@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Color picker</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+	<link rel="stylesheet" href="j-folder/css/colorpicker.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/jquery.spectrum.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+		<form action="" method="" class="j-forms" novalidate>
+
+			<!-- start header -->
+			<div class="header">
+				<p>Color picker</p>
+			</div>
+			<!-- end /.header -->
+
+			<div class="content">
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Color format</span>
+				</div>
+
+				<!-- start hex hsl -->
+				<!-- for proper colorpicker work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">HEX</label>
+						<label class="color-group" for="hex">
+							<input type="text" id="hex">
+						</label>
+					</div>
+					<div class="span6 unit">
+						<label class="label">HSL</label>
+						<label class="color-group" for="hsl">
+							<input type="text" id="hsl">
+						</label>
+					</div>
+				</div>
+				<!-- end hex hsl -->
+
+				<!-- start rgb -->
+				<!-- for proper colorpicker work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="unit">
+					<label class="label">RGB</label>
+					<label class="color-group" for="rgb">
+						<input type="text" id="rgb">
+					</label>
+				</div>
+				<!-- end rgb -->
+
+				<div class="divider-text gap-top-45 gap-bottom-45">
+					<span>Transperency</span>
+				</div>
+
+				<!-- start transperency -->
+				<!-- for proper colorpicker work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">Alpha RGB</label>
+						<label class="color-group" for="a-rgb">
+							<input type="text" id="a-rgb">
+						</label>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Alpha HSL</label>
+						<label class="color-group" for="a-hsl">
+							<input type="text" id="a-hsl">
+						</label>
+					</div>
+				</div>
+				<!-- end transperency -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Palette</span>
+				</div>
+
+				<!-- start palette -->
+				<!-- for proper colorpicker work -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">Palette</label>
+						<label class="color-group" for="palette1">
+							<input type="text" id="palette1">
+						</label>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Palette only</label>
+						<label class="color-group" for="palette2">
+							<input type="text" id="palette2">
+						</label>
+					</div>
+				</div>
+				<!-- end palette -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn">Send</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+	<script>
+		$(function() {
+			// HEX
+			$("#hex").spectrum({
+				color: "#f00",
+				preferredFormat: "hex",
+				showInput: true
+			});
+			// HSL
+			$("#hsl").spectrum({
+				color: "#c34040",
+				preferredFormat: "hsl",
+				showInput: true
+			});
+			// RGB
+			$("#rgb").spectrum({
+				color: "#dbc75e",
+				preferredFormat: "rgb",
+				showInput: true
+			});
+			// Alpha RGB
+			$("#a-rgb").spectrum({
+				showAlpha: true,
+				color: "#3dbb8f",
+				preferredFormat: "rgb",
+				showInput: true
+			});
+			// Alpha HSL
+			$("#a-hsl").spectrum({
+				showAlpha: true,
+				color: "#8bc177",
+				preferredFormat: "hsl",
+				showInput: true
+			});
+			// Palette
+			$("#palette1").spectrum({
+				color: "#9257b4",
+				preferredFormat: "hex",
+				showInput: true,
+				showPalette: true,
+				palette: [
+					['#000', '#fff', '#ffebcd'],
+					['#ff8000', '#448026', '#ffffe0']
+				]
+			});
+			// Palette only
+			$("#palette2").spectrum({
+				showPaletteOnly: true,
+				showPalette:true,
+				color: '#780707',
+				palette: [
+					['#000', '#fff', '#ffebcd','#ff8000', '#448026'],
+					['#ff0000', '#fff700', '#75b274', '#1d31c3', '#9257b4']
+				]
+			});
+			// Method "show"
+			$("#hex, #hsl, #rgb, #a-hsl, #a-rgb, #palette1, #palette2").show();
+		});
+	</script>
+</body>
+</html>

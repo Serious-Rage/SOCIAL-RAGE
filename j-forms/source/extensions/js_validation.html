@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript validation</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/jquery.validate.min.js"></script>
+	<script src="j-folder/js/additional-methods.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+		<form action="" method="" class="j-forms" id="j-forms" novalidate>
+
+			<!-- start header -->
+			<div class="header">
+				<p>JavaScript validation</p>
+			</div>
+			<!-- end header -->
+
+			<div class="content">
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Input</span>
+				</div>
+
+				<div class="unit">
+					<label class="label">Required field</label>
+					<div class="input">
+						<label class="icon-right" for="text">
+							<i class="fa fa-edit"></i>
+						</label>
+						<input type="text" placeholder="required field" id="text" name="req_field">
+					</div>
+				</div>
+
+				<!-- start email url -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">Email</label>
+						<div class="input">
+							<label class="icon-right" for="email">
+								<i class="fa fa-envelope-o"></i>
+							</label>
+							<input type="email" placeholder="email@example.com" name="email" id="email">
+						</div>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Url</label>
+						<div class="input">
+							<label class="icon-right" for="url">
+								<i class="fa fa-globe"></i>
+							</label>
+							<input type="url" placeholder="http://www.example.com" name="url" id="url">
+						</div>
+					</div>
+				</div>
+				<!-- end email url -->
+
+				<!-- start append big file button -->
+				<div class="unit">
+					<label class="label">File</label>
+					<label class="input append-big-btn">
+						<label class="icon-left" for="append-big-btn">
+							<i class="fa fa-download"></i>
+						</label>
+						<div class="file-button">
+							Browse
+							<input type="file" name="file" onchange="document.getElementById('append-big-btn').value = this.value;">
+						</div>
+						<input type="text" id="append-big-btn" readonly="" placeholder="no file selected">
+						<span class="hint">Only: jpg / png </span>
+					</label>
+				</div>
+				<!-- end append big file button -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Password</span>
+				</div>
+
+				<!-- start password, confirm password -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<div class="input">
+							<label class="icon-right" for="password">
+								<i class="fa fa-lock"></i>
+							</label>
+							<input type="password" id="password" name="password" placeholder="password">
+						</div>
+						<label class="checkbox">
+							<input type="checkbox" id="show-pass">
+							<i></i>
+							Show password
+						</label>
+					</div>
+					<div class="span6 unit">
+						<div class="input">
+							<label class="icon-right" for="confirm-password">
+								<i class="fa fa-unlock"></i>
+							</label>
+							<input type="password" id="confirm-password" name="confirm_password" placeholder="confirm password">
+						</div>
+						<label class="checkbox">
+							<input type="checkbox" id="show-conf-pass">
+							<i></i>
+							Show password
+						</label>
+					</div>
+				</div>
+				<!-- end password, confirm password -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>One field from group</span>
+				</div>
+
+				<!-- start one field form group -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">First name</label>
+						<div class="input">
+							<label class="icon-right" for="first_name">
+								<i class="fa fa-user"></i>
+							</label>
+							<input type="text" class="required-group" name="first_name" id="first_name">
+						</div>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Last name</label>
+						<div class="input">
+							<label class="icon-right" for="last_name">
+								<i class="fa fa-user"></i>
+							</label>
+							<input type="text" class="required-group" name="last_name" id="last_name">
+						</div>
+					</div>
+				</div>
+				<!-- end one field form group -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Checkbox and radio</span>
+				</div>
+
+				<!-- start checbox and radio -->
+				<div class="j-row">
+					<div class="span4 unit check">
+						<label class="label">Select option</label>
+						<label class="checkbox">
+							<input type="checkbox" name="checkbox">
+							<i></i>
+							Apple
+						</label>
+						<label class="checkbox">
+							<input type="checkbox" name="checkbox">
+							<i></i>
+							Banana
+						</label>
+						<label class="checkbox">
+							<input type="checkbox" name="checkbox">
+							<i></i>
+							Coconut
+						</label>
+					</div>
+					<div class="span4 unit check">
+						<label class="label">Select option</label>
+						<label class="radio">
+							<input type="radio" name="radio">
+							<i></i>
+							Orange
+						</label>
+						<label class="radio">
+							<input type="radio" name="radio">
+							<i></i>
+							Pear
+						</label>
+						<label class="radio">
+							<input type="radio" name="radio">
+							<i></i>
+							Watermelon
+						</label>
+					</div>
+					<div class="span4 unit check">
+						<label class="label">Select option</label>
+						<label class="checkbox-toggle">
+							<input type="checkbox" name="checkbox_toggle">
+							<i></i>
+							Mango
+						</label>
+						<label class="checkbox-toggle">
+							<input type="checkbox" name="checkbox_toggle">
+							<i></i>
+							Melon
+						</label>
+						<label class="checkbox-toggle">
+							<input type="checkbox" name="checkbox_toggle">
+							<i></i>
+							Lemon
+						</label>
+					</div>
+				</div>
+				<!--  end checbox and radio -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Value</span>
+				</div>
+
+				<!-- start value -->
+				<div class="j-row">
+					<div class="span4 unit">
+						<label class="label">Min value</label>
+						<div class="input">
+							<input type="text" name="min_val">
+						</div>
+					</div>
+					<div class="span4 unit">
+						<label class="label">Range value</label>
+						<div class="input">
+							<input type="text" name="range_val">
+						</div>
+					</div>
+					<div class="span4 unit">
+						<label class="label">Max value</label>
+						<div class="input">
+							<input type="text" name="max_val">
+						</div>
+					</div>
+				</div>
+				<!-- end value -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Length</span>
+				</div>
+
+				<!-- start length -->
+				<div class="j-row">
+					<div class="span4 unit">
+						<label class="label">Min length</label>
+						<div class="input">
+							<input type="text" name="min_len">
+						</div>
+					</div>
+					<div class="span4 unit">
+						<label class="label">Range length</label>
+						<div class="input">
+							<input type="text" name="range_len">
+						</div>
+					</div>
+					<div class="span4 unit">
+						<label class="label">Max length</label>
+						<div class="input">
+							<input type="text" name="max_len">
+						</div>
+					</div>
+				</div>
+				<!-- end length -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>Digits and decimal numbers</span>
+				</div>
+
+				<!-- start digits and decimal numbers -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<label class="label">Digits</label>
+						<div class="input">
+							<label class="icon-right" for="digits">
+								<i class="fa fa-check"></i>
+							</label>
+							<input type="text" name="digits" id="digits">
+						</div>
+					</div>
+					<div class="span6 unit">
+						<label class="label">Decimals</label>
+						<div class="input">
+							<label class="icon-right" for="decimals">
+								<i class="fa fa-check"></i>
+							</label>
+							<input type="text" name="decimals" id="decimals">
+						</div>
+					</div>
+				</div>
+				<!-- end digits and decimal numbers -->
+
+				<div class="divider-text gap-top-20 gap-bottom-45">
+					<span>If checkbox is checked</span>
+				</div>
+
+				<!-- start enable input -->
+				<div class="j-row">
+					<div class="span4">
+						<label class="checkbox">
+							<input type="checkbox" id="check-enable-input">
+							<i></i>
+							Enable input
+						</label>
+					</div>
+					<div class="span8 unit">
+						<div class="input disabled-view">
+							<label class="icon-right" for="enable-input">
+								<i class="fa fa-edit"></i>
+							</label>
+							<input type="text" id="enable-input" name="enable_input" placeholder="enable/disable input" disabled="">
+						</div>
+					</div>
+				</div>
+				<!-- end enable input -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn">Validate</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+	<script>
+		$(document).ready(function() {
+
+			// Show password
+			$("#show-pass").on("change", function(){
+				$("#show-pass").is(":checked") ? $("#password").attr("type", "text") : $("#password").attr("type", "password");
+			});
+/////////////////////////////////////////////////////////////////
+
+			// Show confirm password
+			$("#show-conf-pass").on("change", function(){
+				$("#show-conf-pass").is(":checked") ? $("#confirm-password").attr("type", "text") : $("#confirm-password").attr("type", "password");
+			});
+/////////////////////////////////////////////////////////////////
+
+			// Enabled input
+			$('#check-enable-input').on('change', function() {
+				if ( $('#check-enable-input').is(':checked') ) {
+					$('#enable-input').attr('disabled', false).parent().removeClass('disabled-view error-view success-view');
+				} else {
+					$('#enable-input').attr('disabled', true).parent().addClass('disabled-view').removeClass('success-view error-view');
+
+					// ID for error message = field ID + "-error"
+					// if error message for disable field exists
+					// hide error message
+					if ( $('#enable-input-error').length ) {
+						$('#enable-input-error').css('display', 'none');
+					}
+				};
+			});
+/////////////////////////////////////////////////////////////////
+
+			var form = $( "#j-forms" );
+
+			form.validate({
+
+				/* @validation states + elements
+				------------------------------------------- */
+
+				errorClass: 'error-view',
+				validClass: 'success-view',
+				errorElement: 'span',
+
+				/* @validation rules
+				------------------------------------------ */
+				rules: {
+					req_field: {
+						required: true
+					},
+					email: {
+						required: true,
+						email: true
+					},
+					url: {
+						required: true,
+						url: true
+					},
+					file: {
+						required: true,
+						extension:'jpg|png'
+					},
+					password: {
+						required: true,
+						minlength: 6,
+						maxlength: 14
+					},
+					confirm_password: {
+						required: true,
+						minlength: 6,
+						maxlength: 14,
+						equalTo: '#password'
+					},
+					first_name: {
+						require_from_group: [1, '.required-group']
+					},
+					last_name: {
+						require_from_group: [1, '.required-group']
+					},
+					checkbox: {
+						required: true
+					},
+					radio: {
+						required: true
+					},
+					checkbox_toggle: {
+						required: true
+					},
+					min_val: {
+						required: true,
+						min: 10
+					},
+					range_val: {
+						required: true,
+						range: [10, 50]
+					},
+					max_val: {
+						required: true,
+						max: 50
+					},
+					min_len: {
+						required: true,
+						minlength: 3
+					},
+					range_len: {
+						required: true,
+						rangelength: [3, 8]
+					},
+					max_len: {
+						required: true,
+						maxlength: 8
+					},
+					decimals: {
+						required: true,
+						number: true
+					},
+					digits: {
+						required: true,
+						digits: true
+					},
+					enable_input: {
+						required: '#check-enable-input:checked'
+					}
+				},
+				messages: {
+					req_field: {
+						required: 'Please field is required'
+					},
+					email: {
+						required: 'Please field is required',
+						email: 'Incorrect email format'
+					},
+					url: {
+						required: 'Please field is required',
+						url: 'Incorrect url format'
+					},
+					file: {
+						required: 'Please upload some file',
+						extension:'Incorrect file format'
+					},
+					password: {
+						required: 'Please password is required'
+					},
+					confirm_password: {
+						required: 'Please confirm your password',
+						equalTo: 'Mismatched passwords'
+					},
+					first_name: {
+						require_from_group: 'Please fill at least one field'
+					},
+					last_name: {
+						require_from_group: 'Please fill at least one field'
+					},
+					checkbox: {
+						required: 'Please select an option'
+					},
+					radio: {
+						required: 'Please select an option'
+					},
+					checkbox_toggle: {
+						required: 'Please select an option'
+					},
+					min_val: {
+						required:'Please field is required'
+					},
+					range_val: {
+						required: 'Please field is required'
+					},
+					max_val: {
+						required: 'Please field is required'
+					},
+					min_len: {
+						required: 'Please field is required'
+					},
+					range_len: {
+						required: 'Please field is required'
+					},
+					max_len: {
+						required: 'Please field is required'
+					},
+					decimals: {
+						required: 'Please field is required',
+						number: 'Only decimal numbers allowed'
+					},
+					digits: {
+						required: 'Please field is required',
+						digits: 'Only digits allowed'
+					},
+					enable_input: {
+						required: 'Please field is required'
+					}
+				},
+				highlight: function(element, errorClass, validClass) {
+						$(element).closest('.input').removeClass(validClass).addClass(errorClass);
+						if ( $(element).is(':checkbox') || $(element).is(':radio') ) {
+							$(element).closest('.check').removeClass(validClass).addClass(errorClass);
+						}
+				},
+				unhighlight: function(element, errorClass, validClass) {
+						$(element).closest('.input').removeClass(errorClass).addClass(validClass);
+						if ( $(element).is(':checkbox') || $(element).is(':radio') ) {
+							$(element).closest('.check').removeClass(errorClass).addClass(validClass);
+						}
+				},
+				errorPlacement: function(error, element) {
+					if ( $(element).is(':checkbox') || $(element).is(':radio') ) {
+						$(element).closest('.check').append(error);
+					} else {
+						$(element).closest('.unit').append(error);
+					}
+				}
+			});
+
+		});
+	</script>
+</body>
+</html>

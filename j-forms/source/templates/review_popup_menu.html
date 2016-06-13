@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Review form</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+
+	<div class="popup-menu">
+		<div class="popup-list">
+			<ul>
+				<!-- for proper work of the popup form -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<li class="popup-list-open" id="rev-popup-menu">
+					Leave a review
+					<div class="popup-list-wrapper">
+						<form action="" method="" class="j-forms" novalidate>
+
+							<div class="content">
+
+								<!-- start name -->
+								<div class="unit">
+									<div class="input">
+										<label class="icon-right" for="name">
+											<i class="fa fa-user"></i>
+										</label>
+										<input type="text" id="name" name="name" placeholder="name">
+									</div>
+								</div>
+								<!-- end name -->
+
+								<!-- start email-->
+								<div class="unit">
+									<div class="input">
+										<label class="icon-right" for="email">
+											<i class="fa fa-envelope-o"></i>
+										</label>
+										<input type="email" placeholder="email" id="email" name="email">
+									</div>
+								</div>
+								<!-- end email -->
+
+								<!-- start message -->
+								<div class="unit">
+									<div class="input">
+										<textarea placeholder="review message..." spellcheck="false" name="message"></textarea>
+									</div>
+								</div>
+								<!-- end message -->
+
+								<!-- start ratings -->
+								<div class="unit">
+									<div class="rating-group">
+										<label class="label">Product quality</label>
+										<div class="ratings">
+											<input id="5q" type="radio" name="quality-rating" value="5">
+											<label for="5q">
+												<i class="fa fa-star"></i>
+											</label>
+											<input id="4q" type="radio" name="quality-rating" value="4">
+											<label for="4q">
+												<i class="fa fa-star"></i>
+											</label>
+											<input id="3q" type="radio" name="quality-rating" value="3">
+											<label for="3q">
+												<i class="fa fa-star"></i>
+											</label>
+											<input id="2q" type="radio" name="quality-rating" value="2">
+											<label for="2q">
+												<i class="fa fa-star"></i>
+											</label>
+											<input id="1q" type="radio" name="quality-rating" value="1" checked="">
+											<label for="1q">
+												<i class="fa fa-star"></i>
+											</label>
+										</div>
+									</div>
+									<div class="rating-group">
+										<label class="label">Service quality</label>
+										<div class="ratings">
+											<input id="5s" type="radio" name="service-rating" value="5">
+											<label for="5s">
+												<i class="fa fa-star"></i>
+											</label>
+											<input id="4s" type="radio" name="service-rating" value="4">
+											<label for="4s">
+												<i class="fa fa-star"></i>
+											</label>
+											<input id="3s" type="radio" name="service-rating" value="3">
+											<label for="3s">
+												<i class="fa fa-star"></i>
+											</label>
+											<input id="2s" type="radio" name="service-rating" value="2">
+											<label for="2s">
+												<i class="fa fa-star"></i>
+											</label>
+											<input id="1s" type="radio" name="service-rating" value="1" checked="">
+											<label for="1s">
+												<i class="fa fa-star"></i>
+											</label>
+										</div>
+									</div>
+								</div>
+								<!-- end ratings -->
+							
+								<button type="submit" class="primary-btn">Send</button>
+
+							</div>
+							<!-- end /.content -->
+
+						</form>
+					</div>
+					<!-- /. popup-list-wrapper -->
+				</li>
+				<!-- /. popup-list-open -->
+
+			</ul>
+		</div>
+		<!-- end /.popup-list -->
+	</div>
+	<!-- end /.popup-menu -->
+	<script>
+	$(document).ready(function() {
+		/***************************************/
+		/* Popup menu forms */
+		/***************************************/
+		// If user clicks on the 'subscribe' item
+		// Open popup-menu subscribe form
+		$('#rev-popup-menu').on('click', function() {
+			if ( $('#rev-popup-menu .popup-list-wrapper').css('display') == 'none' ) {
+				$('#rev-popup-menu .popup-list-wrapper').css({ display:'block', left:'auto', right:'0', opacity:'1' });
+			}
+		});
+
+		// Add an event listener
+		// If user clicks outside a form
+		// The form will disappear
+		$(document).on('click touchstart', function(event) {
+			// Close popup-menu 'subscribe' form
+			if (!$(event.target).closest('#rev-popup-menu').length) {
+				if ( $('#rev-popup-menu .popup-list-wrapper').css('display') == 'block' ) {
+					$('#rev-popup-menu .popup-list-wrapper').css({ display:'none', left:'-9999px', opacity:'0' });
+				}
+			}
+		});
+		/***************************************/
+		/* end popup menu forms */
+		/***************************************/
+	});
+	</script>
+</body>
+</html>

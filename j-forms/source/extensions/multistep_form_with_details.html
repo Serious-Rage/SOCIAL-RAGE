@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multistep form</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+	<script src="j-folder/js/jquery.ui.min.js"></script>
+	<script src="j-folder/js/jquery.maskedinput.min.js"></script>
+	<script src="j-folder/js/j-forms-multistep.js"></script>
+
+</head>
+
+<body class="bg-pic">
+	<div class="wrapper wrapper-640">
+
+		<form action="" method="" class="j-forms j-multistep" id="j-forms" novalidate>
+
+			<div class="header">
+				<p>Booking</p>
+			</div>
+			<!-- end /.header-->
+
+			<div class="content">
+
+				<!-- start steps -->
+				<div class="j-row">
+					<div class="span4 step">
+						<div class="steps">
+							<span>Step 1:</span>
+							<p>Personal info</p>
+						</div>
+					</div>
+					<div class="span4 step">
+						<div class="steps">
+							<span>Step 2:</span>
+							<p>Booking details</p>
+						</div>
+					</div>
+					<div class="span4 step">
+						<div class="steps">
+							<span>Step 3:</span>
+							<p>Total info</p>
+						</div>
+					</div>
+				</div>
+				<!-- end steps -->
+
+				<fieldset>
+
+					<!-- start name -->
+					<div class="unit">
+						<label class="label">Your name</label>
+						<div class="input">
+							<label class="icon-right" for="name">
+								<i class="fa fa-user"></i>
+							</label>
+							<input type="text" id="name" name="name">
+						</div>
+					</div>
+					<!-- end name -->
+
+					<!-- start email phone -->
+					<div class="j-row">
+						<div class="span6 unit">
+							<label class="label">Your email</label>
+							<div class="input">
+								<label class="icon-right" for="email">
+									<i class="fa fa-envelope-o"></i>
+								</label>
+								<input type="email" id="email" name="email">
+							</div>
+						</div>
+						<div class="span6 unit">
+							<label class="label">Phone/Mobile</label>
+							<div class="input">
+								<label class="icon-right" for="phone">
+									<i class="fa fa-phone"></i>
+								</label>
+								<input type="text" id="phone" name="phone">
+							</div>
+						</div>
+					</div>
+					<!-- end email phone -->
+
+				</fieldset>
+
+				<fieldset>
+
+					<!-- start date -->
+					<div class="j-row">
+						<div class="span6 unit">
+							<label class="label">Check-in date</label>
+							<div class="input">
+								<label class="icon-right" for="date-from">
+									<i class="fa fa-calendar"></i>
+								</label>
+								<input type="text" id="date-from" name="date-from">
+							</div>
+						</div>
+						<div class="span6 unit">
+							<label class="label">Check-out date</label>
+							<div class="input">
+								<label class="icon-right" for="date-to">
+									<i class="fa fa-calendar"></i>
+								</label>
+								<input type="text" id="date-to" name="date-to">
+							</div>
+						</div>
+					</div>
+					<!-- end date -->
+
+					<!-- start message -->
+					<div class="unit">
+						<label class="label">Comments/Message</label>
+						<div class="input">
+							<textarea spellcheck="false" id="message" name="message"></textarea>
+						</div>
+					</div>
+					<!-- end message -->
+
+				</fieldset>
+
+				<fieldset>
+
+					<!-- start name -->
+					<div class="form-details">
+						<p>Name: </p>
+						<span id="info-name"></span>
+					</div>
+					<!-- end name -->
+
+					<!-- start email -->
+					<div class="form-details">
+						<p>Email: </p>
+						<span id="info-email"></span>
+					</div>
+					<!-- end email -->
+
+					<!-- start phone -->
+					<div class="form-details">
+						<p>Phone/mobile: </p>
+						<span id="info-phone"></span>
+					</div>
+					<!-- end phone -->
+
+					<!-- start check-in date -->
+					<div class="form-details">
+						<p>Check-in date: </p>
+						<span id="info-date-from"></span>
+					</div>
+					<!-- end check-in date -->
+
+					<!-- start check-out date -->
+					<div class="form-details">
+						<p>Check-out date: </p>
+						<span id="info-date-to"></span>
+					</div>
+					<!-- end check-out date -->
+
+					<!-- start message -->
+					<div class="form-details">
+						<p>Comments/message: </p>
+						<span id="info-message"></span>
+					</div>
+					<!-- end message -->
+
+				</fieldset>
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn multi-submit-btn">Booking</button>
+				<button type="button" class="primary-btn multi-next-btn">Next</button>
+				<button type="button" class="secondary-btn multi-prev-btn">Back</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+	<script>
+	$(document).ready(function(){
+
+		/***************************************/
+		/* Add info to the last step */
+		/***************************************/
+		// "Change" function for all fields
+		function formDetails (item) {
+			$('#'+item+'').change(function () {
+				$('#info-'+item+'').html($('#'+item+'').val());
+			});
+		}
+
+		// Adding data to the "Form details" step
+		formDetails('name');
+		formDetails('email');
+		formDetails('phone');
+		formDetails('date-from');
+		formDetails('date-to');
+		formDetails('message');
+		/***************************************/
+		/* end Add info to the last step */
+		/***************************************/
+
+		// Phone masking
+		$("#phone").mask('(999) 999-9999', {placeholder:'x'});
+
+		/***************************************/
+		/* Datepicker */
+		/***************************************/
+		// Popup time interval
+		$(function() {
+			$( "#date-from" ).datepicker({
+				dateFormat: 'mm/dd/yy',
+				prevText: '<i class="fa fa-caret-left"></i>',
+				nextText: '<i class="fa fa-caret-right"></i>',
+				onClose: function( selectedDate ) {
+					$( "#date-to" ).datepicker( "option", "minDate", selectedDate );
+				}
+			});
+			$( "#date-to" ).datepicker({
+				dateFormat: 'mm/dd/yy',
+				prevText: '<i class="fa fa-caret-left"></i>',
+				nextText: '<i class="fa fa-caret-right"></i>',
+				onClose: function( selectedDate ) {
+					$( "#date-from" ).datepicker( "option", "maxDate", selectedDate );
+				}
+			});
+		});
+		/***************************************/
+		/* end Datepicker */
+		/***************************************/
+
+	});
+	</script>
+</body>
+</html>

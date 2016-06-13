@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pop-up form</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+
+	<div class="popup-menu">
+		<div class="popup-list">
+			<ul>
+				<!-- for proper work of the popup subscribe form -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<li class="popup-list-open" id="sub-popup-menu">
+					Subscribe
+					<div class="popup-list-wrapper">
+						<form action="" method="" class="j-forms" novalidate>
+
+							<div class="content">
+
+								<!-- start widget button 130 -->
+								<div class="unit">
+									<div class="widget right-50">
+										<div class="input">
+											<input type="text" placeholder="enter your email">
+										</div>
+										<button type="submit" class="addon-btn adn-50 adn-right">
+											Go!
+										</button>
+									</div>
+								</div>
+								<!-- end widget button 130 -->
+
+							</div>
+							<!-- end /.content -->
+
+						</form>
+					</div>
+					<!-- /. popup-list-wrapper -->
+				</li>
+				<!-- /. popup-list-open -->
+
+				<!-- for proper work of the popup login form -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<li class="popup-list-open" id="log-popup-menu">
+					Login
+					<div class="popup-list-wrapper">
+						<form action="" method="" class="j-forms" novalidate>
+
+							<div class="content">
+
+								<!-- start login -->
+								<div class="unit">
+									<div class="j-row">
+										<div class="span4">
+											<label class="label label-center">Login</label>
+										</div>
+										<div class="span8">
+											<div class="input">
+												<label class="icon-right" for="log-log">
+													<i class="fa fa-user "></i>
+												</label>
+												<input type="text" id="log-log" placeholder="your login...">
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- end login -->
+
+								<!-- start password -->
+								<div class="unit">
+									<div class="j-row">
+										<div class="span4">
+											<label class="label label-center">Password</label>
+										</div>
+										<div class="span8">
+											<div class="input">
+												<label class="icon-right" for="log-pass">
+													<i class="fa fa-lock"></i>
+												</label>
+												<input type="password" id="log-pass" placeholder="your password...">
+												<div class="hint">
+													<a href="#" class="link">Forgot password?</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- end password -->
+
+								<button type="submit" class="primary-btn">Sign in</button>
+
+							</div>
+							<!-- end /.content -->
+
+						</form>
+					</div>
+					<!-- /. popup-list-wrapper -->
+				</li>
+				<!-- /. popup-list-open -->
+
+				<!-- for proper work of the popup registration form -->
+				<!-- don't forget to add appropriate javascript code to your form-->
+				<!-- from the bottom of this page-->
+				<li class="popup-list-open" id="reg-popup-menu">
+					Register
+					<div class="popup-list-wrapper">
+						<form action="" method="" class="j-forms" novalidate>
+
+							<div class="content">
+
+								<!-- start name -->
+								<div class="unit">
+									<div class="input">
+										<label class="icon-right" for="reg-name">
+											<i class="fa fa-user"></i>
+										</label>
+										<input type="text" id="reg-name" placeholder="name">
+									</div>
+								</div>
+								<!-- end name -->
+
+								<!-- start email -->
+								<div class="unit">
+									<div class="input">
+										<label class="icon-right" for="reg-email">
+											<i class="fa fa-envelope-o"></i>
+										</label>
+										<input type="text" id="reg-email" placeholder="email address">
+									</div>
+								</div>
+								<!-- end email -->
+
+								<!-- start password -->
+								<div class="unit">
+									<div class="input">
+										<label class="icon-right" for="reg-pass">
+											<i class="fa fa-lock"></i>
+										</label>
+										<input type="password" id="reg-pass" placeholder="password">
+									</div>
+								</div>
+								<!-- end password -->
+
+								<!-- start confirm password -->
+								<div class="unit">
+									<div class="input">
+										<label class="icon-right" for="conf-pass">
+											<i class="fa fa-unlock"></i>
+										</label>
+										<input type="password" id="conf-pass" placeholder="confirm password">
+									</div>
+								</div>
+								<!-- end confirm password -->
+
+								<button type="submit" class="primary-btn">Register</button>
+
+							</div>
+							<!-- end /.content -->
+
+						</form>
+					</div>
+					<!-- /. popup-list-wrapper -->
+				</li>
+				<!-- /. popup-list-open -->
+			</ul>
+		</div>
+		<!-- end /.popup-list -->
+	</div>
+	<!-- end /.popup-menu -->
+
+	<div class="popup-btm-400">
+		<input type="radio" id="popup-input-open" name="popup-btm">
+		<input type="radio" id="popup-input-close" name="popup-btm" checked="">
+		<div class="popup-btm-wrapper">
+			<form action="" method="" class="j-forms" novalidate>
+
+				<!-- start close-popup button -->
+				<label class="popup-btm-close" for="popup-input-close">
+					<i></i>
+				</label>
+				<!-- end close-popup button -->
+
+				<div class="content">
+
+					<!-- start email -->
+					<div class="unit">
+						<div class="input">
+							<input type="email" placeholder="your email">
+						</div>
+					</div>
+					<!-- end email -->
+
+					<!-- start textarea -->
+					<div class="unit">
+						<div class="input">
+							<textarea placeholder="your message or feedback" spellcheck="false"></textarea>
+						</div>
+					</div>
+					<!-- end textarea -->
+
+					<button type="submit" class="primary-btn">Send</button>
+
+				</div>
+				<!-- end /.content -->
+			</form>
+		</div>
+		<!-- /. popup-btm-wrapper -->
+
+		<label class="popup-btm-label" for="popup-input-open">Leave a feedback</label>
+	</div>
+	<!-- end /.popup-btm -->
+	<script>
+	$(document).ready(function() {
+		/***************************************/
+		/* Popup menu forms */
+		/***************************************/
+		// If user clicks on the 'subscribe' item
+		// Open popup-menu subscribe form
+		$('#sub-popup-menu').on('click', function() {
+			if ( $('#sub-popup-menu .popup-list-wrapper').css('display') == 'none' ) {
+				$('#sub-popup-menu .popup-list-wrapper').css({ display:'block', left:'auto', right:'0', opacity:'1' });
+			}
+		});
+		// If user clicks on the 'login' item
+		// Open popup-menu login form
+		$('#log-popup-menu').on('click', function() {
+			if ( $('#log-popup-menu .popup-list-wrapper').css('display') == 'none' ) {
+				$('#log-popup-menu .popup-list-wrapper').css({ display:'block', left:'auto', right:'0', opacity:'1' });
+			}
+		});
+		// If user clicks on the 'registration' item
+		// Open popup-menu registration form
+		$('#reg-popup-menu').on('click', function() {
+			if ( $('#reg-popup-menu .popup-list-wrapper').css('display') == 'none' ) {
+				$('#reg-popup-menu .popup-list-wrapper').css({ display:'block', left:'auto', right:'0', opacity:'1' });
+			}
+		});
+
+		// Add an event listener
+		// If user clicks outside a form
+		// The form will disappear
+		$(document).on('click touchstart', function(event) {
+			// Close popup-menu 'subscribe' form
+			if (!$(event.target).closest('#sub-popup-menu').length) {
+				if ( $('#sub-popup-menu .popup-list-wrapper').css('display') == 'block' ) {
+					$('#sub-popup-menu .popup-list-wrapper').css({ display:'none', left:'-9999px', opacity:'0' });
+				}
+			}
+			// Close popup-menu 'login' form
+			if (!$(event.target).closest('#log-popup-menu').length) {
+				if ( $('#log-popup-menu .popup-list-wrapper').css('display') == 'block' ) {
+					$('#log-popup-menu .popup-list-wrapper').css({ display:'none', left:'-9999px', opacity:'0' });
+				}
+			}
+			// Close popup-menu 'registration' form
+			if (!$(event.target).closest('#reg-popup-menu').length) {
+				if ( $('#reg-popup-menu .popup-list-wrapper').css('display') == 'block' ) {
+					$('#reg-popup-menu .popup-list-wrapper').css({ display:'none', left:'-9999px', opacity:'0' });
+				}
+			}
+		});
+		/***************************************/
+		/* end popup menu forms */
+		/***************************************/
+	});
+	</script>
+</body>
+</html>
